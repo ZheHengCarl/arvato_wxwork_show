@@ -1,0 +1,24 @@
+<!--pages/information/information.wxml-->
+<view class='container'>
+  <view class='header'>
+    <view class='headerInfo'>
+      <view class='phone'>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086562067.png'></image>
+      </view>
+      <view class='avatar'>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></image>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086613843.png'></image>
+      </view>
+      <view class='talk'>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086578867.png'></image>
+      </view>
+    </view>
+    <view class='dis'></view>
+  </view>
+  <view class='nav'>
+  
+  </view>
+  <view class='section'>
+  
+  </view>
+</view>

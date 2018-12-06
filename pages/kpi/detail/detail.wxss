@@ -1,0 +1,170 @@
+.container{
+  width: 100%;
+  height: 100%;
+}
+.container .loadingParent {
+  width: 100%;
+  height: 20%;
+  position: relative;
+}
+
+.container .loadingParent canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.container .loadingParent .finish {
+  width: 100%;
+  position: absolute;
+  bottom: 20rpx;
+  left: 0;
+  text-align: center;
+}
+
+.container .loadingParent .finish .finishPercent {
+  font-size: 80rpx;
+  color: #d2112b;
+}
+
+.container .loadingParent .finish .percent {
+  font-size: 50rpx;
+  color: #d2112b;
+}
+
+.container .loadingParent .showSort{
+  position: absolute;
+  width: 120rpx;
+  top: 100rpx;
+  right: 0
+}
+
+.container .loadingParent .showSort image{
+  width: 100%;
+}
+
+.container .monthGoal {
+  width: 100%;
+  margin: 0 auto;
+  font-size: 30rpx;
+  text-align: center;
+  color: #d2112b;
+}
+
+.container .monthGoal image {
+  display: inline-block;
+  width: 24rpx;
+  height: 29rpx;
+  margin-right: 20rpx;
+}
+
+.container .avatar {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx auto 0;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 1px solid #eee;
+}
+
+.container .avatar image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.container .chooseItem{
+  margin: 10rpx auto 0;
+  text-align: center;
+  color: #121212;
+}
+
+.container .chooseItem picker{
+  display: inline-block;
+}
+
+.container .chooseItem image{
+  display: inline-block;
+  width: 20rpx;
+  margin-left: 10rpx
+}
+
+.container .middleLine{
+  margin-top: 20rpx;
+  width: 100%;
+  text-align: center;
+}
+
+.container .middleLine text{
+  font-size: 28rpx;
+  display: inline-block;
+  margin: 0 10rpx;
+}
+
+.container .middleLine image{
+  display: inline-block;
+  width: 30%;
+  line-height: 40rpx;
+  font-size: 0;
+  margin-bottom: 10rpx;
+}
+
+.container .content{
+  /* width: 100%; */
+  overflow: scroll;
+  margin-top: 20rpx;
+}
+
+.container .content::-webkit-scrollbar{
+  display: none
+}
+
+.container .content .contentHeader{
+  height: 80rpx;
+  width: 1200rpx;
+  background-color: #d3112c;
+  color: #ffffff;
+  position: relative;
+}
+
+.container .content .contentHeader view{
+  width:200rpx;
+  float: left;
+  height: 80rpx;
+  text-align: center;
+}
+
+.container .content .contentHeader view text{
+  border-right: 1px solid #e1808d;
+  display: block;
+  height: 40rpx;
+  margin-top: 20rpx;
+}
+
+.container .content .contentHeader picker{
+  flex: 1;
+  line-height: 80rpx;
+  text-align: center;
+}
+.container .content .contentHeader image{
+  width: 20rpx;
+  position: absolute;
+  right: 6rpx;
+  top: 30rpx;
+}
+
+.container .content .contentCenter{
+  width: 100%;
+}
+
+.container .content .items{
+  width: 100%;
+  display: flex;
+}
+
+.container .content .items view{
+  width: 25%;
+  flex:1;
+  text-align: center;
+  margin: 10rpx 0;
+  font-size: 22rpx;
+  color: #646464;
+}

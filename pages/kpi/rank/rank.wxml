@@ -1,0 +1,44 @@
+<view class='container'>
+  <view class='screen'>
+    <view class='city'>
+      <picker mode='selector'>请选择城市</picker>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540435872138.png'></image>
+    </view>
+    <view class='time beginTime'>
+      <picker mode='date'>开始时间</picker>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540435872138.png'></image>
+    </view>至
+    <view class='time finishTime'>
+      <picker mode='date'>结束时间</picker>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540435872138.png'></image>
+    </view>
+  </view>
+   <view class='middleLine'>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540278073352.png'></image>
+    <text>门店排名</text>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540278073352.png'></image>
+  </view>
+  <view class='rank'>
+    <view class='store'>
+      <!-- <view>第一八佰伴</view>
+      <view>第一八佰</view>
+      <view>第一八</view>
+      <view>第佰伴</view> -->
+    </view>
+    <view class='progress'>
+      <!-- <progress active color='#d3112c' percent='80' stroke-width='12' backgroundColor='#ffffff' ></progress>
+      <progress active color='#d3112c' percent='70' stroke-width='12' backgroundColor='#ffffff' ></progress>
+      <progress active color='#d3112c' percent='60' stroke-width='12' backgroundColor='#ffffff' ></progress>
+      <progress active color='#d3112c' percent='50' stroke-width='12' backgroundColor='#ffffff' ></progress> -->
+    </view>
+    <view class='number'>
+      <!-- <view>3113</view>
+      <view>2113</view>
+      <view>1113</view>
+      <view>113</view> -->
+    </view>
+  </view>
+  <view class='loadMore'>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540278055767.png'></image>
+  </view>
+</view>

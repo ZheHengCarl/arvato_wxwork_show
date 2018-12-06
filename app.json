@@ -1,0 +1,15 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/kpi/detail/detail",
+    "pages/kpi/rank/rank",
+    "pages/user/mailList/mailList",
+    "pages/user/userInfo/userInfo"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "欧唯特智能工作台",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,19 @@
+<!--pages/wxwork/mailList/mailList.wxml-->
+<view class='container'>
+  <view class='search'>
+    <view class='searchBox'>
+      <input bindinput='getValue' placeholder='请输入昵称'></input>
+    <image mode='aspectFit' bindtap='searchUser' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1539677268173.png'></image>
+    </view>
+  </view>
+  <view class='mailLists' wx:for='{{userList}}'>
+    <view class='list' data-param='{{item.externalId}}' bindtap='toUserDetail'>
+      <view class='header'>
+        <image class='avator' src='{{item.avatar}}'></image>
+      </view>
+      <view class='nickName'>{{item.name}}</view>
+      <view class='userValue'>客户价值：<text>100</text></view>
+    </view>
+  </view>
+  <view class='userNum'><text>●  </text>总计{{total}}位客户<text>  ●</text></view>
+</view>

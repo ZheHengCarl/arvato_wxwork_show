@@ -1,0 +1,125 @@
+.container{
+  width: 100%;
+  height: 100%;
+  overflow: hidden
+}
+
+.container .screen{
+  width: 100%;
+  height: 21%;
+  box-sizing: border-box;
+  padding: 5%;
+  text-align: center;
+  color: #999;
+  font-size: 25rpx;
+}
+
+.container .screen .city,.container .screen .time{
+   position: relative;
+}
+
+.container .screen .city image,.container .screen .time image{
+   position: absolute;
+   width: 20rpx;
+   right: 10rpx;
+   top: 15rpx;
+}
+
+.container .screen view picker{
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  padding-left: 30rpx;
+  font-size: 25rpx;
+  line-height: 50rpx;
+  color: #999;
+  height: 50rpx;
+  margin-bottom: 60rpx;
+  text-align: left;
+}
+
+.container .screen .time{
+  width: 45%;
+  float: left;
+}
+.container .screen .finishTime{
+  width: 45%;
+  float: right;
+}
+
+.container .middleLine{
+  width: 100%;
+  height: 4%;
+  text-align: center;
+}
+
+.container .middleLine text{
+  font-size: 28rpx;
+  display: inline-block;
+  margin: 0 10rpx;
+}
+
+.container .middleLine image{
+  display: inline-block;
+  width: 35%;
+  line-height: 40rpx;
+  font-size: 0;
+  margin-bottom: 10rpx;
+}
+
+.container .rank{
+  width: 100%;
+  height: 70%;
+  box-sizing: border-box;
+  padding: 40rpx 5% 0;
+}
+
+.container .rank .store{
+  height: 100%;
+  width: 30%;
+  float: left;
+  font-size: 22rpx;
+  color: #646464;
+}
+
+.container .rank .store view{
+  margin-bottom: 30rpx;
+  height: 40rpx;
+}
+
+.container .rank .progress{
+  height: 100%;
+  width: 59%;
+  float: left;
+}
+
+.container .rank .progress progress{
+  height: 40rpx;
+  margin-bottom: 30rpx
+}
+
+.container .rank .number{
+  height: 100%;
+  width: 10%;
+  float: left;
+  font-size: 22rpx;
+  color: #646464;
+}
+
+.container .rank .number view{
+  height: 40rpx;
+ margin-bottom: 30rpx;
+}
+
+.container .loadMore{
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  /* padding-bottom: 10rpx; */
+}
+
+.container .loadMore image{
+  width: 40rpx;
+}
+

@@ -1,0 +1,58 @@
+<view class='container'>
+  <view class="loadingParent">
+    <canvas canvas-id="canvasIndex"></canvas>
+    <view class='finish'>
+      <text class='finishPercent'>{{finishPercent}}</text>
+      <text class='percent'>%</text>
+    </view>
+    <view bindtap='showSort' class='showSort'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540278042232.png'></image>
+    </view>
+  </view>
+  <view class='monthGoal'>
+    <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=coin.png'></image>
+    <text>本月业绩目标</text>
+  </view>
+  <view class='avatar'>
+    <image src='{{avatar}}'></image>
+  </view>
+  <view class='chooseItem'>
+    <picker mode='selector'>
+      <view>上海新世界</view>
+    </picker>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540278083238.png'></image>
+  </view>
+  <view class='middleLine'>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540278073352.png'></image>
+    <text>情况一览表</text>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540278073352.png'></image>
+  </view>
+  <view class='content'>
+    <view class='contentHeader'>
+      <view><text>KPI</text></view>
+      <view><text>当日</text></view>
+      <view><text>当月累计</text></view>
+      <view><text>月计划比</text></view>
+      <view><text>其他指标1</text></view>
+      <view><text>其他指标2</text></view>
+      <!-- <picker mode='selector' value='{{index}}' range='{{array}}'  bindchange='changeIndex'>
+        {{array[index]}}
+      </picker> -->
+      <!-- <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540431530321.png'></image> -->
+    </view>
+    <view class='contentCenter '>
+      <view class='sale items'>
+        <!-- <view>销售</view>
+        <view>1.5W/2.5W</view>
+        <view>30W/40W</view>
+        <view>78.5%</view> -->
+      </view>
+      <view class='newCustom items'>
+        <!-- <view>新客</view>
+        <view>2/5</view>
+        <view>30/40</view>
+        <view>80.6%</view> -->
+      </view>
+    </view>
+  </view>
+</view>

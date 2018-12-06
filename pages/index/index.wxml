@@ -1,0 +1,71 @@
+<view class='container' bingtap='opertap' bindtouchstart="handletouchtart" bindtouchend="opertouchend">
+  <view class="header {{_hide==1 ? 'hide':''}}">
+    <view>
+      <text class='seeled'>本月累计销售额</text>
+      <text class='seelMoney'>{{sale}}元</text>
+    </view>
+    <view>
+      <text class='seeled'>本月累计提成</text>
+      <text class='seelMoney'>{{saleMoney}}元</text>
+    </view>
+    <view class='pull'>
+      <view>
+        <!-- <image class='refresh' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=refresh.png'></image> -->
+        <text bindtap='loadMore' class='lookMore'>查看更多</text>
+      </view>
+      <!-- <image class='pullDown' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=pull.png'></image> -->
+    </view>
+  </view>
+
+  <view class="section {{_hide==1 ? 'hide':''}}">
+    <view class='month' bingtap='handletap' bindtouchstart="handletouchtart" bindtouchmove="handletouchmove" bindtouchend="handletouchend">
+      <text data-month='{{monthList[0]}}' bindtap='changeMonth'>{{monthList[0]}}月</text>
+      <text data-month='{{monthList[1]}}' bindtap='changeMonth'>{{monthList[1]}}月</text>
+      <text class='active'>{{monthList[2]}}月</text>
+      <text data-month='{{monthList[3]}}' bindtap='changeMonth'>{{monthList[3]}}月</text>
+      <text data-month='{{monthList[4]}}' bindtap='changeMonth'>{{monthList[4]}}月</text>
+    </view>
+    <view class="loadingParent">
+      <canvas canvas-id="canvasIndex"></canvas>
+      <view class='finish'>
+        <text class='finishPercent'>{{finishPercent}}</text>
+        <text class='percent'>%</text>
+        <view class='monthGoal'>
+          <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=coin.png'></image>
+          <text>本月业绩目标</text>
+        </view>
+      </view>
+    </view>
+    <view class='finishMember'>本店已有
+      <text>{{finishMember}}</text>名店员完成了业绩目标
+    </view>
+  </view>
+  <view class='footer'>
+    <view>
+      <image bindtap='toCate' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540277630452.png"></image>
+      <text bindtap='toCate'>内容词典</text>
+    </view>
+    <view>
+      <image bindtap='openOut' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540277701250.png"></image>
+      <text bindtap='openOut'>招募客户</text>
+    </view>
+    <view>
+      <image bindtap='toMailList' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540277718576.png"></image>
+      <text bindtap='toMailList'>客户通讯录</text>
+    </view>
+    <view>
+      <image bindtap='toPersonal' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540279706531.png"></image>
+      <text bindtap='toPersonal'>个人中心</text>
+    </view>
+  </view>
+  <view class="showMore {{_hide==1 ? 'hide':''}}">
+    <a href="">
+      <image bindtap='showHideBtn' mode='aspectFit' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540278029289.png"></image>
+    </a>
+  </view>
+  <cover-view class="cover {{coverShow==1 ? 'show':''}}"></cover-view>
+  <cover-view class='error {{errorShow==1 ? "show":""}}'>
+			<cover-view class='errorInfo'>提示</cover-view>
+			<cover-view class='errorTip'>对不起，您暂无权限使用该功能,点击右上角小圆点可退出</cover-view>
+		</cover-view>
+</view>
