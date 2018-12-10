@@ -1,0 +1,57 @@
+<view class='container'>
+  <view class='header'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{margin}}rpx" next-margin="{{margin}}rpx" circular='{{circular}}' skip-hidden-item-layout ="true" indicator-color='RGB(230,228,228)' indicator-active-color='RGB(59,131,186)'>
+      <block wx:for="{{imgUrls}}" wx:key=''>
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='nav'>
+    <view class=''>
+      <view>热卖</view>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543993088855.png'></image>
+    </view>
+    <view class='active'>
+      <view>产品系列</view>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543993088855.png'></image>
+    </view>
+    <view class=''>
+      <view>面部</view>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543993088855.png'></image>
+    </view>
+    <view class=''>
+      <view>眼部</view>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543993088855.png'></image>
+    </view>
+    <view class=''>
+      <view>唇部</view>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543993088855.png'></image>
+    </view>
+  </view>
+  <view class='section'>
+    <view class='search'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543993101764.png'></image>
+      <input placeholder='输入产品名称'></input>
+    </view>
+    <view class='goodList'>
+      <view class='goodItem'>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+        <view class='goodName'>薇姿矿物矿泉系列水活精华液（30ml）</view>
+        <view class='goodInfo'>
+          <view>保湿 | 补水</view>
+          <view>￥189</view>
+          <view>月销100笔</view>
+        </view>
+        <view class='discount'>
+          <text>赚</text>
+          <text>46元</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+  
+  </view>
+</view>
