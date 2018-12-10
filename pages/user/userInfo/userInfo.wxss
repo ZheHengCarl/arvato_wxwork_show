@@ -1,19 +1,708 @@
 @import "../../../static/utils/common.wxss";
-view,text,a{
-  font-family: 'SourceHanSansCN-Normal'
-}
-.container{
-  width: 100%;
-  height: 100%;
+view,text,a,input{
+  font-family: 'SourceHanSansCN-Normal';
   box-sizing: border-box;
-  overflow: hidden
 }
-
 .header{
   width: 100%;
   height: 25%;
-  position: relative;
   background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086550758.png');
   background-size: 100% 100%;
-  
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+}
+
+.headerInfo{
+  width: 100%;
+  height: 150rpx;
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 160rpx;
+}
+
+.headerInfo .phone,.headerInfo .talk{
+  width: 66rpx;
+  height: 66rpx;
+  margin-top: 42rpx
+}
+
+.headerInfo .phone image,.headerInfo .talk image{
+  width: 100%
+}
+
+.headerInfo .avatar{
+  width: 150rpx;
+  height: 150rpx;
+  position: relative;
+}
+
+.headerInfo .avatar image{
+  width: 100%
+}
+
+.headerInfo .avatar .sexIcon{
+  width: 30rpx;
+  position: absolute;
+  bottom: 4rpx;
+  right: 4rpx;
+}
+
+.discount{
+  position: absolute;
+  right: 0;
+  top: 50rpx;
+  width: 150rpx;
+  height: 70rpx;
+  background-color: #881A22;
+  display: flex;
+  justify-content: space-around;
+  border-top-left-radius: 34rpx;
+  border-bottom-left-radius: 34rpx;
+  padding-left: 10rpx
+}
+
+.discount image{
+  width: 36rpx;
+  margin-top: 22rpx
+}
+
+.discount text{
+  font-size: 20rpx;
+  color: #FFFFFF;
+  line-height: 70rpx;
+}
+
+.vipLevel{
+  width: 110rpx;
+  height: 40rpx;
+  background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086753050.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  font-size: 20rpx;
+  color: #6C6C6C;
+  text-align: center;
+  line-height: 40rpx;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: -20rpx;
+}
+
+.userInfo{
+  text-align: center;
+  color: #FBFBFB;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.userInfo .nickName{
+  font-size: 28rpx
+}
+
+.userInfo .point{
+  font-size: 20rpx
+}
+
+.remark{
+  color: #FFFFFF;
+  font-size: 20rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+
+
+.nav{
+  width: 100%;
+  height: 15%;
+  position: absolute;
+  top: 25%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 36rpx;
+  border-bottom: 1rpx solid #DDDDDD
+}
+
+.nav .navList{
+  text-align: center;
+  position: relative;
+  width: 120rpx;
+}
+
+.nav .navList image{
+  width: 60rpx;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 20rpx;
+}
+
+.nav .navList .choose{
+   opacity: 0;
+   z-index: -1
+}
+
+.nav .navList text{
+  font-size: 22rpx;
+  color: #c8c8c8;
+  display: block;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 100rpx;
+}
+
+.nav .active .choose{
+  opacity: 1;
+  z-index: 1
+}
+
+.nav .active text{
+  color: #AC202A;
+}
+
+.section{
+  height: 60%;
+  width: 100%;
+  background: #f5f5f5;
+  position: absolute;
+  top: 40%;
+}
+
+
+/* 精准画像 */
+.portrait{
+  width: 100%;
+  height: 100%;
+  display: none
+}
+
+.userLabel{
+  width: 100%;
+  height: 35%;
+  padding: 40rpx 50rpx;
+  overflow: hidden;
+}
+
+.title{
+  width: 100%;
+  height: 24rpx;
+}
+
+.label{
+  float: left;
+  font-size: 24rpx;
+  color: #969696;
+  line-height: 24rpx;
+  border-left: 4rpx solid #C71129;
+  padding-left: 20rpx;
+}
+
+.more{
+  float: right;
+  width: 90rpx;
+  height: 24rpx;
+  font-size: 16rpx;
+  line-height: 24rpx;
+  text-align: center;
+  border-radius: 12rpx;
+  background: #C61129;
+  color: #FFFFFF
+}
+
+.labelList{
+  width: 100%;
+  margin-top: 15rpx;
+}
+
+.labelList view{
+  float: left;
+  height: 54rpx;
+  background: #c5c5c5;
+  border-radius: 26rpx;
+  color: #FFFFFF;
+  font-size: 24rpx;
+  line-height: 54rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  padding: 0 26rpx;
+  letter-spacing: 5rpx;
+}
+.userPicture{
+  width: 100%;
+  height: 65%;
+}
+.pic{
+  height: 20%;
+  padding-left: 40rpx
+}
+.userImage{
+  width: 100%;
+  height: 70%;
+  background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164142449.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.userImage image{
+  width: 160rpx;
+  height: 160rpx;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0
+}
+.userImage view{
+  background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544166420762.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  text-align: center;
+  color: #FFFFFF;
+  border-radius: 100%;
+}
+.userImage .label1{
+  width:90rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  font-size: 24rpx;
+  top: 30rpx;
+  left: 30rpx;
+}
+.userImage .label2{
+  width:120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  font-size: 26rpx;
+  top: 0;
+  right: 30rpx;
+}
+.userImage .label3{
+  width:150rpx;
+  height: 150rpx;
+  line-height: 150rpx;
+  font-size: 30rpx;
+  bottom: 30rpx;
+  right:200rpx;
+}
+
+/* 添加标签 */
+.currentLabel{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 60rpx 50rpx 0;
+  position: relative;
+  display: none
+}
+
+.manageLabel{
+  width: 100%;
+  height: 80%;
+}
+
+.currentLabelTitle{
+  text-align: center;
+  margin-bottom: 60rpx;
+  font-weight: bold;
+}
+
+.currentLabelList{
+  width: 100%;
+  overflow: hidden
+}
+
+.currentLabelItem{
+  float: left;
+  background: #c5c5c5;
+  border-radius: 26rpx;
+  color: #FFFFFF;
+  font-size: 24rpx;
+  line-height: 54rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  padding: 0 26rpx;
+  letter-spacing: 5rpx;
+  position: relative;
+}
+
+.currentLabelItem image{
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  top: 15rpx;
+  right: -6rpx
+}
+
+.addButton{
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  background: #FFFFFF
+}
+
+.addButton button{
+  background: #b02532;
+  border-radius: 40rpx;
+  height: 80rpx;
+  color: #FFFFFF;
+  font-size: 30rpx;
+  width: 40%;
+  margin: auto
+}
+
+/* 手动添加 */
+.addByHand{
+  width: 100%;
+  height: 100%;
+  display: none
+}
+
+.showAddLabel{
+  width: 100%;
+  height: 80%;
+  padding: 25rpx 50rpx 0;
+  position: relative
+}
+
+.addByHandTitle{
+  font-size: 30rpx;
+  color: #323232;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 25rpx;
+}
+
+.addLabelList{
+  overflow: hidden;
+}
+
+.addLabelItem{
+  width: 100%;
+  height: 66rpx;
+  background: #FFFFFF;
+  color: #646464;
+  font-size: 24rpx;
+  line-height: 66rpx;
+  text-align: center;
+  position: relative;
+}
+.addLabelItem image{
+  width: 26rpx;
+  height: 26rpx;
+  position: absolute;
+  right: 20rpx;
+  margin: auto;
+  top: 0;
+  bottom: 0
+}
+.handAddBtn{
+  position: absolute;
+  bottom: 10rpx;
+  margin: auto;
+  left: 0;
+  right: 0;
+  color: #B52633;
+  font-size: 20rpx;
+  text-decoration: underline;
+  line-height: 40rpx;
+  text-align: center
+}
+.ensureAddBtn{
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  background: #FFFFFF
+}
+
+.ensureAddBtn button{
+  background: #b02532;
+  border-radius: 40rpx;
+  height: 80rpx;
+  color: #FFFFFF;
+  font-size: 30rpx;
+  width: 80%;
+  margin: auto
+}
+
+/* 标签库添加 */
+.addFormLibrary{
+  width: 100%;
+  height: 100%;
+  display: none
+}
+
+.LibraryLabelList{
+  width: 100%;
+  height: 80%;
+  padding: 25rpx 50rpx 0;
+  position: relative
+}
+
+.addFormLibraryTitle{
+  font-size: 30rpx;
+  color: #323232;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 25rpx;
+}
+
+.searchLabel{
+  width: 100%;
+  height: 66rpx;
+  position: relative
+}
+
+.searchLabel input{
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #FFFFFF;
+  color: #C8C8C8;
+  font-size: 24rpx;
+  padding-left: 40%;
+}
+
+.searchLabel cover-image{
+  width: 25rpx;
+  height: 25rpx;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 30%;
+  z-index: 9
+}
+
+.LibraryList{
+  overflow: hidden;
+  margin-top: 20rpx
+}
+
+.ensureAddBtnFrom{
+  width: 100%;
+  height: 20%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  background: #FFFFFF
+}
+
+.ensureAddBtnFrom button{
+  background: #b02532;
+  border-radius: 40rpx;
+  height: 80rpx;
+  color: #FFFFFF;
+  font-size: 30rpx;
+  width: 80%;
+  margin: auto
+}
+
+.LibraryItem{
+  float: left;
+  background: #c5c5c5;
+  border-radius: 26rpx;
+  color: #FFFFFF;
+  font-size: 24rpx;
+  line-height: 54rpx;
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  padding: 0 26rpx;
+  letter-spacing: 5rpx;
+}
+
+.LibraryList .active{
+  background: #b02532;
+}
+
+/* 客户信息 */
+.customer{
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: none
+}
+
+.customerInfo{
+  width: 100%;
+  height: 100%;
+  padding: 30rpx 40rpx;
+}
+
+.customerInfo .customerItem{
+  width: 100%;
+  height: 50rpx;
+  margin-bottom: 10rpx
+}
+.customerInfo .customerItem text{
+  width: 40%;
+  float: left;
+  color: #969696;
+  font-size: 24rpx;
+  line-height: 50rpx;
+}
+
+.customerInfo .customerItem input, .customerInfo .customerItem picker{
+  width: 59%;
+  height: 30rpx;
+  float: right;
+  font-size: 24rpx;
+  color: #323232;
+  line-height: 50rpx
+}
+
+.ensureBtn{
+  width: 100%;
+  height: 120rpx;
+  background: #FFFFFF;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.ensureBtn button{
+  width: 500rpx;
+  height: 80rpx;
+  background: #d22a3b;
+  margin-top: 20rpx;
+  border-radius: 40rpx;
+  color: #FFFFFF;
+  font-size: 30rpx
+}
+
+.historyPoint{
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.pointDetail{
+  width: 100%;
+  height: 25%;
+  border-bottom: 1rpx solid #DDDDDD;
+  display: flex;
+}
+
+
+.pointNum,.pointOper,.operDetail{
+  flex: 1;
+  font-size: 60rpx;
+  color: #AF202A;
+  align-items:center; 
+  display: flex;
+}
+
+.pointNum text,.pointOper text,.operDetail text{
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.reduce{
+  color: #646464
+}
+
+.pointOper{
+  color: #323232;
+  font-size: 26rpx;
+}
+
+.operDetail text{
+  font-size: 24rpx;
+  color: #969696;
+}
+.loadmore{
+  position: fixed;
+  width: 66rpx;
+  height: 66rpx;
+  bottom: 20rpx;
+  right: 60rpx;
+}
+.historyOrder{
+  width: 100%;
+  height: 100%;
+  display: none
+}
+.orderList{
+  overflow: hidden;
+}
+.orderItem{
+  width: 100%;
+  padding: 60rpx 0;
+  overflow: hidden;
+  border-bottom: 1rpx solid #DDDDDD
+}
+.orderItem .orderInfo{
+  width: 33%;
+  float: left;
+  overflow: hidden
+}
+.orderItem .orderInfo view{
+  width: 100%;
+  text-align: center;
+}
+
+.orderPlace{
+  color: #323232;
+  font-size: 30rpx;
+}
+
+.orderTime,.goodsName,.price{
+  color: #969696;
+  font-size: 24rpx
+}
+
+.orderItem .orderInfo .goodsName,.orderItem .orderInfo .price{
+  text-align: left;
+  padding-left: 40rpx
+}
+.orderItem .orderInfo .price{
+  padding-left: 50rpx;
+}
+.pointState{
+  font-size: 40rpx;
+  color: #AF202A
+}
+
+.present{
+  width: 100%;
+  height: 100%;
+  padding: 50rpx;
+  display: none;
+}
+
+.presentDetail{
+  width: 100%
+}
+
+.presentDetail text{
+  float: left;
+  width: 60%;
+  font-size: 24rpx;
+  color: #323232;
+  margin-bottom: 40rpx
+}
+
+.presentDetail .presentTitle{
+  width: 40%;
+  color: #969696;
+}
+
+.show{
+  display: block
 }

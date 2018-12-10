@@ -128,7 +128,7 @@ Page({
   toUserDetail:function(e){
     var externalId = e.currentTarget.dataset.param
     wx.navigateTo({
-      url: '../user/user?externalId=' + externalId
+      url: '../userInfo/userInfo?externalId=' + externalId
     })
   },
 

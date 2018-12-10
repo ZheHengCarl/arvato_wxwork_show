@@ -1,24 +1,333 @@
-<!--pages/information/information.wxml-->
 <view class='container'>
+
+  <!-- 用户信息 -->
   <view class='header'>
     <view class='headerInfo'>
       <view class='phone'>
-        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086562067.png'></image>
+        <image class='phoneIcon' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086562067.png'></image>
       </view>
       <view class='avatar'>
-        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></image>
-        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086613843.png'></image>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></image>
+        <image class='sexIcon' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086613843.png'></image>
       </view>
       <view class='talk'>
-        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086578867.png'></image>
+        <image class='talkIcon' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086578867.png'></image>
       </view>
     </view>
-    <view class='dis'></view>
+    <view class='discount'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086740589.png'></image>
+      <text>优惠券</text>
+    </view>
+    <view class='userInfo'>
+      <text class='nickName'>Gina</text>，
+      <text class='point'>3250积分</text>
+    </view>
+    <view class='remark'>
+      备注:一枚钱多的沙漠干皮夜猫子，死宅！
+    </view>
+    <view class='vipLevel'>
+      银卡会员
+    </view>
   </view>
+
+  <!-- 导航 -->
   <view class='nav'>
-  
+    <view class='navList {{currentTab==0||currentTab==100 ? "active" : ""}}' data-current="0" bindtap="changeNav">
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086889335.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086904069.png'></image>
+      <text>精准画像</text>
+    </view>
+    <view class='navList {{currentTab==1 ? "active" : ""}}' data-current="1" bindtap="changeNav">
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086918753.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086935359.png'></image>
+      <text>客户信息</text>
+    </view>
+    <view class='navList {{currentTab==2 ? "active" : ""}}' data-current="2" bindtap="changeNav">
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086946672.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086960705.png'></image>
+      <text>历史积分</text>
+    </view>
+    <view class='navList {{currentTab==3 ? "active" : ""}}' data-current="3" bindtap="changeNav">
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086975938.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086991856.png'></image>
+      <text>历史订单</text>
+    </view>
+    <view class='navList {{currentTab==4 ? "active" : ""}}' data-current="4" bindtap="changeNav">
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544087005040.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544087018080.png'></image>
+      <text>礼品领用</text>
+    </view>
   </view>
+
+  <!-- 内容页 -->
   <view class='section'>
-  
+
+    <!-- 精准画像 -->
+    <view class='portrait {{currentTab==0 ? "show" : ""}}  {{labelTab==0 ? "show" : ""}}'>
+      <view class='userLabel'>
+        <view class='title'>
+          <view class='label'>用户标签</view>
+          <view class='more' bindtap='showMore' data-index='1'>MORE +</view>
+        </view>
+        <view class='labelList'>
+          <view>关注抗皱紧致</view>
+          <view>购物达人</view>
+          <view>护肤面膜控</view>
+          <view>高价值</view>
+          <view>品牌忠实消费者</view>
+          <view>白富美</view>
+        </view>
+      </view>
+      <view class='userPicture'>
+        <view class='title pic'>
+          <view class='label'>用户画像</view>
+        </view>
+        <view class='userImage'>
+          <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></image>
+          <view class='label1'>购物达人</view>
+          <view class='label2'>白富美</view>
+          <view class='label3'>护肤面膜控</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 标签管理 -->
+    <view class='currentLabel {{labelTab==1 ? "show" : ""}}'>
+      <view class='manageLabel'>
+        <view class='currentLabelTitle'>用户标签</view>
+        <view class='currentLabelList'>
+          <label class='currentLabelItem'>
+            关注抗皱紧致
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
+          </label>
+          <label class='currentLabelItem'>
+            购物达人
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
+          </label>
+          <label class='currentLabelItem'>
+            护肤面膜控
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
+          </label>
+          <label class='currentLabelItem'>
+            高价值
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
+          </label>
+          <label class='currentLabelItem'>
+            品牌忠实消费者
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
+          </label>
+        </view>
+      </view>
+      <view class='addButton'>
+        <button bindtap='showMore' data-index='2'>标签库添加</button>
+        <button bindtap='showMore' data-index='3'>手动添加</button>
+      </view>
+    </view>
+
+    <!-- 手动添加 -->
+    <view class='addByHand {{labelTab==2 ? "show" : ""}}'>
+      <view class='showAddLabel'>
+        <view class='addByHandTitle'>手动添加</view>
+        <view class='addLabelList'>
+          <view class='addLabelItem'>
+            抗皱紧致关注者
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
+          </view>
+        </view>
+        <view class='handAddBtn'>增加标签</view>
+      </view>
+      <view class='ensureAddBtn'>
+        <button>确认添加</button>
+      </view>
+    </view>
+
+    <!-- 标签库添加 -->
+    <view class='addFormLibrary {{labelTab==3 ? "show" : ""}}'>
+      <view class='LibraryLabelList'>
+        <view class='addFormLibraryTitle'>标签库</view>
+        <view class='searchLabel'>
+          <input placeholder='标签关键字'>
+          </input>
+          <cover-image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544171328985.png'></cover-image>
+        </view>
+        <view class='LibraryList'>
+          <label class='LibraryItem active'>关注抗皱紧致</label>
+          <label class='LibraryItem '>购物达人</label>
+          <label class='LibraryItem '>护肤面膜控</label>
+          <label class='LibraryItem '>高价值</label>
+          <label class='LibraryItem active'>护肤面膜控</label>
+          <label class='LibraryItem '>白富美</label>
+          <label class='LibraryItem '>关注抗皱紧致</label>
+          <label class='LibraryItem '>购物达人</label>
+          <label class='LibraryItem '>护肤面膜控</label>
+          <label class='LibraryItem active'>高价值</label>
+          <label class='LibraryItem '>护肤面膜控</label>
+          <label class='LibraryItem '>白富美</label>
+        </view>
+      </view>
+      <view class='ensureAddBtnFrom'>
+        <button>确认添加</button>
+      </view>
+    </view>
+
+    <!-- 客户信息 -->
+    <view class='customer {{currentTab==1 ? "show" : ""}}'>
+      <view class='customerInfo'>
+        <view class='birthday customerItem'>
+          <text>会员生日</text>
+          <input value='1998-08-08'></input>
+        </view>
+        <view class='area customerItem'>
+          <text>地区</text>
+          <picker mode="region">
+            上海市闸北区
+          </picker>
+        </view>
+        <view class='detailArea customerItem'>
+          <text>详细地址</text>
+          <input value='万荣路700号A3幢'></input>
+        </view>
+        <view class='age customerItem'>
+          <text>年龄</text>
+          <input value='23'></input>
+        </view>
+        <view class='addDate customerItem'>
+          <text>入会日期</text>
+          <input value='2018-05-20'></input>
+        </view>
+        <view class='firstBuyDate customerItem'>
+          <text>首购日期</text>
+          <input value='2018-06-05'></input>
+        </view>
+        <view class='register customerItem'>
+          <text>注册方式</text>
+          <picker mode="selector" range='{{register}}'>
+            {{register[0]}}
+          </picker>
+        </view>
+        <view class='store customerItem'>
+          <text>店铺</text>
+          <input value='上海正大广场店'></input>
+        </view>
+        <view class='ensureBtn'>
+          <button>确认修改</button>
+        </view>
+      </view>
+    </view>
+
+    <!-- 历史积分 -->
+    <view class='historyPoint {{currentTab==2 ? "show" : ""}}'>
+      <view class='pointDetail'>
+        <view class='pointNum'>
+          <text>+ 1000</text>
+        </view>
+        <view class='pointOper'>
+          <text>消费积分</text>
+        </view>
+        <view class='operDetail'>
+          <text>微商城消费累加\n2018/06/01</text>
+        </view>
+      </view>
+      <view class='pointDetail'>
+        <view class='pointNum reduce'>
+          <text>- 600</text>
+        </view>
+        <view class='pointOper'>
+          <text>积分兑礼</text>
+        </view>
+        <view class='operDetail'>
+          <text>微商城消费累加\n2018/06/01</text>
+        </view>
+      </view>
+      <view class='pointDetail'>
+        <view class='pointNum'>
+          <text>+ 1000</text>
+        </view>
+        <view class='pointOper'>
+          <text>消费积分</text>
+        </view>
+        <view class='operDetail'>
+          <text>微商城消费累加\n2018/06/01</text>
+        </view>
+      </view>
+      <view class='pointDetail'>
+        <view class='pointNum'>
+          <text>+ 1000</text>
+        </view>
+        <view class='pointOper'>
+          <text>消费积分</text>
+        </view>
+        <view class='operDetail'>
+          <text>微商城消费累加\n2018/06/01</text>
+        </view>
+      </view>
+      <image class='loadmore' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544154992927.png'></image>
+    </view>
+
+    <!-- 历史订单 -->
+    <view class='historyOrder  {{currentTab==3 ? "show" : ""}}'>
+      <view class='orderList'>
+        <view class='orderItem'>
+          <view class='orderInfo'>
+            <view class='orderPlace'>新梅联合广场</view>
+            <view class='orderTime'>2018/06/01</view>
+          </view>
+          <view class='orderInfo'>
+            <view class='goodsName'>●红妍肌活精华露</view>
+            <view class='price'>￥588 × 1</view>
+          </view>
+          <view class='orderInfo'>
+            <view class='pointState'>+ 590</view>
+          </view>
+        </view>
+        <view class='orderItem'>
+          <view class='orderInfo'>
+            <view class='orderPlace'>新梅联合广场</view>
+            <view class='orderTime'>2018/06/01</view>
+          </view>
+          <view class='orderInfo'>
+            <view class='goodsName'>●红妍肌活精华露</view>
+            <view class='price'>￥588 × 1</view>
+            <view class='goodsName'>●悦薇珀颜亮肤水</view>
+            <view class='price'>￥5656 × 1</view>
+          </view>
+          <view class='orderInfo'>
+            <view class='pointState'>+ 1270</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 礼品领用 -->
+    <view class='present {{currentTab==4 ? "show" : ""}}'>
+      <view class='presentDetail'>
+        <text class='presentTitle'>申请日期</text>
+        <text>2018-10-10</text>
+      </view>
+      <view class='presentDetail'>
+        <text class='presentTitle'>申请编号</text>
+        <text>BCHD268869</text>
+      </view>
+      <view class='presentDetail'>
+        <text class='presentTitle'>预约方式</text>
+        <text>微信预约</text>
+      </view>
+      <view class='presentDetail'>
+        <text class='presentTitle'>店铺</text>
+        <text>正大广场店</text>
+      </view>
+      <view class='presentDetail'>
+        <text class='presentTitle'>商品名称</text>
+        <text>红妍肌活精华露</text>
+      </view>
+      <view class='presentDetail'>
+        <text class='presentTitle'>申请数量</text>
+        <text>1</text>
+      </view>
+      <view class='presentDetail'>
+        <text class='presentTitle'>状态</text>
+        <text>申领中</text>
+      </view>
+    </view>
   </view>
 </view>
