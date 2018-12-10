@@ -12,14 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-      console.info("2121")
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+      
   },
 
   /**
@@ -29,38 +22,43 @@ Page({
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  // 用户点击手机号授权事件
+  getPhone: function (res) {
+    console.info(res);
+    var ency = res.detail.encryptedData;
+    var iv = res.detail.iv;
+    var sessionKey = app.sessionKey;
+    console.info(app);
+    if (res.detail.errMsg == 'getPhoneNumber:fail user deny') {
+      console.info("用户点击了拒绝。");
+    } else {
+      console.info("用户点击了同意。");
+      var data = {
+        encryptedData: ency,
+        iv: iv,
+        sessionKey: sessionKey,
+        openId: app.openId
+      }
+      console.info(data);
+      // 同意获取手机号就发送请求给后台 解密手机号
+      wx.request({
+        url: app.domain + "/show/phone",
+        data: data,
+        header: {
+          'content-type': 'application/x-www-form-urlencoded'
+        },
+        success: function (res) {
+          console.info("后台解密手机号返回的结果:");
+          console.info(res);
+        },
+        fail: function (res) {
+          console.info("发送ajax请求刀" + app.domain + "失败");
+          console.info(res);
+        }
+      })
+    }
   }
+
+
+
 })

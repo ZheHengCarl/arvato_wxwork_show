@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -36,12 +36,25 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
 					"name": "客户信息",
-					"pathName": "pages/user/userInfo/userInfo"
+					"pathName": "pages/user/userInfo/userInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "授权手机",
+					"pathName": "pages/auth/auth",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "轮播介绍",
+					"pathName": "pages/swiper/swiper",
+					"query": ""
 				}
 			]
 		}
