@@ -1,13 +1,14 @@
 {
   "pages": [
+    "pages/swiper/swiper",
     "pages/index/index",
     "pages/auth/auth",
     "pages/kpi/detail/detail",
     "pages/kpi/rank/rank",
     "pages/user/mailList/mailList",
     "pages/user/userInfo/userInfo",
-    "pages/swiper/swiper",
-    "pages/workbench/workbench"  ],
+    "pages/workbench/workbench"  
+    ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

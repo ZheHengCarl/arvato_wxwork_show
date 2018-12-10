@@ -56,7 +56,7 @@ Page({
     console.info(index);
     if(index == 4){
       // 跳转到选择用户身份页
-      wx.navigateTo({
+      wx.redirectTo({
         url: "../workbench/workbench"
       })
     }
