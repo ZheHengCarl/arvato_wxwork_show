@@ -17,23 +17,12 @@ Page({
     _num:1,
     _hide:0,
     scrollTop: 0,
-    brand: 'SHISEIDO'
+    brand: 'SHISEIDO',
+    role1:0
   },
 
   onShow:function(){
-    var that = this;
-    wx.getSystemInfo({
-      success({ environment }) {
-        console.log('environment', environment)
-        if (environment != 'wxwork') {
-          // 如果运行环境不是在企业微信，做出相应提示
-          // that.setData({
-          //   coverShow: 1,
-          //   errorShow: 1
-          // })
-        }
-      }
-    });
+    
   },
 
   onLoad: function() {
@@ -41,221 +30,7 @@ Page({
     app.domain = 'https://minipro.arvatocrm.cn/shiseido';
     this.drawFinish(0.7);
     this.showMonth();
-    wx.qy.login({
-      success: function(res) {
-        console.log('qy.login', res)
-        if (res.code) {
-          //发起网络请求
-          console.log(res.code)
-          console.log(that.data.brand)
-          wx.request({
-            url: app.domain + '/wxwork/minipro/login',
-            data: {
-              code: res.code,
-              brand: that.data.brand
-            },
-            success: function(res) {
-              console.info('qy.login返回的参数', res);
-              if(res.data.code == 200){
-                app.staffId = res.data.data.staffId;
-                app.userNameId = res.data.data.userid;
-                app.token = res.data.data.token;
-                app.avatar = res.data.data.avatar;
-                app.qrCode = res.data.data.qrCode;
-                app.name = res.data.data.name;
-              }else{
-                wx.showModal({
-                  title: '提示',
-                  content: '员工信息出错'
-                })
-              }
-              
-            }
-          })
-        } else {
-          console.log('登录失败！' + res.errMsg)
-        }
-      }
-    });
 
-  },
-
-  openOut: function() {
-    var that = this;
-    wx.qy.selectExternalContact({
-      filterType: 0, //0表示展示全部外部联系人列表，1表示仅展示未曾选择过的外部联系人。
-      success: function(res) {
-        console.log(res)
-        var userIds = res.userIds; // 返回此次选择的外部联系人userId列表，数组类型
-        console.log('userIds', userIds)
-        var param = {
-          brand: that.data.brand,
-          token: app.token
-        };
-        var str = '';
-        console.log('userIds', userIds)
-        console.log('param1', param)
-        if (userIds != [] && userIds != null && userIds != undefined) {
-          str = userIds.join(',');
-          param.externalUserIdsStr = str;
-          console.log('param2', param)
-          wx.request({
-            url: app.domain + '/wxwork/external/check',
-            data: param,
-            success: function(data) {
-              console.log('绑定情况', data);
-
-              // var indexId = [];
-              // for (var k = 0; k < data.data.data.hadBindList.length;k++){
-              //   indexId.push(data.data.data.hadBindList[k].wxExternalUserid)
-              // }
-              // console.log("indexId", indexId);
-              // wx.qy.shareAppMessageEx({
-              //   selectedExternalUserIds: indexId,
-              //   success:   function(res)  {         
-              //     // 回调  
-              //     console.log(res)    
-              //   },
-              // });
-              
-              if (data.data.data.hadBindList != undefined && data.data.data.hadBindList.length>=1) {
-                var hadBind = [];
-                var hadBindStr = '';
-                for (var n = 0; n < data.data.data.hadBindList.length; n++) {
-                  hadBind.push(data.data.data.hadBindList[n].name)
-                }
-                
-                if (hadBind.length >1){
-                  hadBindStr = hadBind.join(' 、');
-                }else{
-                  hadBindStr = hadBind[0];
-                } 
-                console.log('招募名单',hadBindStr);
-                if (data.data.data.unBindList != undefined && data.data.data.unBindList.length >= 1) {
-                  wx.showModal({
-                    title: '提示',
-                    content: hadBindStr + '已经被招募',
-                    showCancel: false,
-                    success: function (res) {
-                      if (res.confirm) {
-                        var unBindList = data.data.data.unBindList;
-                        var bindStr = '';
-                        var staffId = app.staffId;
-                        var brand = that.data.brand;
-                        var unBind = [];
-                        for (var m = 0; m < unBindList.length; m++) {
-                          unBind.push(unBindList[m].wxExternalUserid)
-                        }
-                        bindStr = unBind.join(',');
-                        console.log('绑定参数', bindStr, staffId, brand);
-                        wx.request({
-                          url: app.domain + '/wxwork/external/bind',
-                          data: {
-                            externalUserIdsStr: bindStr,
-                            brand: brand,
-                            staffId: staffId,
-                            token: app.token
-                          },
-                          success: function (res) {
-                            console.log(res);
-                            if (res.data.code == '200') {
-                              wx.showModal({
-                                title: '提示',
-                                content: '招募成功',
-                                showCancel: false,
-                                success: function (res) {
-                                  if (res.confirm) {
-                                    that.toMailList();
-                                  }
-                                }
-                              })
-                            } else {
-                              wx.showModal({
-                                title: '提示',
-                                content: '招募失败',
-                                showCancel: false,
-                                success: function (res) {
-                                  if (res.confirm) {
-                                    that.toMailList();
-                                  } else if (res.cancel) {
-                                    that.openOut();
-                                  }
-                                }
-                              })
-                            }
-                          }
-                        })
-                      }
-                    }
-                  });
-                }else{
-                  wx.showModal({
-                    title: '提示',
-                    content: hadBindStr + '已经被招募',
-                    showCancel: false,
-                    success: function (res) {
-                      if(res.confirm){
-                        that.toMailList();
-                      }
-                    }
-                  })
-                }
-              }else{
-                if (data.data.data.unBindList != undefined && data.data.data.unBindList.length >= 1) {
-                  var unBindList = data.data.data.unBindList;
-                  var bindStr = '';
-                  var staffId = app.staffId;
-                  var brand = that.data.brand;
-                  var unBind = [];
-                  for (var m = 0; m < unBindList.length; m++) {
-                    unBind.push(unBindList[m].wxExternalUserid)
-                  }
-                  bindStr = unBind.join(',');
-                  console.log('绑定参数', bindStr, staffId, brand);
-                  wx.request({
-                    url: app.domain + '/wxwork/external/bind',
-                    data: {
-                      externalUserIdsStr: bindStr,
-                      brand: brand,
-                      staffId: staffId,
-                      token: app.token
-                    },
-                    success: function (res) {
-                      console.log(res);
-                      if (res.data.code == '200') {
-                        wx.showModal({
-                          title: '提示',
-                          content: '招募成功',
-                          showCancel: false,
-                          success: function (res) {
-                            if (res.confirm) {
-                              that.toMailList();
-                            }
-                          }
-                        })
-                      } else {
-                        wx.showModal({
-                          title: '提示',
-                          content: '招募失败',
-                          showCancel: false,
-                          success: function (res) {
-                            if (res.confirm) {
-                              that.toMailList();
-                            } else if (res.cancel) {
-                              that.openOut();
-                            }
-                          }
-                        })
-                      }
-                    }
-                  })
-                }
-              } 
-            }
-          })
-        }
-      }
-    });
   },
 
   drawFinish: function(p) {
@@ -404,6 +179,23 @@ Page({
     })
   },
 
+  toCare: function () {
+    wx.navigateTo({
+      url: '../care/care',
+      success: function () {
+
+      }, //成功后的回调；      
+      fail: function () {
+
+      },
+      //失败后的回调；      
+      complete: function () {
+
+      } //结束后的回调(成功，失败都会执行)
+
+    })
+  },
+
   toMailList: function() {
     wx.navigateTo({
       url: '../user/mailList/mailList',
@@ -421,19 +213,10 @@ Page({
     })
   },
 
-  toPersonal: function() {
-    wx.navigateTo({
-      url: '../personal/personal',
-      success: function() {
-
-      }, //成功后的回调；      
-      fail: function() {
-
-      },
-      //失败后的回调；      
-      complete: function() {
-
-      } //结束后的回调(成功，失败都会执行)
+  toSale: function() {
+    this.setData({
+      coverShow:1,
+      chooseShow:1
     })
   },
 
@@ -452,4 +235,28 @@ Page({
       } //结束后的回调(成功，失败都会执行)
     })
   },
+
+  changeRole1:function(e){
+    var role1 = e.currentTarget.dataset.role1;
+    this.setData({
+      role1:role1
+    })
+  },
+
+  toIndex:function(){
+    var role = this.data.role1; 
+    this.setData({
+      coverShow: 0,
+      chooseShow: 0
+    })
+    if(role == 0){
+      wx.navigateTo({
+        url: '../sale/index_user/index'
+      })
+    } else if (role == 1){
+      wx.navigateTo({
+        url: '../sale/index_bc/index'
+      })
+    }
+  }
 })

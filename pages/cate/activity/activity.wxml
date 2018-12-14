@@ -1,0 +1,22 @@
+<!--pages/wxwork/cate/activity/activity.wxml-->
+<view class="container">
+  <view class="orderInfo-list define-title">
+    <view class="title">活动列表</view>
+  </view>
+  <view class="scroll-list" wx:for='{{activityList}}' wx:key=''>
+    <view class='lists' id = '{{item.promotionId}}'>
+      <view class='icons icons-activity'></view>
+      <view class='txt'>{{item.title}}</view>
+      <view class='btns'>
+        <button data-param="{{item.promotionId}}" bindtap='deleteList'>删除</button>
+        <button data-param="{{item.promotionId}}" bindtap='editList'>编辑</button>
+        <button data-param="{{item.promotionId}}" bindtap='showList'>查看</button>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- <view class="load-spinner load-more hide">
+		<view class="bounce1"></view>
+		<view class="bounce2"></view>
+		<view class="bounce3"></view>
+	</view> -->

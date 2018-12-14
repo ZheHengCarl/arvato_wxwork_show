@@ -7,7 +7,7 @@
         <image class='phoneIcon' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086562067.png'></image>
       </view>
       <view class='avatar'>
-        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></image>
+        <image mode='widthFix' src='{{avatar}}'></image>
         <image class='sexIcon' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086613843.png'></image>
       </view>
       <view class='talk'>
@@ -19,11 +19,11 @@
       <text>优惠券</text>
     </view>
     <view class='userInfo'>
-      <text class='nickName'>Gina</text>，
-      <text class='point'>3250积分</text>
+      <text class='nickName'>{{username}}</text>，
+      <text class='point'>{{point}}积分</text>
     </view>
     <view class='remark'>
-      备注:一枚钱多的沙漠干皮夜猫子，死宅！
+      备注 : {{remarks}}
     </view>
     <view class='vipLevel'>
       银卡会员
@@ -70,12 +70,7 @@
           <view class='more' bindtap='showMore' data-index='1'>MORE +</view>
         </view>
         <view class='labelList'>
-          <view>关注抗皱紧致</view>
-          <view>购物达人</view>
-          <view>护肤面膜控</view>
-          <view>高价值</view>
-          <view>品牌忠实消费者</view>
-          <view>白富美</view>
+          <view wx:for='{{labelList}}' wx:key=''>{{item}}</view>
         </view>
       </view>
       <view class='userPicture'>
@@ -83,7 +78,7 @@
           <view class='label'>用户画像</view>
         </view>
         <view class='userImage'>
-          <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></image>
+          <image src='{{avatar}}'></image>
           <view class='label1'>购物达人</view>
           <view class='label2'>白富美</view>
           <view class='label3'>护肤面膜控</view>
@@ -96,31 +91,15 @@
       <view class='manageLabel'>
         <view class='currentLabelTitle'>用户标签</view>
         <view class='currentLabelList'>
-          <label class='currentLabelItem'>
-            关注抗皱紧致
-            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
-          </label>
-          <label class='currentLabelItem'>
-            购物达人
-            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
-          </label>
-          <label class='currentLabelItem'>
-            护肤面膜控
-            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
-          </label>
-          <label class='currentLabelItem'>
-            高价值
-            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
-          </label>
-          <label class='currentLabelItem'>
-            品牌忠实消费者
+          <label class='currentLabelItem' wx:for='{{labelList}}' wx:key=''>
+            {{item}}
             <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
           </label>
         </view>
       </view>
       <view class='addButton'>
-        <button bindtap='showMore' data-index='2'>标签库添加</button>
-        <button bindtap='showMore' data-index='3'>手动添加</button>
+        <button bindtap='showMore' data-index='2'>手动添加</button>
+        <button bindtap='showMore' data-index='3'>标签库添加</button>
       </view>
     </view>
 
@@ -151,11 +130,11 @@
           <cover-image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544171328985.png'></cover-image>
         </view>
         <view class='LibraryList'>
-          <label class='LibraryItem active'>关注抗皱紧致</label>
+          <label data-labelchoose='{{labelchoose}}' bindtap='chooseLabel' class='LibraryItem {{labelchoose==1 ? "active" : ""}}'>关注抗皱紧致</label>
           <label class='LibraryItem '>购物达人</label>
           <label class='LibraryItem '>护肤面膜控</label>
           <label class='LibraryItem '>高价值</label>
-          <label class='LibraryItem active'>护肤面膜控</label>
+          <label class='LibraryItem '>护肤面膜控</label>
           <label class='LibraryItem '>白富美</label>
           <label class='LibraryItem '>关注抗皱紧致</label>
           <label class='LibraryItem '>购物达人</label>

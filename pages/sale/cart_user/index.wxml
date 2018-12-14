@@ -1,0 +1,53 @@
+<view class='container'>
+  <view class='goodList'>
+    <view class='goodItem'>
+      <view bindtap='changeSelect' data-select='{{selected}}' class='select {{selected==1?"selected":""}}'></view>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+      <view class='goodInfo'>
+        <view class='goodName'>薇姿温泉矿物系列水活精华液</view>
+        <view class='goodIntroduce'>50ml</view>
+        <view class='goodPrice'>￥{{price}}</view>
+      </view>
+      <view class='count'>
+        <view data-num='{{num}}' bindtap='minus'>-</view><view class='num'>{{num}}</view><view data-num='{{num}}' bindtap='plus'>+</view>
+      </view>
+    </view>
+  </view>
+  <view class='disableGood'>
+    <view class='disableTitle'>失效商品</view>
+    <view class='disableList'>
+      <view class='goodItem'>
+        <view class='select'></view>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+        <view class='goodInfo'>
+          <view class='disablegoodName goodName'>薇姿温泉矿物系列水活精华液</view>
+          <view class='disablegoodIntroduce goodIntroduce'>50ml</view>
+          <view class='disablegoodPrice goodPrice'>￥189</view>
+        </view>
+      </view>
+      <view class='goodItem'>
+        <view class='select'></view>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+        <view class='goodInfo'>
+          <view class='disablegoodName goodName'>薇姿温泉矿物系列水活精华液</view>
+          <view class='disablegoodIntroduce goodIntroduce'>50ml</view>
+          <view class='disablegoodPrice goodPrice'>￥189</view>
+        </view>
+      </view>
+      <view class='goodItem'>
+        <view class='select'></view>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+        <view class='goodInfo'>
+          <view class='disablegoodName goodName'>薇姿温泉矿物系列水活精华液</view>
+          <view class='disablegoodIntroduce goodIntroduce'>50ml</view>
+          <view class='disablegoodPrice goodPrice'>￥189</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='select'></view>
+    <view class='countAll'>合计：￥ {{count}} </view>
+    <view class='placeOrder useful' bindtap='toEnsureOrder'>下单</view>
+  </view>
+</view>

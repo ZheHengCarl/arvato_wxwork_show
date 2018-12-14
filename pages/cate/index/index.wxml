@@ -1,0 +1,28 @@
+<!--pages/wxwork/cate/index/index.wxml-->
+<view class="container">
+  <view class="orderInfo-list define-title">
+    <view class="title">内容词典</view>
+  </view>
+  <view class="catelog-list">
+    <view class='lists' bindtap='toMessage'>
+      <text class='icons message'></text>
+      <text>产品简介</text>
+    </view>
+    <view class='lists' bindtap='toActivity'>
+      <text class='icons activity'></text>
+      <text>品牌活动</text>
+    </view>
+    <view class='lists' bindtap='toActivity'>
+      <text class='icons activity'></text>
+      <text>护肤小常识</text>
+    </view>
+    <view class='lists' bindtap='toVip'>
+      <text class='icons vip'></text>
+      <text>会员权益</text>
+    </view>
+    <view class='lists' bindtap='toYaoYue'>
+      <text class='icons invite'></text>
+      <text>邀约话术</text>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,3 @@
+<!--pages/cate/vip/vip.wxml-->
+<text>pages/cate/vip/vip.wxml</text>
+ <web-view src='{{link}}'></web-view>

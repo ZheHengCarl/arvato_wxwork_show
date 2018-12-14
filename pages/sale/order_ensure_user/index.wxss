@@ -1,0 +1,233 @@
+@import "../../../static/utils/common.wxss";
+.container{
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+  overflow: hidden
+}
+
+.header{
+  width: 100%;
+  height: 170rpx;
+  margin-top: 16rpx;
+  background: #ffffff;
+  position: relative;
+}
+
+.header .nickName{
+  font-size: 30rpx;
+  color: #344B57;
+  float: left;
+  margin: 30rpx 0 0 30rpx;
+}
+
+.header .userInfo{
+  float: left;
+  margin-left: 60rpx;
+}
+
+.header .userInfo .phone{
+  font-size: 30rpx;
+  color: #344B57;
+  margin-top: 30rpx;
+}
+
+.header .userInfo .site{
+  font-size: 24rpx;
+  color: #869CA7;
+  margin-top: 36rpx;
+}
+
+.header image{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.coupon{
+  height: 180rpx;
+  background: #ffffff;
+  margin-top: 16rpx;
+}
+
+.coupon .discount,.coupon .invoice{
+  height: 90rpx;
+  padding: 0 30rpx;
+}
+
+.coupon .discount view,.coupon .invoice view{
+  font-size: 28rpx;
+  color: #354C58;
+  line-height: 90rpx;
+  float: left
+}
+
+.coupon .discount{
+  border-bottom: 2rpx solid #f7f7f7
+}
+
+.coupon .discount .more,.coupon .invoice .more{
+  font-size: 24rpx;
+  float: right;
+  color: #869CA7
+}
+
+.goodItem{
+  width: 100%;
+  height: 300rpx;
+  background: #ffffff;
+  margin-top: 16rpx;
+  padding: 25rpx;
+  position: relative;
+}
+
+.goodItem image{
+  width: 160rpx;
+  height: 160rpx;
+  float: left;
+}
+
+.goodItem .goodInfo{
+  width: 100%;
+  height: 160rpx;
+  position: absolute;
+  top:25rpx;
+  left: 0; 
+  padding-left: 212rpx;
+  padding-right: 30rpx;
+}
+
+.goodInfo .goodName{
+  width: 100%;
+  font-size: 26rpx;
+  color: #344C57;
+  float: left
+}
+
+.goodInfo .goodIntroduce{
+  width: 100%;
+  margin-top: 20rpx;
+  float: left
+}
+
+.goodInfo .goodIntroduce .goodPrice{
+  font-size: 28rpx;
+  color: #DA202B;
+  float: left
+}
+
+.goodInfo .goodIntroduce .goodContent{
+  font-size: 28rpx;
+  color: #869DA7;
+  float: right
+}
+
+
+.goodInfo .tips{
+  float: left;
+  width: 210rpx;
+  height: 32rpx;
+  font-size: 20rpx;
+  color: #DA202B;
+  margin-top: 20rpx;
+  border: 2rpx solid #FF9F7B;
+  border-radius: 16rpx;
+  text-align: center
+}
+
+.buyNum{
+  width: 100%;
+  height: 100rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding-left: 30rpx;
+}
+
+.countTitle{
+  font-size: 28rpx;
+  color: #354C58;
+  line-height: 90rpx;
+}
+
+.count {
+  width: 180rpx;
+  height: 40rpx;
+  position: absolute;
+  bottom: 32rpx;
+  right: 30rpx;
+  display: flex;
+  justify-content: space-between
+}
+
+.count view{
+  width: 33.33%;
+  color: #354C57;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+.count .num{
+  background: #F4F4F4;
+  font-size: 26rpx;
+}
+
+.amount{
+  height: 170rpx;
+  background: #ffffff;
+  margin-top: 16rpx;
+  padding: 0 30rpx;
+  margin-bottom: 100rpx;
+}
+
+.amount .money,.amount .freight{
+  height: 50%;
+}
+
+.amount .money view,.amount .freight view{
+  float: left;
+  line-height: 85rpx;
+  font-size: 28rpx;
+  color: #354C58
+}
+
+.amount .money .amountMoney,.amount .freight .freightMoney{
+  float: right;
+  color: #354B57;
+}
+
+.footer{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+}
+
+.footer .payMoney{
+  float: left;
+  color: #DA202B;
+  font-size: 28rpx;
+  padding-left: 30rpx;
+  line-height: 100rpx;
+  font-weight: bold;
+}
+
+.footer .payMoney text{
+  font-size: 34rpx;
+}
+
+.footer .payBtn{
+  float: right;
+  width: 320rpx;
+  text-align: center;
+  line-height: 100rpx;
+  background: #DA202B;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 30rpx;
+
+}

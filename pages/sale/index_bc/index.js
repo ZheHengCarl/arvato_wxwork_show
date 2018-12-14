@@ -1,7 +1,7 @@
 Page({
   data: {
     imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+      'http://pic.90sjimg.com/back_pic/qk/back_origin_pic/00/03/95/402a9568fbe5e37f34aa64bba094df0c.jpg',
       'https://images2015.cnblogs.com/blog/1083235/201705/1083235-20170529224430274-470334084.png',
       'https://images2015.cnblogs.com/blog/1083235/201705/1083235-20170529224451586-1329647239.png'
     ],
@@ -10,6 +10,40 @@ Page({
     interval: 5000,
     duration: 1000,
     margin: 40,
-    circular: true
-  }
+    circular: true,
+    currentIndex:0
+  },
+
+  changeNav: function (e) {
+    var index = e.currentTarget.dataset.index;
+    this.setData({
+      currentIndex: index
+    })
+  },
+
+  showDemo: function () {
+    wx.showModal({
+      title: '提示',
+      content: '很遗憾，此版本仅为演示版，无法使用该功能。',
+      showCancel: false
+    })
+  },
+
+  toOrder:function(){
+    wx.navigateTo({
+      url: '../order_bc/index',
+    })
+  },
+
+  toMine: function () {
+    wx.navigateTo({
+      url: '../mine_bc/index',
+    })
+  },
+
+  toGood: function () {
+    wx.navigateTo({
+      url: '../good_user/index',
+    })
+  },
 })

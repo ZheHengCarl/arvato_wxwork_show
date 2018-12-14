@@ -1,0 +1,256 @@
+@import "../../../static/utils/common.wxss";
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.header{
+  height: 40%;
+  background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544670696561.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 0 30rpx;
+}
+
+.title{
+  width: 300rpx;
+  height: 90rpx;
+  margin: 0 auto;
+  text-align: center;
+  position: relative
+}
+
+.title .imageFirst{
+  width: 15rpx;
+  height: 20rpx;
+  left: 0;
+  position: absolute;
+  top:  35rpx;
+}
+
+.title .imageLast{
+  width: 15rpx;
+  height: 20rpx;
+  right: 0;
+  position: absolute;
+  top:  35rpx;
+}
+
+.title text{
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color: #333333
+}
+
+.mybc{
+  height: 200rpx;
+  background:  url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544670707023.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.mybc .avatar{
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx 0 20rpx 60rpx;
+  float: left
+}
+
+.mybc .bcName{
+  width: 400rpx;
+  float: left;
+  margin: 34rpx 0 0 30rpx;
+  font-size: 30rpx;
+  color: #333333
+}
+
+
+.mybc .bcName .name{
+  float: left;
+  font-size: 30rpx;
+  color: #333333;
+  line-height: 30rpx;
+  font-weight: bold;
+}
+
+.mybc .bcName image{
+  width: 30rpx;
+  height: 30rpx;
+  float: left;
+  margin-left: 10rpx; 
+}
+
+.mybc .bcIntroduce{
+  width: 400rpx;
+  float: left;
+  margin: 24rpx 0 0 30rpx;
+  font-size: 24rpx;
+  color: #666666
+}
+
+.equity{
+  overflow: hidden;
+}
+
+.equityTitle{
+  width: 100%;
+  text-align: center;
+  color: #362D20;
+  font-size: 30rpx;
+  line-height: 90rpx;
+}
+
+.equityContent{
+  display: flex;
+  justify-content: space-between;
+}
+
+.equityItem view{
+  float: left;
+  font-size: 24rpx;
+  color: #ffffff;
+}
+
+.equityItem .equityNum{
+  width: 30rpx;
+  height: 30rpx;
+  background: #5B482D;
+  border-radius: 100%;
+  text-align: center;
+  line-height: 30rpx;
+  font-size: 18rpx;
+  color: #F0B56A;
+  font-weight: bold;
+  margin-right: 10rpx;
+}
+
+.orderDetail{
+  height: 60%;
+  overflow-y: scroll;
+}
+
+.orderTitle{
+  width: 170rpx;
+  height: 90rpx;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.orderTitle .imageFirst{
+  width: 15rpx;
+  height: 20rpx;
+  left: 0;
+  position: absolute;
+  top:  35rpx;
+}
+
+.orderTitle .imageLast{
+  width: 15rpx;
+  height: 20rpx;
+  right: 0;
+  position: absolute;
+  top:  35rpx;
+}
+
+.orderTitle text{
+  line-height: 90rpx;
+  font-size: 30rpx;
+  color: #333333
+}
+
+.userInfo{
+  border-top: 2rpx solid #f7f7f7;
+  height: 140rpx;
+  padding-left: 30rpx;
+}
+
+.userInfo .userName{
+  line-height: 50rpx;
+  font-size: 28rpx;
+  color: #333333;
+  padding-top: 20rpx;
+}
+
+.userInfo .address{
+  line-height: 50rpx;
+  font-size: 26rpx;
+  color: #869CA7;
+  padding-bottom: 20rpx;
+}
+
+.goodItem{
+  overflow: hidden;
+  border-top: 14rpx solid #f7f7f7
+}
+
+.goodItem{
+  height: 200rpx;
+  padding: 40rpx 30rpx;
+  position: relative;
+}
+
+.goodItem image{
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.goodItem .goodName{
+  position: absolute;
+  top: 40rpx;
+  left: 0;
+  padding-left: 170rpx;
+  font-size: 26rpx;
+  color: #344C57
+}
+
+.goodItem .goodPrice{
+  bottom: 40rpx;
+  position: absolute;
+  left: 0;
+  padding-left: 170rpx;
+  font-size: 30rpx;
+  color: #354C58
+}
+
+.goodItem .goodState{
+  position: absolute;
+  right: 30rpx;
+  bottom: 40rpx;
+  text-align: right;
+  font-size: 24rpx;
+  color:#869CA7
+}
+
+.orderState{
+  height: 180rpx;
+  border-top: 16rpx solid #f7f7f7;
+  padding: 0 30rpx
+}
+
+.orderState view{
+  color: #869CA7;
+  font-size: 26rpx;
+  line-height: 50rpx;
+}
+
+.orderState view text{
+  color: #354C58;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}
+
+.ask{
+  width: 170rpx;
+  height: 64rpx;
+  position: absolute;
+  right: 0;
+  top: 110rpx;
+  background: #362D20;
+  font-size: 24rpx;
+  color: #EEE5BE;
+  text-align: center;
+  line-height: 64rpx;
+  border-top-left-radius: 32rpx;
+  border-bottom-left-radius: 32rpx;
+}

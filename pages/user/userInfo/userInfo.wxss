@@ -237,7 +237,7 @@ view,text,a,input{
 }
 .pic{
   height: 20%;
-  padding-left: 40rpx
+  padding-left: 50rpx
 }
 .userImage{
   width: 100%;

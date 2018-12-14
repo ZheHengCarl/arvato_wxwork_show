@@ -1,0 +1,49 @@
+@import "../../../static/utils/common.wxss";
+.container{
+  background: #f3f3f3;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 40rpx 5%;
+}
+.container view .title{
+  box-sizing: border-box;
+  color: #fff;
+  background: hsl(352, 86%, 44%);
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  margin: 0 40rpx;
+}
+.container .catelog-list{
+  margin-top: 40rpx;
+}
+.container .catelog-list .lists{
+  border-top: 1px solid #d0d0d0;
+  text-align: center;
+  line-height: 160rpx;
+  font-size: 32rpx;
+}
+
+.container .catelog-list .lists .icons{
+  width: 80rpx;
+  height: 80rpx;
+  background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=catelog-icons.png');
+  display: inline-block; 
+  background-size: 100% auto;
+  background-position: 0 0;
+  margin-right: 30rpx;
+  margin-bottom: -25rpx;
+}
+
+.container .catelog-list .lists .activity{
+  background-position: 0 -78rpx;
+}
+
+.container .catelog-list .lists .vip{
+  background-position: 0 -156rpx;
+}
+
+.container .catelog-list .lists .invite{
+  background-position: 0 -234rpx;
+}

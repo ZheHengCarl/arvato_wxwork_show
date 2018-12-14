@@ -1,0 +1,53 @@
+@import "../../../static/utils/common.wxss";
+.container{
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+  padding-bottom: 100rpx;
+}
+
+.container image{
+  width: 100%;
+}
+
+.footer{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+  display: flex;
+}
+
+
+.footer .home{
+  flex: 1;  
+  border-right: 2rpx solid #E6E4E4;
+}
+
+
+.footer .cart,.footer .buy{
+  flex: 3;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #354B57
+}
+
+.footer .buy{
+  color: #ffffff;
+  background: #DA202B;
+}
+
+.footer .home image{
+  display: block;
+  width: 44rpx;
+  margin: 20rpx auto 0;
+}
+
+.footer .home view{
+  font-size: 20rpx;
+  color: #354C57;
+  text-align: center
+}

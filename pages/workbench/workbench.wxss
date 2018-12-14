@@ -348,3 +348,149 @@ view, text, a {
   white-space: normal;
   line-height: 40rpx;
 }
+
+.choose {
+  width: 600rpx;
+  height: 800rpx;
+  background: #fff;
+  /* background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544430916385.png'); */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 80rpx;
+  border-radius: 12rpx;
+  z-index: 4;
+  box-sizing: border-box;
+  display: none;
+}
+
+.choose .chooseInfo {
+  text-align: center;
+  line-height: 140rpx;
+  color: #666666;
+  font-size: 34rpx;
+}
+
+.choose .chooseTip {
+  text-align: center;
+  font-size: 26rpx;
+  color: #ACACAC;
+  white-space: normal;
+  line-height: 40rpx;
+}
+
+.choose .chooseId{
+  margin-top: 150rpx;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden
+}
+
+.choose .chooseId .chooseItem cover-image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  box-sizing: border-box
+}
+
+.choose .chooseId .chooseItem .userChoose{
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.choose .chooseId .active cover-image{
+ border: 2px solid #FF9EA2;
+}
+
+.choose .chooseId .active .userChoose{
+  color: #333333;
+}
+
+.ensureChoose{
+  margin-top: 50rpx;
+  width: 500rpx;
+  height: 100rpx;
+  border:none;
+  border-radius: 48rpx;
+  font-size: 34rpx;
+  background: #DA202B;
+  color: #fff;
+}
+
+.choice {
+  width: 600rpx;
+  height: 800rpx;
+  background: #fff;
+  /* background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544430916385.png'); */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 80rpx;
+  border-radius: 12rpx;
+  z-index: 4;
+  box-sizing: border-box;
+  display: none;
+}
+
+.choice .choiceInfo {
+  text-align: center;
+  line-height: 140rpx;
+  color: #666666;
+  font-size: 34rpx;
+}
+
+.choice .choiceTip {
+  text-align: center;
+  font-size: 26rpx;
+  color: #ACACAC;
+  white-space: normal;
+  line-height: 40rpx;
+}
+
+.choice .choiceId{
+  margin-top: 150rpx;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden
+}
+
+.choice .choiceId .choiceItem cover-image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  box-sizing: border-box
+}
+
+.choice .choiceId .choiceItem .userchoice{
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.choice .choiceId .active cover-image{
+ border: 2px solid #FF9EA2;
+}
+
+.choice .choiceId .active .userchoice{
+  color: #333333;
+}
+
+.ensurechoice{
+  margin-top: 50rpx;
+  width: 500rpx;
+  height: 100rpx;
+  border:none;
+  border-radius: 48rpx;
+  font-size: 34rpx;
+  background: #DA202B;
+  color: #fff;
+}

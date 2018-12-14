@@ -1,0 +1,154 @@
+@import "../../../static/utils/common.wxss";
+.container{
+  width: 100%;
+  height: 100%;
+  background: #f7f7f7;
+}
+
+.goodItem{
+  height: 224rpx;
+  background: #ffffff;
+  margin-top: 16rpx;
+  position: relative
+}
+
+.goodItem .select{
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 100%;
+  border: 2rpx solid #869CA7;
+  float: left;
+  margin:96rpx 30rpx;
+  background: #ffffff
+}
+
+
+.goodItem .selected{
+  background: #DA202B
+}
+
+.goodItem image{
+  width: 160rpx;
+  height: 160rpx;
+  float: left;
+  margin-top: 32rpx;
+}
+
+.goodItem .goodInfo{
+  width: 100%;
+  height: 160rpx;
+  position: absolute;
+  top: 32rpx;
+  left: 270rpx;
+  padding: 0 300rpx 0 0; 
+}
+
+.goodItem .goodInfo .goodName{
+  width: 100%;
+  font-size: 26rpx;
+  color: #344C57 
+}
+
+.goodItem .goodInfo .goodIntroduce{
+  width: 100%;
+  font-size: 22rpx;
+  color: #869DA7;
+  line-height: 26rpx;
+  margin-top: 26rpx;
+}
+
+.goodItem .goodInfo .goodPrice{
+  width: 100%;
+  font-size: 28rpx;
+  color: #DA202B;
+  margin-top: 26rpx;
+}
+
+.count {
+  width: 180rpx;
+  height: 40rpx;
+  position: absolute;
+  bottom: 32rpx;
+  right: 30rpx;
+  display: flex;
+  justify-content: space-between
+}
+
+.count view{
+  width: 33.33%;
+  color: #354C57;
+  font-size: 30rpx;
+  line-height: 40rpx;
+  text-align: center;
+}
+
+.count .num{
+  background: #F4F4F4;
+  font-size: 26rpx;
+}
+
+.disableGood{
+  background: #ffffff;
+  margin-top: 16rpx;
+  padding-bottom: 100rpx;
+}
+
+.disableGood .disableTitle{
+  font-size: 28rpx;
+  color: #344C57;
+  line-height: 80rpx;
+  height: 80rpx;
+  padding-left: 30rpx;
+  border-bottom: 2rpx solid #f7f7f7;
+}
+
+.goodItem .goodInfo .disablegoodName,.goodItem .goodInfo .disablegoodIntroduce,.goodItem .goodInfo .disablegoodPrice{
+  color: #869CA7 
+}
+
+.disableList .goodItem{
+  border-bottom: 2rpx solid #f7f7f7
+}
+
+.footer{
+  width: 100%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: #ffffff;
+  border-top: 2rpx solid #f7f7f7;
+}
+
+.footer .select{
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 100%;
+  border: 2rpx solid #869CA7;
+  float: left;
+  margin: 38rpx 30rpx;
+}
+
+.footer .countAll{
+  font-size: 28rpx;
+  color: #DA202B;
+  line-height: 100rpx;
+  padding-left: 140rpx;
+}
+
+.footer .placeOrder{
+  width: 320rpx;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 100rpx;
+  text-align: center;
+  color: #ffffff;
+  font-size: 30rpx;
+  background: #E5E5E5
+}
+
+.footer .useful{
+  background: #DA202B
+}

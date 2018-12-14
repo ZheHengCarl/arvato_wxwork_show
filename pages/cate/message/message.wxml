@@ -1,0 +1,28 @@
+<view class='container'>
+  <view class="form-group">
+    <view class='addMessage'>信息新增</view>
+    <label>标题</label>
+    <input class="form-control" name="title" bindinput='titleText' value='{{thisList.title}}'></input>
+  </view>
+  <view class="form-group">
+    <label>图片</label>
+    <view class="image" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+    <!-- 图片预览 -->
+       <image mode='aspectFit' src="{{item}}" data-index="{{index}}" bindtap='previewImg'></image>
+    </view>
+    <view class="image {{num==0?'hideImg':''}}">
+       <image mode='aspectFit' src="http://minipro.arvatocrm.cn{{thisList.imgUrl}}"  bindtap='previewImg'></image>
+    </view>
+    <view class='addFile'>
+      <button bindtap='chooseImg'>选择文件</button>
+      <!-- <text>未选择任何文件</text> -->
+    </view>
+  </view>
+  <view class="form-group">
+    <label>内容</label>
+    <textarea class="form-control" bindinput='contentText' value='{{thisList.content}}'></textarea>
+  </view>
+  <view class="form-group" id="btns">
+    <button class="btn btn-primary" id="save" bindtap='save'>保存</button>
+  </view>
+</view>

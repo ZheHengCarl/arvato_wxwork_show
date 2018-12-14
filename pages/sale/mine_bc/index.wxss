@@ -1,0 +1,247 @@
+@import "../../../static/utils/common.wxss";
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.header{
+  height: 15%;
+  background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544518471979.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.header .cash{
+  padding:5% 0 5% 60rpx;
+  width: 33%;
+  height: 100%;
+  float: left;
+  display: flex; 
+  flex-direction: column;
+}
+
+.header .cash view{
+  width: 100%;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.header .cash .cashNum{
+  font-size: 44rpx
+}
+
+.header .cashBtn{
+  width: 33%;
+  height: 100%;
+  float: right
+}
+
+.header .cashBtn view{
+  float: left;
+  width: 160rpx;
+  height: 64rpx;
+  border-radius: 32rpx;
+  border: 4rpx solid #ffffff;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 60rpx;
+  color: #ffffff;
+  margin-top: 80rpx;
+}
+
+.section{
+  width: 100%;
+  height: 70%;
+}
+
+.section .income{
+  height: 50%;
+  border-bottom: 8rpx solid #F7F7F7;
+}
+
+.section .income .incomeDetail{
+  height:30%;
+  border-bottom: 8rpx solid #F7F7F7;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.section .income .incomeDetail .incomeTitle{
+  color: #0D0001;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.section .income .incomeDetail .incomeImg image{
+  width: 16rpx;
+}
+
+.section .incomeState{
+  height: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section .incomeState .incomeItem{
+  width: 50%;
+  padding: 3% 0 3% 40rpx;
+  display: flex;
+  flex-direction:column;
+  justify-content: space-around
+}
+
+.section .incomeState .incomeItem view{
+  color: #869CA7;
+  font-size: 24rpx;
+}
+
+.section .incomeState .incomeItem .incomeItemMoney{
+  color: #354C58;
+  font-size: 30rpx;
+}
+
+.hasbottom{
+  border-bottom: 2rpx solid #F7F7F7;
+}
+
+.hasleft{
+  border-left: 2rpx solid #F7F7F7;
+}
+
+.hasright{
+  margin-right: 4%
+}
+
+.hastop{
+  margin-top: 10rpx;
+}
+
+.section .order{
+  height: 50%;
+}
+
+.section .order .orderDetail{
+  height:30%;
+  padding: 0 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.section .order .orderDetail .orderTitle{
+  color: #344C57;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.section .order .orderDetail .orderImg image{
+  width: 16rpx;
+}
+
+.order .orderNav{
+  height: 54rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between
+}
+
+.order .orderNav view{
+  width: 33.33%;
+  text-align: center;
+  background: #FBFBFB;
+  font-size: 28rpx;
+  color: #869DA8;
+  line-height: 54rpx;
+}
+
+.order .orderNav .active{
+  background: linear-gradient(#F1F1F1, #ffffff);
+  color: #354B57;
+}
+
+.order .orderDetailData{
+  width: 100%;
+  padding: 0 30rpx;
+  overflow: hidden;
+  margin-top: 20rpx;
+}
+
+.order .orderDetailData .orderDetailItem{
+  width: 48%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+}
+
+.order .orderDetailData .orderDetailItem image{
+  width: 100%;
+}
+
+.order .orderDetailData .orderDetailItem view{
+  position: absolute;
+  color: #776E67;
+  font-size: 26rpx;
+  left: 44rpx;
+  top: 80rpx;
+}
+
+.order .orderDetailData .orderDetailItem .orderDetailNum{
+  top: 14rpx;
+  font-size: 46rpx;
+}
+
+
+.footer{
+  width: 100%;
+  background: #ffffff;
+  height: 100rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1rpx solid #E6E4E4;
+  z-index: 9
+}
+
+.footer view{
+  text-align: center;
+  position: relative;
+  width: 120rpx;
+}
+
+.footer view image{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 8rpx;
+  width: 45rpx;
+}
+
+.footer view .choose{
+  opacity: 1;
+  z-index: 1
+}
+
+.footer .active .choose{
+  opacity: 0;
+  z-index: -1
+}
+
+.footer view  text{
+  font-size: 20rpx;
+  color: #BEC6CB;
+  display: block;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 66rpx;
+}
+
+.footer .active text{
+  color: #DA202B
+}

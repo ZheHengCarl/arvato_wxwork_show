@@ -1,1 +1,38 @@
-/* pages/auth/auth.wxss */
+@import "../../static/utils/common.wxss";
+.container {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544430927614.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 250rpx
+}
+.welcome{
+  font-size: 48rpx;
+  color: #D6323B;
+  font-weight: bold;
+  text-align: center;
+}
+.auth{
+  text-align: center;
+  font-size: 30rpx;
+  color: #E17878;
+  line-height: 35rpx;
+  margin-top: 300rpx;
+}
+.auth image{
+  width: 35rpx;
+  margin-left: 25rpx;
+}
+.button{
+  width: 80%;
+  height: 100rpx;
+  margin: 0 auto;
+  margin-top: 166rpx;
+}
+.button button{
+  background: #DA202B;
+  border-radius: 8rpx;
+  color: #ffffff
+}

@@ -1,0 +1,451 @@
+@import "../../static/utils/common.wxss";
+.container{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  overflow: hidden
+}
+
+.header{
+  box-sizing: border-box;
+  width: 100%;
+  height: 13%;
+  background:url('http://minipro.arvatocrm.cn/arvato/img/?fileName=informationBg.png');
+  background-size:100% 100%;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.header .title{
+  height: 50rpx;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 36rpx;
+  line-height: 50rpx;
+  color: #ffffff;
+  text-align: center;
+}
+
+.taskList{
+  height: 87%;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 40rpx;
+}
+
+.taskList .nav{
+  width: 100%;
+  height: 60rpx;
+  border-radius: 6rpx;
+  border: 1rpx solid #CCCCCC;
+  overflow: hidden;
+}
+
+.taskList .nav view{
+  width: 50%;
+  float: left;
+  text-align: center;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  color: #646464;
+  background: #ffffff
+}
+
+.taskList .nav .active{
+  color: #ffffff;
+  background: #d3112c
+}
+
+.taskList .list{
+  height: 40%;
+  background: #ffffff;
+  margin-top: 40rpx;
+  overflow: hidden;
+  border-radius: 8rpx;
+  display: none
+}
+
+.taskList .list .listHeader{
+  border-bottom: 1rpx solid #d3d3d3;
+}
+
+.taskList .list .listHeader view{
+  font-size: 26rpx;
+  color: #ffffff;
+  background: #d3112c;
+  width: 220rpx;
+  margin: 20rpx auto;
+  border-radius: 10rpx;
+  line-height: 50rpx;
+  text-align: center
+}
+
+.taskList .list .listContent{
+  height: 120rpx;
+  position: relative;
+  border-bottom: 1rpx solid #d3d3d3;
+  text-align: center;
+  font-size: 24rpx;
+  color: #646464;
+  vertical-align: middle
+}
+
+.taskList .list .disable{
+  height: 120rpx;
+  position: relative;
+  background: #f7f7f7;
+  border-bottom: 1rpx solid #CCCCCC;
+}
+
+.taskList .list .listContent text{
+  display: block;
+  transform: translateY(30rpx)
+}
+
+.taskList .list .disable text{
+  color: #999999;
+}
+
+.taskList .list .listContent image{
+  width: 30rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 40rpx;
+}
+
+.taskList .edit{
+  display: none
+}
+
+.taskList .edit .editHeader{
+  border-bottom: 1rpx solid #CCCCCC;
+}
+
+.taskList .edit .editHeader view{
+  font-size: 24rpx;
+  color: #ffffff;
+  background: #d3112c;
+  width: 200rpx;
+  margin: 20rpx auto;
+  border-radius: 10rpx;
+  line-height: 50rpx;
+  text-align: center
+}
+
+.taskList .edit .editContent{
+  height: 120rpx;
+  position: relative;
+  border-bottom: 1rpx solid #CCCCCC;
+  text-align: center;
+  font-size: 24rpx;
+  color: #646464
+}
+
+.taskList .edit .editContent text{
+  display: block;
+  transform: translateY(30rpx)
+}
+
+.taskList .edit .editContent image{
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 40rpx;
+}
+
+/* 操作 */
+.taskList .edit .operate{
+  width: 100%;
+  background: #ffffff;
+  padding: 20rpx 30rpx 0;
+}
+
+.taskList .edit .operate .userList{
+  width: 100%;
+  height: 200rpx;
+  overflow: scroll;
+  border-bottom: 1rpx solid #CCCCCC;
+}
+
+.checkItem{
+  width: 100%;
+  display: flex;
+  height: 60rpx
+}
+
+.checkItem image,.checkItem checkbox,.checkItem text{
+  flex: 1;
+  font-size: 26rpx;
+  color: #646464;
+  line-height: 60rpx;
+  text-align: center;
+}
+
+.checkItem image{
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 15rpx;
+}
+
+.checkItem .avatar{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 5rpx;
+}
+
+.checkItem .userName{
+  border-bottom: 1px solid #646464
+}
+
+checkbox .wx-checkbox-input {
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+}
+
+.operate .editSpace{
+  width: 100%;
+  height: 300rpx;
+  padding: 20rpx;
+  font-size: 24rpx;
+  color: #333;
+  letter-spacing: 4rpx;
+  border-bottom: 1rpx solid #CCCCCC;
+  margin-bottom: 20rpx;
+  line-height: 40rpx
+}
+
+.operate .operBtn{
+  width: 100%;
+  border: 1px solid #cccccc;
+  border-radius: 6rpx;
+  display: flex;
+  justify-content: space-between
+}
+
+.operate .operBtn view{
+  width: 50%;
+  text-align: center;
+  background: #cccccc;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  color: #333333
+}
+
+.operate .operBtn .preview{
+  background: #ffffff;
+}
+
+.operate .ensureBtn{
+  margin-top: 20rpx;
+  overflow: hidden
+}
+
+.operate .ensureBtn button{
+  float: right;
+  background-color: #eeeeee;
+  width: 45%;
+  font-size: 26rpx;
+  color: #333
+}
+
+.operate .ensureBtn text,.operate .ensureBtn checkbox{
+  line-height: 45px;
+  color: #646464;
+  font-size: 24rpx;
+}
+
+.operate .ensureBtn checkbox .wx-checkbox-input {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.cover{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 8;
+  display: none
+}
+
+.coverContent{
+  width: 90%;
+  height: 40%;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: #ffffff;
+  padding: 50rpx;
+  display: none
+}
+
+.coverContent image{
+  position: absolute;
+  width: 26rpx;
+  height: 26rpx;
+  top: 12rpx;
+  right: 12rpx;
+  z-index: 99
+}
+
+.coverContent textarea{
+  width: 100%;
+  height: 300rpx;
+  box-sizing: border-box;
+  padding: 20rpx;
+  color: #333333;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  border: 1rpx solid #eeeeee;
+}
+
+.coverContent .coverBtn{
+  margin-top: 30rpx;
+  width: 100%;
+  display: flex;
+  height: 50rpx;
+  border: 1px solid #CCCCCC;
+  border-radius: 8rpx;
+}
+
+.coverContent .coverBtn view{
+  width: 50%;
+  text-align: center;
+  color: #333333;
+  font-size: 24rpx;
+  line-height: 50rpx;
+}
+
+.coverContent .coverBtn .coverPreview{
+  background: #CCCCCC
+}
+
+.previewContent{
+  position: fixed;
+  width: 85%;
+  height: 75%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  z-index: 99;
+  display: none;
+}
+
+.previewContent .closePreview{
+  position: absolute;
+  width: 26rpx;
+  height: 26rpx;
+  top: 12rpx;
+  right: 12rpx;
+}
+
+.previewContent .logo{
+  position: absolute;
+  width: 186rpx;
+  height: 50rpx;
+  margin: auto;
+  top: 30rpx;
+  left: 0;
+  right: 0;
+}
+
+.previewContent .goods{
+  position: absolute;
+  width: 140rpx;
+  height: 540rpx;
+  margin: auto;
+  bottom: 120rpx;
+  left: 0;
+  right: 0;
+}
+
+.previewContent cover-view{
+  white-space:pre-wrap;
+  color: #333333;
+  margin: 0 45rpx;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  letter-spacing: 5rpx;
+  padding-top: 120rpx;
+  z-index: 999
+}
+
+.historyOrder{
+  width: 90%;
+  height: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-color: #f5f5f5;
+  z-index: 9;
+  border-radius: 10rpx;
+  display: none
+}
+
+.historyOrder .historyOrderHeader{
+  width: 100%;
+  height: 80rpx;
+  background-color: #d3112c;
+  position: relative
+}
+.historyOrder .historyOrderHeader cover-view{
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  color: #ffffff
+}
+.historyOrder .historyOrderHeader cover-image{
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  top: 25rpx;
+  right: 25rpx
+}
+.historyOrderList{
+  width: 100%;
+  height: 90%;
+  overflow-y: scroll;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.historyOrderList .historyOrderItem{
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10rpx;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.historyOrderList .historyOrderItem .historyOrderTitle{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  color: #333333;
+  font-size: 24rpx;
+}
+
+.show{
+  display: block;
+}
+
+.taskList .show{
+  display: block;
+}

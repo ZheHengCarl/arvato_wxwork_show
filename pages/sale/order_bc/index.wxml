@@ -1,0 +1,104 @@
+<view class='container'>
+  <view class='nav'>
+    <view data-index='0' class='{{index==0?"active":""}}' bindtap='changeIndex'>全部</view>
+    <view data-index='1' class='{{index==1?"active":""}}' bindtap='changeIndex'>有效</view>
+    <view data-index='2' class='{{index==2?"active":""}}' bindtap='changeIndex'>失效</view>
+  </view>
+
+  <view class='classify'>
+    <view data-index1='0' class='{{index1==0?"active":""}}' bindtap='changeIndex1'>待付款</view>
+    <view data-index1='1' class='{{index1==1?"active":""}}' bindtap='changeIndex1'>已付款</view>
+    <view data-index1='2' class='{{index1==2?"active":""}}' bindtap='changeIndex1'>已收货</view>
+    <view data-index1='3' class='lastBtn {{index1==3?"active":""}}' bindtap='changeIndex1'>已结算</view>
+  </view>
+
+  <view class='section'>
+    <view class='orderItem'>
+      <view class='itemHead'>
+        <view>Gina</view>
+        <view class='lastBtn'>1873262886</view>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544582254823.png'></image>
+      </view>
+      <view class='itemContent'>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+        <view class='goodName'>薇姿温泉矿物系列水活精华液</view>
+        <view class='goodInfo'>2018-11-5 18:08:20 创建 </view>
+        <view class='goodState'>已付款</view>
+      </view>
+      <view class='itemFoot'>
+        <view class='itemList'>
+          <view>付款金额： </view>
+          <view class='itemMoney'>￥62</view>
+        </view>
+        <view class='itemList'>
+          <view>付款预估收入： </view>
+          <view class='itemMoney'>￥8.52</view>
+        </view>
+      </view>
+    </view>
+    <view class='orderItem'>
+      <view class='itemHead'>
+        <view>Gina</view>
+        <view class='lastBtn'>1873262886</view>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544582254823.png'></image>
+      </view>
+      <view class='itemContent'>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+        <view class='goodName'>薇姿温泉矿物系列水活精华液</view>
+        <view class='goodInfo'>2018-11-5 18:08:20 创建 </view>
+        <view class='goodState'>已付款</view>
+      </view>
+      <view class='itemFoot'>
+        <view class='itemList'>
+          <view>付款金额： </view>
+          <view class='itemMoney'>￥62</view>
+        </view>
+        <view class='itemList'>
+          <view>付款预估收入： </view>
+          <view class='itemMoney'>￥8.52</view>
+        </view>
+      </view>
+    </view>
+    <view class='orderItem'>
+      <view class='itemHead'>
+        <view>Gina</view>
+        <view class='lastBtn'>1873262886</view>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544582254823.png'></image>
+      </view>
+      <view class='itemContent'>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+        <view class='goodName'>薇姿温泉矿物系列水活精华液</view>
+        <view class='goodInfo'>2018-11-5 18:08:20 创建 </view>
+        <view class='goodState'>已付款</view>
+      </view>
+      <view class='itemFoot'>
+        <view class='itemList'>
+          <view>付款金额： </view>
+          <view class='itemMoney'>￥62</view>
+        </view>
+        <view class='itemList'>
+          <view>付款预估收入： </view>
+          <view class='itemMoney'>￥8.52</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='footer'>
+    <view class='find' bindtap='toFind'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512520775.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515014055.png'></image>
+      <text>发现</text>
+    </view>
+    <view class='order active'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512544189.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515027857.png'></image>
+      <text>订单</text>
+    </view>
+    <view class='mine' bindtap='toMine'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512560261.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515040224.png'></image>
+      <text>我的</text>
+    </view>
+  </view>
+</view>

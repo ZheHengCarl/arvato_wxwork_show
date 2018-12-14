@@ -1,4 +1,4 @@
-// pages/order/order.js
+// pages/kpi/kpiList/kpiList.js
 Page({
 
   /**

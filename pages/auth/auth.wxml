@@ -1,2 +1,12 @@
-<button class='pop_btn' plain="true"
-    open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber">获取用户手机号</button>
+<!-- 授权页面 -->
+<view class='container'>
+  <view class='welcome'>欢迎进入智能工作台</view>
+  <view class='auth'>
+    <text>请授权即可使用 </text>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544430905083.png'></image>
+  </view>
+  <view class='button'>
+    <button class='pop_btn' plain="true"
+open-type='getPhoneNumber' bindgetphonenumber="getPhone">允许授权</button>
+  </view>
+</view>

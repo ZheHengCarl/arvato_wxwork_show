@@ -1,4 +1,4 @@
-// pages/personal/personal.js
+// pages/sale/detail_bc/index.js
 Page({
 
   /**

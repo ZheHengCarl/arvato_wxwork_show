@@ -1,0 +1,97 @@
+<view class='container'>
+  <view class='header'>
+    <view class='cash'>
+      <view>可提现金额</view>
+      <view class='cashNum'>￥189</view>
+    </view>
+    <view class='cashBtn'>
+      <view bindtap='showDemo'>提现</view>
+    </view>
+
+  </view>
+
+  <view class='section'>
+    <view class='income'>
+      <view class='incomeDetail' bindtap='toDetail'>
+        <view class='incomeTitle'>
+          <text>收入明细</text>
+        </view>
+        <view class='incomeImg'>
+          <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544520702253.png'></image>
+        </view>
+      </view>
+      <view class='incomeState'>
+        <view class='incomeItem hasbottom'>
+          <view>本月消费结算预估收入</view>
+          <view class='incomeItemMoney'>￥ 8.52</view>
+        </view>
+        <view class='incomeItem hasbottom hasleft'>
+          <view>上月消费结算预估收入</view>
+          <view class='incomeItemMoney'>￥ 62</view>
+        </view>
+        <view class='incomeItem'>
+          <view>本月消费预估收入</view>
+          <view class='incomeItemMoney'>￥ 9.52</view>
+        </view>
+        <view class='incomeItem hasleft'>
+          <view>上月消费预估收入</view>
+          <view class='incomeItemMoney'>￥ 18.52</view>
+        </view>
+      </view>
+    </view>
+    <view class='order'>
+      <view class='orderDetail' bindtap='toOrder'>
+        <view class='orderTitle'>
+          <text>全部订单明细</text>
+        </view>
+        <view class='orderImg'>
+          <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544520702253.png'></image>
+        </view>
+      </view>
+      <view class='orderNav'>
+        <view data-index='0' class='{{index==0?"active":""}}' bindtap='changeIndex'>今日</view>
+        <view data-index='1' class='{{index==1?"active":""}}' bindtap='changeIndex'>本月</view>
+        <view data-index='2' class='{{index==2?"active":""}}' bindtap='changeIndex'>历史</view>
+      </view>
+      <view class='orderDetailData'>
+        <view class='orderDetailItem hasright'>
+          <view class='orderDetailNum'>11</view>
+          <view>点击数</view>
+          <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544523937128.png'></image>
+        </view>
+        <view class='orderDetailItem'>
+          <view class='orderDetailNum'>18</view>
+          <view>付款订单(笔)</view>
+          <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544523946614.png'></image>
+        </view>
+        <view class='orderDetailItem hasright hastop'>
+          <view class='orderDetailNum'>16.89</view>
+          <view>付款预估收入</view>
+          <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544523957483.png'></image>
+        </view>
+        <view class='orderDetailItem hastop'>
+          <view class='orderDetailNum'>20.89</view>
+          <view>结算预估收入</view>
+          <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544523966994.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='find' bindtap='toFind'>         
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512520775.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515014055.png'></image>
+      <text>发现</text>
+    </view>
+    <view class='order' bindtap='toOrder'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512544189.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515027857.png'></image>
+      <text>订单</text>
+    </view>
+    <view class='mine active'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512560261.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515040224.png'></image>
+      <text>我的</text>
+    </view>
+  </view>
+</view>

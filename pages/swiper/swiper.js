@@ -53,7 +53,7 @@ Page({
   // 获取当前的轮播图的index 如果当前是最后一张轮播简介(index == 4)
   getCurrIndex: function(e){
     var index = e.detail.current;
-    console.info(index);
+    // console.info(index);
     if(index == 4){
       // 跳转到选择用户身份页
       wx.redirectTo({

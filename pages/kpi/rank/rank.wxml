@@ -26,10 +26,10 @@
       <view>第佰伴</view> -->
     </view>
     <view class='progress'>
-      <!-- <progress active color='#d3112c' percent='80' stroke-width='12' backgroundColor='#ffffff' ></progress>
+      <progress active color='#d3112c' percent='100' stroke-width='12' backgroundColor='#ffffff'  ></progress>
       <progress active color='#d3112c' percent='70' stroke-width='12' backgroundColor='#ffffff' ></progress>
       <progress active color='#d3112c' percent='60' stroke-width='12' backgroundColor='#ffffff' ></progress>
-      <progress active color='#d3112c' percent='50' stroke-width='12' backgroundColor='#ffffff' ></progress> -->
+      <progress active color='#d3112c' percent='50' stroke-width='12' backgroundColor='#ffffff' ></progress>
     </view>
     <view class='number'>
       <!-- <view>3113</view>

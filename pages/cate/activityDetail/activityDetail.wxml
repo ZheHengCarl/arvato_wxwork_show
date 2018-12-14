@@ -1,0 +1,4 @@
+<view class='container'>
+  <image mode='widthFix' src='http://minipro.arvatocrm.cn{{thisList.imgUrl}}'></image>
+  <view class='content'>{{thisList.content}}</view>
+</view>

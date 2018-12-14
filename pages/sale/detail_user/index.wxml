@@ -1,0 +1,63 @@
+<view class='container'>
+  <view class='header'>
+    <view class='title'>
+      <image class='imageFirst' mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544670718096.png'></image>
+      <text>您的专属美容顾问 </text>
+      <image class='imageLast' mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544670718096.png'></image>
+    </view>
+    <view class='mybc'>
+      <image class='avatar' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></image>
+      <view class='bcName'>
+        <view class='name'>王梓心 </view>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544670731198.png'></image>
+      </view>
+      <view class='bcIntroduce'>五年从业经验 ，为您私人定制护肤计划，为您带来专业体验。 </view>
+    </view>
+    <view class='equity'>
+      <view class='equityTitle'>权益</view>
+      <view class='equityContent'>
+        <view class='equityItem'>
+          <view class='equityNum'>1</view>
+          <view>1V1专业咨询</view>
+        </view>
+        <view class='equityItem'>
+          <view class='equityNum'>2</view>
+          <view>优先接待</view>
+        </view>
+        <view class='equityItem'>
+          <view class='equityNum'>3</view>
+          <view>活动通知</view>
+        </view>
+        <view class='equityItem'>
+          <view class='equityNum'>4</view>
+          <view>专属福利</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='orderDetail'>
+    <view class='orderTitle'>
+      <image class='imageFirst' mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544670718096.png'></image>
+      <text>订单详情</text>
+      <image class='imageLast' mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544670718096.png'></image>
+    </view>
+    <view class='userInfo'>
+      <view class='userName'>Gina 1873262886</view>
+      <view class='address'>地址： 上海市大宁广场中心A3欧唯特</view>
+    </view>
+    <view class='goodList'>
+      <view class='goodItem'>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+        <view class='goodName'>薇姿温泉矿物系列水活精华液 </view>
+        <view class='goodPrice'>￥106</view>
+        <view class='goodState'>待收货</view>
+      </view>
+    </view>
+    <view class='orderState'>
+      <view>支付方式： 在线支付</view>
+      <view>商品总额： <text>￥106</text></view>
+      <view>运费： <text>￥10</text></view>
+    </view>
+  </view>
+  <view class='ask'>前往咨询</view>
+</view>

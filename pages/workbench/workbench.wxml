@@ -10,10 +10,8 @@
     </view>
     <view class='pull'>
       <view>
-        <!-- <image class='refresh' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=refresh.png'></image> -->
         <text bindtap='loadMore' class='lookMore'>查看更多</text>
       </view>
-      <!-- <image class='pullDown' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=pull.png'></image> -->
     </view>
   </view>
 
@@ -46,16 +44,16 @@
       <text bindtap='toCate'>内容词典</text>
     </view>
     <view>
-      <image bindtap='openOut' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540277701250.png"></image>
-      <text bindtap='openOut'>招募客户</text>
+      <image bindtap='toCare' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540277701250.png"></image>
+      <text bindtap='toCare'>客户关怀</text>
     </view>
     <view>
       <image bindtap='toMailList' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540277718576.png"></image>
       <text bindtap='toMailList'>客户通讯录</text>
     </view>
     <view>
-      <image bindtap='toPersonal' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540279706531.png"></image>
-      <text bindtap='toPersonal'>个人中心</text>
+      <image bindtap='toSale' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540279706531.png"></image>
+      <text bindtap='toSale'>电商分销平台</text>
     </view>
   </view>
   <view class="showMore {{_hide==1 ? 'hide':''}}">
@@ -65,7 +63,43 @@
   </view>
   <cover-view class="cover {{coverShow==1 ? 'show':''}}"></cover-view>
   <cover-view class='error {{errorShow==1 ? "show":""}}'>
-			<cover-view class='errorInfo'>提示</cover-view>
-			<cover-view class='errorTip'>对不起，您暂无权限使用该功能,点击右上角小圆点可退出</cover-view>
-		</cover-view>
+    <cover-view class='errorInfo'>提示</cover-view>
+    <cover-view class='errorTip'>对不起，您暂无权限使用该功能,点击右上角小圆点可退出</cover-view>
+  </cover-view>
+  <cover-view class='choose {{chooseShow==1 ? "show":""}}'>
+    <cover-view class='chooseInfo'>选择身份</cover-view>
+    <cover-view class='chooseTip'>不同身份可使用不同版本的电商功能</cover-view>
+    <cover-view class='chooseTip'>请选择您感兴趣的身份</cover-view>
+    <cover-view class='chooseId'>
+      <cover-view bindtap='changeRole1' data-role1='0' class='chooseItem {{role1==0 ? "active":""}}'>
+        <cover-image mode='widthFix' src='../../images/avartar.png'></cover-image>
+        <cover-view class='userChoose'>消费者</cover-view>
+      </cover-view>
+      <cover-view bindtap='changeRole1' data-role1='1' class='chooseItem {{role1==1 ? "active":""}}'>
+        <cover-image mode='widthFix' src='../../images/avartar.png'></cover-image>
+        <cover-view class='userChoose'>导购</cover-view>
+      </cover-view>
+    </cover-view>
+    <button class='ensureChoose' bindtap='toIndex'>确定</button>
+  </cover-view>
+  <cover-view class='choice {{choiceShow==1 ? "show":""}}'>
+    <cover-view class='choiceInfo'>选择身份</cover-view>
+    <cover-view class='choiceTip'>不同身份可使用不同版本的电商功能</cover-view>
+    <cover-view class='choiceTip'>请选择您感兴趣的身份</cover-view>
+    <cover-view class='choiceId'>
+      <cover-view bindtap='changeRole' data-role='0' class='choiceItem {{role==0 ? "active":""}}'>
+        <cover-image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></cover-image>
+        <cover-view class='userchoice'>导购</cover-view>
+      </cover-view>
+      <cover-view bindtap='changeRole' data-role='1' class='choiceItem {{role==1 ? "active":""}}'>
+        <cover-image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></cover-image>
+        <cover-view class='userchoice'>店长</cover-view>
+      </cover-view>
+      <cover-view class='choiceItem'>
+        <cover-image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></cover-image>
+        <cover-view class='userchoice'>区域长</cover-view>
+      </cover-view>
+    </cover-view>
+    <button class='ensurechoice'>确定</button>
+  </cover-view>
 </view>

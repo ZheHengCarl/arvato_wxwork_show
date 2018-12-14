@@ -1,0 +1,107 @@
+@import "../../../static/utils/common.wxss";
+.container{
+  width: 100%;
+  height: 100%;
+}
+.header{
+  width: 100%;
+  height: 90rpx;
+  background: #E5F6FF;
+  padding: 10rpx 40rpx 10rpx 90rpx;
+  position: relative
+}
+.header image{
+  width: 30rpx;
+  position: absolute;
+  left: 40rpx;
+  top: 30rpx
+}
+
+.header view{
+  font-size: 24rpx;
+  color: #354C58;
+}
+
+.selectTime{
+  height: 90rpx;
+  background: #F7F7F7;
+  padding: 0 30rpx;
+  position: relative
+}
+
+.selectTime view{
+  color:#869CA7;
+  line-height: 90rpx;
+  font-size: 24rpx;
+}
+
+.selectTime image{
+  position: absolute;
+  width: 36rpx;
+  right: 30rpx;
+  top: 30rpx;
+}
+
+.section{
+  width: 100%;
+}
+
+.detailList{
+  border-bottom: 20rpx solid #F7F7F7
+}
+
+.detailList .detailHead{
+  height: 72rpx;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 8rpx solid #F7F7F7;
+}
+
+.detailList .detailHead view{
+  font-size: 28rpx;
+  color: #354C58;
+  line-height: 72rpx;
+  width: 33.33%;
+  text-align: center
+}
+
+.detailConentItem{
+  height: 144rpx;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  border-bottom: 2rpx solid #F7F7F7;
+}
+
+.detailConentItem .date{
+  width: 33.33%;
+  font-size: 36rpx;
+  line-height: 144rpx;
+  color: #354B57;
+  padding-left: 10rpx;
+}
+
+.detailConentItem .restMoney{
+  width: 33.33%;
+  font-size: 30rpx;
+  line-height: 144rpx;
+  color: #354B57;
+  padding-left: 70rpx;
+}
+
+.detailConentItem .flow{
+  width: 33.33%;
+  padding-left: 70rpx;
+  padding-top: 20rpx;
+}
+
+.detailConentItem .flow .flowMoney{
+  font-size: 30rpx;
+  color: #DA202B
+}
+
+.detailConentItem .flow .explain{
+  color: #869DA7;
+  font-size: 24rpx;
+  margin-top: 20rpx;
+}

@@ -1,0 +1,98 @@
+<view class='container'>
+  <view class='header'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{margin}}rpx" next-margin="{{margin}}rpx" circular='{{circular}}' skip-hidden-item-layout ="true" indicator-color='RGB(230,228,228)' indicator-active-color='RGB(234,32,43)'>
+      <block wx:for="{{imgUrls}}" wx:key=''>
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='nav'>
+    <view bindtap='changeNav' data-index='0' class='{{currentIndex == 0?"active":""}}'>
+      <view>热卖</view>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
+    </view>
+    <view bindtap='changeNav' data-index='1' class='{{currentIndex == 1?"active":""}}'>
+      <view>产品系列</view>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
+    </view>
+    <view bindtap='changeNav' data-index='2' class='{{currentIndex == 2?"active":""}}'>
+      <view>面部</view>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
+    </view>
+    <view bindtap='changeNav' data-index='3' class='{{currentIndex == 3?"active":""}}'>
+      <view>眼部</view>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
+    </view>
+    <view bindtap='changeNav' data-index='4' class='{{currentIndex == 4?"active":""}}'>
+      <view>唇部</view>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
+    </view>
+  </view>
+  <view class='section'>
+    <view class='search'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543993101764.png'></image>
+      <input bindinput='showDemo' placeholder='输入产品名称'></input>
+    </view>
+    <view class='goodList'>
+      <view class='goodItem' bindtap='toGood'>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+        <view class='goodName'>薇姿矿物矿泉系列水活精华液（30ml）</view>
+        <view class='goodInfo'>
+          <view class='goodIntroduce'>保湿 | 补水</view>
+          <view class='goodPrice'>￥189</view>
+          <view class='goodSale'>月销100笔</view>
+        </view>
+      </view>
+      <view class='goodItem' bindtap='toGood'>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+        <view class='goodName'>薇姿矿物矿泉系列水活精华液（30ml）</view>
+        <view class='goodInfo'>
+          <view class='goodIntroduce'>保湿 | 补水</view>
+          <view class='goodPrice'>￥189</view>
+          <view class='goodSale'>月销100笔</view>
+        </view>
+      </view>
+      <view class='goodItem' bindtap='toGood'>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+        <view class='goodName'>薇姿矿物矿泉系列水活精华液（30ml）</view>
+        <view class='goodInfo'>
+          <view class='goodIntroduce'>保湿 | 补水</view>
+          <view class='goodPrice'>￥189</view>
+          <view class='goodSale'>月销100笔</view>
+        </view>
+      </view>
+      <view class='goodItem' bindtap='toGood'>
+        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+        <view class='goodName'>薇姿矿物矿泉系列水活精华液（30ml）</view>
+        <view class='goodInfo'>
+          <view class='goodIntroduce'>保湿 | 补水</view>
+          <view class='goodPrice'>￥189</view>
+          <view class='goodSale'>月销100笔</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='find active'>         
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512520775.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515014055.png'></image>
+      <text>发现</text>
+    </view>
+    <view class='order' bindtap='toCart'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515621159.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515612151.png'></image>
+      <text>购物车</text>
+    </view>
+    <view class='mine'bindtap='toMine'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512560261.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515040224.png'></image>
+      <text>我的</text>
+    </view>
+  </view>
+  <view class='ask' bindtap='showDemo'>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544685784397.png'></image>
+    <view>咨询</view>
+  </view>
+</view>

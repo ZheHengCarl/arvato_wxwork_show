@@ -1,4 +1,5 @@
 // pages/auth/auth.js
+var app = getApp();
 Page({
 
   /**

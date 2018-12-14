@@ -4,16 +4,17 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true
+		"newFeature": true,
+		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.4.1",
+	"libVersion": "2.4.2",
 	"appid": "wx1969566d264fcae8",
-	"projectname": "arvato",
+	"projectname": "wxworkdemo",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
@@ -45,15 +46,22 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 1,
 					"name": "分销首页",
-					"pathName": "pages/sale/index_bc/index",
+					"pathName": "pages/sale/index_user/index",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "test",
+					"pathName": "pages/sale/good_user/index",
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "轮播介绍",
-					"pathName": "pages/swiper/swiper"
+					"name": "工作台",
+					"pathName": "pages/workbench/workbench",
+					"query": ""
 				}
 			]
 		}

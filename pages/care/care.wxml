@@ -1,0 +1,119 @@
+<view class="container">
+  <view class='header'>
+    <view class='title'>新客培育计划</view>
+  </view>
+  <view class='taskList'>
+    <view class='nav'>
+      <view class='active'>今日</view>
+      <view class=''>历史</view>
+    </view>
+    <view class="list {{listShow==1 ? 'show':''}}">
+      <view class='listHeader'>
+        <view>入会27天新客</view>
+      </view>
+      <view class='listContent'>
+        <text>UAT\n总计2人需要关怀，还有1人尚未完成</text>
+        <image bindtap='showDetail' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
+      </view>
+      <view class='listContent disable'>
+        <text>NUAT\n总计2人需要关怀，还有1人尚未完成</text>
+        <image bindtap='showDetail' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
+      </view>
+    </view>
+    <view class="list {{listShow==1 ? 'show':''}}">
+      <view class='listHeader'>
+        <view>入会55天新客</view>
+      </view>
+      <view class='listContent'>
+        <text>UAT\n总计2人需要关怀，还有1人尚未完成</text>
+        <image bindtap='showDetail' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
+      </view>
+      <view class='listContent disable'>
+        <text>NUAT\n总计2人需要关怀，还有1人尚未完成</text>
+        <image bindtap='showDetail' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
+      </view>
+    </view>
+    <view class="edit {{editShow==1 ? 'show':''}}">
+      <view class='editHeader'>
+        <view>入会55天新客</view>
+      </view>
+      <view class='editContent'>
+        <text>UAT\n总计2人需要关怀，还有1人尚未完成</text>
+        <image bindtap='hideDetail' mode='widthFix' style='width:30rpx' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543546420711.png'></image>
+      </view>
+      <view class='operate'>
+        <view class='userList'>
+          <checkbox-group bindchange="checkboxChange">
+            <label class="checkbox">
+              <view class='checkItem'>
+                <checkbox value="1" />
+                <image mode='aspectFit' class='avatar' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></image>
+                <text bindtap='showHistory' class='userName'>name</text>
+                <text>未完成</text>
+                <image mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556673121.png'></image>
+                <image mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556702629.png'></image>
+              </view>
+            </label>
+            <label class="checkbox">
+              <view class='checkItem'>
+                <checkbox value="2" />
+                <image mode='aspectFit' class='avatar' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></image>
+                <text bindtap='showHistory' class='userName'>name</text>
+                <text>未完成</text>
+                <image mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556673121.png'></image>
+                <image mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556702629.png'></image>
+              </view>
+            </label>
+          </checkbox-group>
+        </view>
+        <view class='editSpace'>
+          亲爱的~距您上次购买资生堂产品已近一个月了，感受到我们的产品为您肌肤带来变化了吗？请尽快前往XXXX专柜即可领取悦薇珀翡塑颜臻白精华液中样一份。搭配您已购买的傲娇精华，抵御加修护，予肌肤持久粉透光采！我在专柜静候您的光临哦~
+        </view>
+        <view class='operBtn'>
+          <view class='preview' bindtap='showPreview'>预览</view>
+          <view bindtap='showEdit'>编辑</view>
+        </view>
+        <view class='ensureBtn'>
+          <checkbox></checkbox>
+          <text>全选</text>
+          <button>确认发送</button>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="cover {{coverShow==1 ? 'show':''}}"></view>
+<view class="coverContent {{coverContentShow==1 ? 'show':''}}">
+  <image bindtap='hideEdit' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543549012749.png'></image>
+  <textarea cursor-spacing='20' value='亲爱的~距您上次购买资生堂产品已近一个月了，感受到我们的产品为您肌肤带来变化了吗？请尽快前往XXXX专柜即可领取悦薇珀翡塑颜臻白精华液中样一份。搭配您已购买的傲娇精华，抵御加修护，予肌肤持久粉透光采！我在专柜静候您的光临哦~'></textarea>
+  <view class='coverBtn'>
+    <view bindtap='showPreview' class='coverPreview'>预览</view>
+    <view>保存</view>
+  </view>
+</view>
+<cover-view class="previewContent {{previewContentShow==1 ? 'show':''}}">
+  <cover-image class='logo' mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543557335152.png'></cover-image>
+  <cover-image class='goods' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543557349948.png'></cover-image>
+  <cover-image class='closePreview' bindtap='hidePreview' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543549012749.png'></cover-image>
+  <cover-view>亲爱的~距您上次购买资生堂产品已近一个月了，感受到我们的产品为您肌肤带来变化了吗？请尽快前往XXXX专柜即可领取悦薇珀翡塑颜臻白精华液中样一份。搭配您已购买的傲娇精华，抵御加修护，予肌肤持久粉透光采！我在专柜静候您的光临哦~
+  </cover-view>
+</cover-view>
+<cover-view class="historyOrder {{historyOrderShow==1 ? 'show':''}}">
+  <cover-view class='historyOrderHeader'>
+    <cover-view>订单记录</cover-view>
+    <cover-image bindtap='historyHide' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543385902625.png'></cover-image>
+  </cover-view>
+  <cover-view class='historyOrderList'>
+    <cover-view class='historyOrderItem'>
+      <cover-view class='historyOrderTitle'>
+        <cover-view>交易时间</cover-view>
+        <cover-view>产品明细</cover-view>
+        <cover-view>金额</cover-view>
+        <cover-view>数量</cover-view>
+        <cover-view>积分</cover-view>
+      </cover-view>
+      <cover-view class='historyOrderContent'>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+</cover-view>

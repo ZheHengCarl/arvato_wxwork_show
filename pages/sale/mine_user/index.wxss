@@ -1,0 +1,236 @@
+@import "../../../static/utils/common.wxss";
+.container{
+  width: 100%;
+  height: 100%;
+}
+
+.header{
+  width: 100%;
+  height: 18%;
+  background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544602735202.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative
+}
+
+.header image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  float: left;
+  margin: 60rpx 0 0 36rpx;
+}
+
+.header .nickName{
+  width: 100%;
+  position: absolute;
+  top: 60rpx;
+  left: 0;
+  padding-left: 150rpx;
+  font-size: 30rpx;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+
+.header .userInfo{
+  width: 100%;
+  position: absolute;
+  top: 110rpx;
+  left: 0;
+  padding-left: 150rpx;
+  font-size: 24rpx;
+  color: #FFFFFF;
+}
+
+
+.header .userInfo view{
+  float: left;
+  border: 2rpx solid #ffffff;
+  border-radius: 20rpx;
+  padding: 0 26rpx;
+  margin-right: 20rpx;
+  line-height: 40rpx;
+}
+
+.section{
+  height: 82%;
+  padding-bottom: 100rpx;
+  overflow: hidden;
+  overflow-y: scroll
+}
+
+.section .sectionHead{
+  height: 160rpx;
+  padding: 0 30rpx;
+}
+
+.section .sectionHead .myOrder{
+  line-height: 100rpx;
+  color: #4D0305;
+  font-size: 30rpx;
+}
+
+.section .sectionHead .nav{
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between
+}
+
+.section .sectionHead .nav view{
+  color: #869DA8;
+  font-size: 28rpx;
+}
+
+.section .sectionHead .nav .active{
+  color: #DA202B;
+  border-bottom: 4rpx solid #DA202B;
+}
+
+.orderItem{
+  height: 350rpx;
+  border-top: 16rpx solid #f7f7f7;
+  border-bottom: 2rpx solid #f7f7f7;
+}
+
+.orderItem .orderHead{
+  height: 80rpx;
+  padding: 0 30rpx;
+  border-bottom: 2rpx solid #f7f7f7
+}
+
+.orderItem .orderHead .orderNum{
+  float: left;
+  font-size: 28rpx;
+  color: #869CA7;
+  line-height: 80rpx;
+}
+
+.orderItem .orderHead .orderState{
+  float: right;
+  font-size: 24rpx;
+  color: #869CA7;
+  line-height: 80rpx;
+}
+
+.goodList{
+  overflow: hidden;
+}
+
+.goodItem{
+  height: 180rpx;
+  padding: 20rpx;
+  position: relative;
+  border-bottom: 2rpx solid #f7f7f7;
+}
+
+.goodItem image{
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.goodItem .goodName{
+  position: absolute;
+  top: 20rpx;
+  left: 0;
+  padding-left: 170rpx;
+  font-size: 26rpx;
+  color: #344C57
+}
+
+.goodItem .goodIntroduce{
+  bottom: 20rpx;
+  position: absolute;
+  left: 0;
+  padding-left: 170rpx;
+  font-size: 26rpx;
+  color: #869DA7
+}
+
+.goodItem .count{
+  position: absolute;
+  right: 30rpx;
+  bottom: 20rpx;
+  text-align: right;
+  font-size: 26rpx;
+  color: #869CA7;
+}
+
+.goodItem .count text{
+  font-size: 30rpx;
+  color: #354C58;
+}
+
+.orderFoot{
+  height: 80rpx;
+  padding: 0 30rpx;
+}
+
+.orderFoot view{
+  float: right;
+  height: 50rpx;
+  margin: 15rpx 0 15rpx 30rpx;
+  font-size: 24rpx;
+  border: 2rpx solid #FF060B;
+  color: #DA202B;
+  line-height: 50rpx;
+  padding: 0 20rpx;
+  border-radius: 24rpx;
+}
+
+.orderFoot .logistics{
+  color: #869CA7;
+  border-color: #859CA7;
+}
+
+.footer{
+  width: 100%;
+  background: #ffffff;
+  height: 100rpx;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  border-top: 1rpx solid #E6E4E4;
+  z-index: 9
+}
+
+.footer view{
+  text-align: center;
+  position: relative;
+  width: 120rpx;
+}
+
+.footer view image{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 8rpx;
+  width: 45rpx;
+}
+
+.footer view .choose{
+  opacity: 1;
+  z-index: 1
+}
+
+.footer .active .choose{
+  opacity: 0;
+  z-index: -1
+}
+
+.footer view  text{
+  font-size: 20rpx;
+  color: #BEC6CB;
+  display: block;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  top: 66rpx;
+}
+
+.footer .active text{
+  color: #DA202B
+}

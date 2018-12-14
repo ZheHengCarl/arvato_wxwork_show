@@ -1,0 +1,97 @@
+<view class='container'>
+  <view class='header'>
+    <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></image>
+    <view class='nickName'>Gina</view>
+    <view class='userInfo'>
+      <view>会员</view>
+      <view>积分：120</view>
+    </view>
+  </view> 
+
+  <view class='section'>
+    <view class='sectionHead'>
+      <view class='myOrder'>我的订单</view>
+      <view class='nav'>
+        <view data-index='0' class='{{index==0?"active":""}}' bindtap='changeIndex'>全部</view>
+        <view data-index='1' class='{{index==1?"active":""}}' bindtap='changeIndex'>待付款</view>
+        <view data-index='2' class='{{index==2?"active":""}}' bindtap='changeIndex'>待收货</view>
+        <view data-index='3' class='{{index==3?"active":""}}' bindtap='changeIndex'>已完成</view>
+        <view data-index='4' class='{{index==4?"active":""}}' bindtap='changeIndex'>已取消</view>
+      </view>
+    </view>
+    <view class='orderList'>
+      <view class='orderItem'>
+        <view class='orderHead'>
+          <view class='orderNum'>订单编号：223568</view>
+          <view class='orderState'>已付款</view>
+        </view>
+        <view class='goodList'>
+          <view class='goodItem'>
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+            <view class='goodName'>薇姿温泉矿物系列水活精华液  </view>
+            <view class='goodIntroduce'>50ml</view>
+            <view class='count'>合计： <text>￥8.85</text></view>
+          </view>
+        </view>
+        <view class='orderFoot'>
+          <view class='receive' bindtap='showDemo'>确认收货</view>
+          <view class='logistics' bindtap='toLogistics'>查看物流</view>
+        </view>
+      </view>
+       <view class='orderItem'>
+        <view class='orderHead'>
+          <view class='orderNum'>订单编号：223568</view>
+          <view class='orderState'>已付款</view>
+        </view>
+        <view class='goodList'>
+          <view class='goodItem'>
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+            <view class='goodName'>薇姿温泉矿物系列水活精华液  </view>
+            <view class='goodIntroduce'>50ml</view>
+            <view class='count'>合计： <text>￥8.85</text></view>
+          </view>
+        </view>
+        <view class='orderFoot'>
+          <view class='receive' bindtap='showDemo'>确认收货</view>
+          <view class='logistics'>查看物流</view>
+        </view>
+      </view>
+       <view class='orderItem'>
+        <view class='orderHead'>
+          <view class='orderNum'>订单编号：223568</view>
+          <view class='orderState'>已付款</view>
+        </view>
+        <view class='goodList'>
+          <view class='goodItem'>
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+            <view class='goodName'>薇姿温泉矿物系列水活精华液  </view>
+            <view class='goodIntroduce'>50ml</view>
+            <view class='count'>合计： <text>￥8.85</text></view>
+          </view>
+        </view>
+        <view class='orderFoot'>
+          <view class='receive' bindtap='showDemo'>确认收货</view>
+          <view class='logistics'>查看物流</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='footer'>
+    <view class='find' bindtap='toFind'>         
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512520775.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515014055.png'></image>
+      <text>发现</text>
+    </view>
+    <view class='order' bindtap='toCart'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515621159.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515612151.png'></image>
+      <text>购物车</text>
+    </view>
+    <view class='mine active'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512560261.png'></image>
+      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515040224.png'></image>
+      <text>我的</text>
+    </view>
+  </view>
+</view>

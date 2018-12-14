@@ -1,0 +1,53 @@
+<view class='container'>
+  <view class='header'>
+    <view class='nickName'>Gina </view>
+    <view class='userInfo'>
+      <view class='phone'>18736552886</view>
+      <view class='site'>上海市大宁广场A3欧唯特</view>
+    </view>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544602724631.png'></image>
+  </view>
+  <view class='coupon'>
+    <view class='discount'>
+      <view>优惠券：暂无可用</view>
+      <view class='more'>0张 ●●●</view>
+    </view>
+    <view class='invoice'>
+      <view>发票</view>
+      <view class='more'>●●●</view>
+    </view>
+  </view>
+  <view class='goodList'>
+    <view class='goodItem'>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+      <view class='goodInfo'>
+        <view class='goodName'>薇姿温泉矿物系列水活精华液</view>
+        <view class='goodIntroduce'>
+          <view class='goodPrice'>￥ 106</view>
+          <view class='goodContent'>50ml</view>
+        </view>
+        <view class='tips'>支持7天无理由退货</view>
+      </view>
+      <view class='buyNum'>
+        <view class='countTitle'>购买数量</view>
+        <view class='count'>
+          <view>-</view><view class='num'>2</view><view>+</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='amount'>
+    <view class='money'>
+      <view>商品金额</view>
+      <view class='amountMoney'>￥ 106</view>
+    </view>
+    <view class='freight'>
+      <view>运费</view>
+      <view class='freightMoney'>￥ 12</view>
+    </view>
+  </view>
+  <view class='footer'>
+    <view class='payMoney'>应付： <text>￥ 106</text></view>
+    <view class='payBtn' bindtap='toMine'>提交订单</view>
+  </view>
+</view>
