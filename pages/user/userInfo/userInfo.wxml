@@ -4,10 +4,10 @@
   <view class='header'>
     <view class='headerInfo'>
       <view class='phone'>
-        <image class='phoneIcon' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086562067.png'></image>
+        <image class='phoneIcon' bindtap='phoneClick' data-phone="{{currUserInfo.mobile}}" mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086562067.png'></image>
       </view>
       <view class='avatar'>
-        <image mode='widthFix' src='{{avatar}}'></image>
+        <image mode='widthFix' src='{{currUserInfo.avatar}}'></image>
         <image class='sexIcon' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086613843.png'></image>
       </view>
       <view class='talk'>
@@ -19,14 +19,14 @@
       <text>优惠券</text>
     </view>
     <view class='userInfo'>
-      <text class='nickName'>{{username}}</text>，
-      <text class='point'>{{point}}积分</text>
+      <text class='nickName'>{{currUserInfo.name}}</text>，
+      <text class='point'>{{currUserInfo.point}}积分</text>
     </view>
     <view class='remark'>
-      备注 : {{remarks}}
+      备注 : {{currUserInfo.note}}
     </view>
     <view class='vipLevel'>
-      银卡会员
+      {{currUserInfo.level}}
     </view>
   </view>
 
@@ -70,7 +70,7 @@
           <view class='more' bindtap='showMore' data-index='1'>MORE +</view>
         </view>
         <view class='labelList'>
-          <view wx:for='{{labelList}}' wx:key=''>{{item}}</view>
+          <view wx:for='{{currUserInfo.tagList}}' wx:key=''>{{item}}</view>
         </view>
       </view>
       <view class='userPicture'>
@@ -78,10 +78,10 @@
           <view class='label'>用户画像</view>
         </view>
         <view class='userImage'>
-          <image src='{{avatar}}'></image>
-          <view class='label1'>购物达人</view>
-          <view class='label2'>白富美</view>
-          <view class='label3'>护肤面膜控</view>
+          <image src='{{currUserInfo.avatar}}'></image>
+          <view class='label1'>{{currUserInfo.features[0]}}</view>
+          <view class='label2'>{{currUserInfo.features[2]}}</view>
+          <view class='label3'>{{currUserInfo.features[1]}}</view>
         </view>
       </view>
     </view>
@@ -91,7 +91,7 @@
       <view class='manageLabel'>
         <view class='currentLabelTitle'>用户标签</view>
         <view class='currentLabelList'>
-          <label class='currentLabelItem' wx:for='{{labelList}}' wx:key=''>
+          <label class='currentLabelItem' wx:for='{{tagList}}' wx:key=''>
             {{item}}
             <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
           </label>

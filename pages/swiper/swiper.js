@@ -17,7 +17,7 @@ Page({
     //是否竖直  
     vertical: false,
     //是否自动切换  
-    autoplay: true,
+    autoplay: false,
     //滑动动画时长毫秒  
     duration: 500,
     //所有图片的高度  

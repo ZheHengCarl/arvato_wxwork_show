@@ -36,10 +36,13 @@ view,text,a,input{
   width: 150rpx;
   height: 150rpx;
   position: relative;
+ 
+
 }
 
 .headerInfo .avatar image{
-  width: 100%
+  width: 100%;
+  border-radius: 100%;
 }
 
 .headerInfo .avatar .sexIcon{
@@ -47,6 +50,7 @@ view,text,a,input{
   position: absolute;
   bottom: 4rpx;
   right: 4rpx;
+  z-index: 2; 
 }
 
 .discount{
@@ -246,6 +250,7 @@ view,text,a,input{
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
+  
 }
 
 .userImage image{
@@ -255,7 +260,8 @@ view,text,a,input{
   margin: auto;
   left: 0;
   right: 0;
-  top: 0
+  top: 0;
+  border-radius: 100%;
 }
 .userImage view{
   background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544166420762.png');

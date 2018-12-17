@@ -26,14 +26,11 @@ Page({
   // 用户点击手机号授权事件
   getPhone: function (res) {
     console.info(res);
-    var ency = res.detail.encryptedData;
-    var iv = res.detail.iv;
-    var sessionKey = app.sessionKey;
-    console.info(app);
-    if (res.detail.errMsg == 'getPhoneNumber:fail user deny') {
-      console.info("用户点击了拒绝。");
-    } else {
+    if (res.detail.errMsg == 'getPhoneNumber:ok') {
       console.info("用户点击了同意。");
+      var ency = res.detail.encryptedData;
+      var iv = res.detail.iv;
+      var sessionKey = app.sessionKey;
       var data = {
         encryptedData: ency,
         iv: iv,
@@ -49,14 +46,22 @@ Page({
           'content-type': 'application/x-www-form-urlencoded'
         },
         success: function (res) {
-          console.info("后台解密手机号返回的结果:");
-          console.info(res);
+          wx.navigateTo({
+            url: "../swiper/swiper"
+          })
         },
         fail: function (res) {
           console.info("发送ajax请求刀" + app.domain + "失败");
           console.info(res);
+          // 解密成功或者失败都跳转到轮播图页
+          wx.navigateTo({
+            url: "../swiper/swiper"
+          })
         }
       })
+    } else {
+      // 点击拒绝停留在此界面
+      console.info("用户点击了拒绝。");
     }
   }
 

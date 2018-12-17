@@ -11,14 +11,55 @@ Page({
     labelTab: 0,
     username:'Gina',
     point: 3250,
-    labelList: ['关注抗皱紧致', '购物达人', '护肤面膜控', '高价值', '品牌忠实消费者', '白富美'],
     labelchoose:0
   },
 
   onLoad: function (options) {
-
+    var id = options.id;
+    if(!id){
+      id = 1;
+    }
+    console.info(id);
+    // 从app.userList里面找出当前ID的用户的信息
+    var userList = app.userList;
+    for(var i = 0; i < userList.length; i ++){
+      var item = userList[i];
+      if(item.id == id){
+        this.setData({
+          currUserInfo: item
+        });
+      }
+    }
+    var that = this;
+    // 请求默认的标签
+    wx.request({
+      url: "https://minipro.arvatocrm.cn/arvato/show/json/get",
+      data: {
+        id: "tagList"
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.info(res);
+        var tagList = res.data.tagList;
+        console.info(tagList.length);
+        that.setData({
+          tagList: tagList
+        })
+      }
+    })
+    
   },
 
+  // 点击拨打电话触发的方法
+  phoneClick: function(e){
+    var phoneNumber = e.target.dataset.phone;
+    console.info(phoneNumber);
+    wx.makePhoneCall({
+      phoneNumber: phoneNumber,
+    })
+  },
   changeNav: function (e) {
     var index = e.currentTarget.dataset.current;
     this.setData({
@@ -33,7 +74,7 @@ Page({
     this.setData({
       labelTab: index,
       currentTab:100
-    })
+    }) 
   },
 
   chooseLabel:function(e){
