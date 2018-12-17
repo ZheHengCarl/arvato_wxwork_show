@@ -188,7 +188,7 @@ view,text,a,input{
   width: 100%;
   height: 35%;
   padding: 40rpx 50rpx;
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .title{
@@ -220,6 +220,8 @@ view,text,a,input{
 .labelList{
   width: 100%;
   margin-top: 15rpx;
+  height: 85%;
+  overflow-y: scroll
 }
 
 .labelList view{
@@ -320,7 +322,8 @@ view,text,a,input{
 
 .currentLabelList{
   width: 100%;
-  overflow: hidden
+  height: 75%;
+  overflow-y: scroll
 }
 
 .currentLabelItem{
@@ -401,6 +404,7 @@ view,text,a,input{
   line-height: 66rpx;
   text-align: center;
   position: relative;
+  margin-bottom: 10rpx;
 }
 .addLabelItem image{
   width: 26rpx;

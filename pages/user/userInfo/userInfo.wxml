@@ -91,9 +91,9 @@
       <view class='manageLabel'>
         <view class='currentLabelTitle'>用户标签</view>
         <view class='currentLabelList'>
-          <label class='currentLabelItem' wx:for='{{tagList}}' wx:key=''>
+          <label class='currentLabelItem' wx:for-index="index" wx:for='{{currUserInfo.tagList}}' wx:key=''>
             {{item}}
-            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png' data-labelindex = '{{index}}' bindtap='removeLabel'></image>
           </label>
         </view>
       </view>
@@ -108,15 +108,15 @@
       <view class='showAddLabel'>
         <view class='addByHandTitle'>手动添加</view>
         <view class='addLabelList'>
-          <view class='addLabelItem'>
-            抗皱紧致关注者
-            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png'></image>
+          <view class='addLabelItem' wx:for-index="index" wx:for='{{handLabelList}}' wx:key=''>
+            {{item}}
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png' data-addlabelindex='{{index}}' bindtap='removeHandLabel'></image>
           </view>
         </view>
-        <view class='handAddBtn'>增加标签</view>
+        <view class='handAddBtn' bindtap='modalinput'>增加标签</view>
       </view>
       <view class='ensureAddBtn'>
-        <button>确认添加</button>
+        <button bindtap='concatLabel'>确认添加</button>
       </view>
     </view>
 
@@ -130,22 +130,11 @@
           <cover-image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544171328985.png'></cover-image>
         </view>
         <view class='LibraryList'>
-          <label data-labelchoose='{{labelchoose}}' bindtap='chooseLabel' class='LibraryItem {{labelchoose==1 ? "active" : ""}}'>关注抗皱紧致</label>
-          <label class='LibraryItem '>购物达人</label>
-          <label class='LibraryItem '>护肤面膜控</label>
-          <label class='LibraryItem '>高价值</label>
-          <label class='LibraryItem '>护肤面膜控</label>
-          <label class='LibraryItem '>白富美</label>
-          <label class='LibraryItem '>关注抗皱紧致</label>
-          <label class='LibraryItem '>购物达人</label>
-          <label class='LibraryItem '>护肤面膜控</label>
-          <label class='LibraryItem active'>高价值</label>
-          <label class='LibraryItem '>护肤面膜控</label>
-          <label class='LibraryItem '>白富美</label>
+          <label wx:for='{{labelLib}}' wx:for-index='index' wx:key='' bindtap='chooseLabel' data-labelindex='{{index}}' class='LibraryItem {{item.labelchoose==1 ? "active" : ""}}'>{{item.labelName}}</label>
         </view>
       </view>
       <view class='ensureAddBtnFrom'>
-        <button>确认添加</button>
+        <button bindtap='ensureLibAdd'>确认添加</button>
       </view>
     </view>
 
@@ -154,7 +143,7 @@
       <view class='customerInfo'>
         <view class='birthday customerItem'>
           <text>会员生日</text>
-          <input value='1998-08-08'></input>
+          <input value='{{currUserInfo.brithday}}'></input>
         </view>
         <view class='area customerItem'>
           <text>地区</text>
@@ -166,11 +155,11 @@
         </view>
         <view class='detailArea customerItem'>
           <text>详细地址</text>
-          <input value='万荣路700号A3幢'></input>
+          <input value='{{currUserInfo.address}}'></input>
         </view>
         <view class='age customerItem'>
           <text>年龄</text>
-          <input value='23'></input>
+          <input value='{{currUserInfo.age}}'></input>
         </view>
         <view class='addDate customerItem'>
           <text>入会日期</text>
@@ -188,7 +177,7 @@
         </view>
         <view class='store customerItem'>
           <text>店铺</text>
-          <input value='上海正大广场店'></input>
+          <input value='{{currUserInfo.store}}'></input>
         </view>
         <view class='ensureBtn'>
           <button>确认修改</button>
@@ -198,48 +187,15 @@
 
     <!-- 历史积分 -->
     <view class='historyPoint {{currentTab==2 ? "show" : ""}}'>
-      <view class='pointDetail'>
-        <view class='pointNum'>
-          <text>+ 1000</text>
+      <view class='pointDetail' wx:for='{{currUserInfo.pointList}}' wx:key=''>
+        <view class='pointNum {{item.type==1?"":"reduce"}}'>
+          <text>{{item.count}}</text>
         </view>
         <view class='pointOper'>
-          <text>消费积分</text>
+          <text>{{item.type==1?"消费积分":"积分兑礼"}}</text>
         </view>
         <view class='operDetail'>
-          <text>微商城消费累加\n2018/06/01</text>
-        </view>
-      </view>
-      <view class='pointDetail'>
-        <view class='pointNum reduce'>
-          <text>- 600</text>
-        </view>
-        <view class='pointOper'>
-          <text>积分兑礼</text>
-        </view>
-        <view class='operDetail'>
-          <text>微商城消费累加\n2018/06/01</text>
-        </view>
-      </view>
-      <view class='pointDetail'>
-        <view class='pointNum'>
-          <text>+ 1000</text>
-        </view>
-        <view class='pointOper'>
-          <text>消费积分</text>
-        </view>
-        <view class='operDetail'>
-          <text>微商城消费累加\n2018/06/01</text>
-        </view>
-      </view>
-      <view class='pointDetail'>
-        <view class='pointNum'>
-          <text>+ 1000</text>
-        </view>
-        <view class='pointOper'>
-          <text>消费积分</text>
-        </view>
-        <view class='operDetail'>
-          <text>微商城消费累加\n2018/06/01</text>
+          <text>{{item.note}}\n{{item.date}}</text>
         </view>
       </view>
       <image class='loadmore' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544154992927.png'></image>
@@ -248,67 +204,59 @@
     <!-- 历史订单 -->
     <view class='historyOrder  {{currentTab==3 ? "show" : ""}}'>
       <view class='orderList'>
-        <view class='orderItem'>
+        <view class='orderItem' wx:for='{{currUserInfo.orderList}}' wx:key=''>
           <view class='orderInfo'>
-            <view class='orderPlace'>新梅联合广场</view>
-            <view class='orderTime'>2018/06/01</view>
+            <view class='orderPlace'>{{item.address}}</view>
+            <view class='orderTime'>{{item.date}}</view>
           </view>
           <view class='orderInfo'>
-            <view class='goodsName'>●红妍肌活精华露</view>
-            <view class='price'>￥588 × 1</view>
+            <view wx:for='{{item.commodityList}}' wx:key=''>
+              <view class='goodsName'>●{{item.name}}</view>
+              <view class='price'>￥{{item.price}} × {{item.count}}</view>
+            </view>
           </view>
           <view class='orderInfo'>
-            <view class='pointState'>+ 590</view>
-          </view>
-        </view>
-        <view class='orderItem'>
-          <view class='orderInfo'>
-            <view class='orderPlace'>新梅联合广场</view>
-            <view class='orderTime'>2018/06/01</view>
-          </view>
-          <view class='orderInfo'>
-            <view class='goodsName'>●红妍肌活精华露</view>
-            <view class='price'>￥588 × 1</view>
-            <view class='goodsName'>●悦薇珀颜亮肤水</view>
-            <view class='price'>￥5656 × 1</view>
-          </view>
-          <view class='orderInfo'>
-            <view class='pointState'>+ 1270</view>
+            <view class='pointState'>{{item.point}}</view>
           </view>
         </view>
       </view>
     </view>
 
     <!-- 礼品领用 -->
-    <view class='present {{currentTab==4 ? "show" : ""}}'>
+    <view class='present {{currentTab==4 ? "show" : ""}}' wx:for='{{currUserInfo.applyList}}' wx:key=''>
       <view class='presentDetail'>
         <text class='presentTitle'>申请日期</text>
-        <text>2018-10-10</text>
+        <text>{{item.date}}</text>
       </view>
       <view class='presentDetail'>
         <text class='presentTitle'>申请编号</text>
-        <text>BCHD268869</text>
+        <text>{{item.serial}}</text>
       </view>
       <view class='presentDetail'>
         <text class='presentTitle'>预约方式</text>
-        <text>微信预约</text>
+        <text>{{item.type}}</text>
       </view>
       <view class='presentDetail'>
         <text class='presentTitle'>店铺</text>
-        <text>正大广场店</text>
+        <text>{{item.store}}</text>
       </view>
       <view class='presentDetail'>
         <text class='presentTitle'>商品名称</text>
-        <text>红妍肌活精华露</text>
+        <text>{{item.commodityName}}</text>
       </view>
       <view class='presentDetail'>
         <text class='presentTitle'>申请数量</text>
-        <text>1</text>
+        <text>{{item.count}}</text>
       </view>
       <view class='presentDetail'>
         <text class='presentTitle'>状态</text>
-        <text>申领中</text>
+        <text>{{item.status}}</text>
       </view>
     </view>
+
+    <!-- 标签输入框 -->
+    <modal hidden="{{hiddenmodalput}}" title="请输入标签名" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
+    <input bindinput='saveLabelName' maxlength='7' type='text' placeholder="请输入内容" value='{{inputValue}}' auto-focus/>  
+</modal> 
   </view>
 </view>
