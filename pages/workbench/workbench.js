@@ -3,8 +3,8 @@ Page({
   data: {
     coverShow: 0,
     errorShow: 0,
-    sale: '123,000',
-    saleMoney: '1,230',
+    sale: '1.2',
+    saleMoney: '20',
     finishPercent: '70',
     hasFinishNum: '123,000',
     goalNum: '176,000',
@@ -39,7 +39,7 @@ Page({
     var h = wx.getSystemInfoSync().windowHeight / 2 * 0.5;
     var f = 1 - p;
     ctx.setLineWidth(5);
-    ctx.setStrokeStyle('#d2112b');
+    ctx.setStrokeStyle('#DA202B');
     ctx.setLineCap('round');
     ctx.beginPath();
     ctx.arc(w, h, h - 15, -1 * Math.PI, -f * Math.PI, false);

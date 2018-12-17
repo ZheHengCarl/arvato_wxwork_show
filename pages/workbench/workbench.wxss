@@ -13,7 +13,7 @@ view, text, a {
   box-sizing: border-box;
   padding-top: 30rpx;
   width: 100%;
-  height: 25%;
+  height: 20%;
   background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=headerbg.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
@@ -28,7 +28,7 @@ view, text, a {
 
 .header .pull {
   position: absolute;
-  bottom: 0;
+  bottom: 24rpx;
   text-align: center;
   width: 100%;
 }
@@ -40,27 +40,10 @@ view, text, a {
 
 .header .pull view .lookMore {
   width: 40%;
-  margin: 0 30% 30rpx;
+  font-size: 20rpx;
 }
 
-.header .pull view .refresh {
-  width: 15rpx;
-  height: 21rpx;
-  display: block;
-  position: absolute;
-  top: 5rpx;
-  left: 40%;
-}
-
-.header .pull .pullDown {
-  text-align: center;
-  width: 50rpx;
-  height: 50rpx;
-  display: inline-block;
-  margin-top: 10rpx;
-}
-
-.header view text {
+.header view view {
   display: inline-block;
   width: 100%;
   text-align: center;
@@ -69,10 +52,14 @@ view, text, a {
 
 .header view .seeled {
   font-size: 30rpx;
-  font-weight: bold;
 }
 
 .header view .seelMoney {
+  font-size: 36rpx;
+  margin-top: 20rpx;
+}
+
+.header view .seelMoney text{
   font-size: 50rpx;
 }
 
@@ -81,89 +68,37 @@ view, text, a {
   color: #fff;
 }
 
-.footer {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.footer view {
-  width: 25%;
-  text-align: center;
-  padding-top: 40rpx;
-}
-
-.footer view image {
-  display: inline-block;
-  width: 70rpx;
-  height: 70rpx;
-}
-
-.footer view text {
-  display: block;
-  width: 100%;
-  font-size: 24rpx;
-  margin-top: 10rpx;
-  color: #7a7a7a;
-}
-
-.showMore {
-  margin-top: 30rpx;
-  overflow: hidden;
-  width: 100%;
-  height: 60rpx;
-  text-align: center;
-}
-
-.showMore a {
-  width: 60rpx;
-  height: 60rpx;
-}
-
-.showMore a text {
-  width: 100%;
-  text-align: center;
-  display: block;
-}
-
-.showMore a image {
-  display: inline-block;
-  width: 64rpx;
-  height: 64rpx;
-}
-
 .section {
   width: 100%;
-  height: 40%;
-  margin-top: 10%;
-  padding-top: 30rpx;
+  height: 55%;
   box-sizing: border-box;
-  border-top: 10rpx solid #dcdcdc;
+  border-bottom: 12rpx solid #dcdcdc
 }
 
 .section .month {
   display: flex;
   justify-content: space-around;
+  height: 13%
 }
 
 .section .month text {
+  line-height: 90rpx;
   display: block;
   width: 20%;
   text-align: center;
   font-size: 34rpx;
+  color: #646464;
   border-bottom: 2px solid #eee;
 }
 
 .section .month .active {
-  border-bottom: 3px solid darkred;
-  color: darkred;
+  border-bottom: 3px solid #DA202B;
+  color: #DA202B;
 }
 
 .section .loadingParent {
   width: 100%;
-  height: 70%;
+  height: 45%;
   position: relative;
 }
 
@@ -198,7 +133,7 @@ view, text, a {
   bottom: 0;
   font-size: 30rpx;
   text-align: center;
-  color: #d2112b;
+  color: #DA202B;
 }
 
 .section .loadingParent .finish .monthGoal image {
@@ -223,10 +158,11 @@ view, text, a {
 }
 
 .section .finishMember {
-  color: #7a7a7a;
+  color: #7A7A7A;
   font-size: 20rpx;
   text-align: center;
   margin-top: 10rpx;
+  height: 7%
 }
 
 .section .newParent {
@@ -284,16 +220,71 @@ view, text, a {
 
 .section .customList {
   width: 100%;
-  height: 60rpx;
+  height: 20%;
   margin: 20rpx auto 0;
   display: flex;
   justify-content: space-around;
 }
 
 .section .customList view {
-  color: #7d7d7d;
+  color: #767676;
   text-align: center;
   font-size: 24rpx;
+  margin-bottom: 20rpx;
+}
+
+.footer {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.footer view {
+  width: 25%;
+  text-align: center;
+  padding-top: 40rpx;
+}
+
+.footer view image {
+  display: inline-block;
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.footer view text {
+  display: block;
+  width: 100%;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+  color: #666666;
+}
+
+.showMore {
+  margin-top: 30rpx;
+  overflow: hidden;
+  width: 100%;
+  height: 5%;
+  text-align: center;
+}
+
+.showMore a {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.showMore a text {
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+.showMore a image {
+  display: inline-block;
+  width: 64rpx;
+  height: 64rpx;
 }
 
 .hide {

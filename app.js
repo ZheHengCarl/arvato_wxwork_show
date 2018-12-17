@@ -33,6 +33,14 @@ App({
       }
     })
   },
+
+  // onShow:function(){
+  //   var that=this;
+  //   var res = wx.getSystemInfo();
+  //   console.log(res);
+  //   that.globalData.statusBarHeight  = res.statusBarHeight *2
+  // },
+
   globalData: {
     userInfo: null
   }

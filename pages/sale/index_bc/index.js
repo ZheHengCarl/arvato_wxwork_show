@@ -43,7 +43,7 @@ Page({
 
   toGood: function () {
     wx.navigateTo({
-      url: '../good_user/index',
+      url: '../good_bc/index',
     })
   },
 })
