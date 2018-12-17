@@ -6,7 +6,7 @@
       <cover-image mode='widthFix' bindtap='searchUser' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1539677268173.png'></cover-image>
     </view>
   </view>
-  <view class='mailLists' wx:for='{{userList}}'>
+  <view class='mailLists' wx:for='{{userList}}' wx:key=''>
     <view class='list' data-param='{{item.id}}' bindtap='toUserDetail'>
       <view class='header'>
         <image class='avator' src='{{item.avatar}}'></image>

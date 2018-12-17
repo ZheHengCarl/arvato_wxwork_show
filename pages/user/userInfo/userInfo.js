@@ -6,12 +6,14 @@ Page({
     avatar:'http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png',
     region: ['上海市', '上海市', '闸北区'],
     register: ['微信', '手机'],
+    registerArray: [{id: 0,name: '微信'},{id: 1, name: '手机'}],
     currentTab: 0,
     remarks:'hello! thank you! thank you very much!',
     labelTab: 0,
     username:'Gina',
     point: 3250,
-    labelchoose:0
+    labelchoose:0,
+    index:0
   },
 
   onLoad: function (options) {
@@ -42,8 +44,7 @@ Page({
       },
       success: function (res) {
         console.info(res);
-        var tagList = res.data.tagList;
-        console.info(tagList.length);
+        var tagList = res.data.data.tagList;
         that.setData({
           tagList: tagList
         })
@@ -88,5 +89,17 @@ Page({
         labelchoose: 0
       })
     }
-  }
+  },
+  bindRegionChange(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      region: e.detail.value
+    })
+  },
+  bindPickerChange(e) {
+    console.log('picker发送选择改变，携带值为', e.detail.value)
+    this.setData({
+      index: e.detail.value
+    })
+  },
 })

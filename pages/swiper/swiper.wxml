@@ -1,6 +1,6 @@
 <view class="container">  
   <swiper class="swiper" bindchange="getCurrIndex"  indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" bindtap='navToList'  circular="{{circular}}" >  
-    <block wx:for="{{imageList}}">  
+    <block wx:for="{{imageList}}" wx:key=''>  
       <swiper-item >  
         <image src="{{item}}" mode="scaleToFill" bindload="imageLoad"         
         class=".itemimage" style="height:100%;width:100%;"/>  

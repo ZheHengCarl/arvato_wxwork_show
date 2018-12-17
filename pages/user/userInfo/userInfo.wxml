@@ -158,8 +158,10 @@
         </view>
         <view class='area customerItem'>
           <text>地区</text>
-          <picker mode="region">
-            上海市闸北区
+          <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+            <view class="picker">
+              {{region[0]}}{{region[1]}}{{region[2]}}
+            </view>
           </picker>
         </view>
         <view class='detailArea customerItem'>
@@ -180,8 +182,8 @@
         </view>
         <view class='register customerItem'>
           <text>注册方式</text>
-          <picker mode="selector" range='{{register}}'>
-            {{register[0]}}
+          <picker mode="selector" range='{{register}}' bindchange="bindPickerChange" value="{{index}}">
+            {{register[index]}}
           </picker>
         </view>
         <view class='store customerItem'>
