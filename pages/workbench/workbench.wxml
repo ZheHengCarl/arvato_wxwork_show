@@ -2,11 +2,11 @@
   <view class="header {{_hide==1 ? 'hide':''}}">
     <view>
       <view class='seeled'>今日累积销售额</view>
-      <view class='seelMoney'><text>{{sale}}</text>万元</view>
+      <view class='seelMoney'><text>{{dataList.sale}}</text>万元</view>
     </view>
     <view>
-      <view class='seeled'>本月累积销售额</view>
-      <view class='seelMoney'><text>{{saleMoney}}</text>万元</view>
+      <view class='seeled'>本月累积销售额</view> 
+      <view class='seelMoney'><text>{{dataList.saleMoney}}</text>万元</view>
     </view>
     <view class='pull'>
       <view>
@@ -26,7 +26,7 @@
     <view class="loadingParent">
       <canvas canvas-id="canvasIndex"></canvas>
       <view class='finish'>
-        <text class='finishPercent'>{{finishPercent}}</text>
+        <text class='finishPercent'>{{dataList.finishPercent}}</text>
         <text class='percent'>%</text>
         <view class='monthGoal'>
           <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=coin.png'></image>
@@ -35,7 +35,7 @@
       </view>
     </view>
     <view class='finishMember'>全国已有
-      <text>{{finishMember}}</text>个区域完成了业绩目标
+      <text>{{dataList.finishMember}}</text>个区域完成了业绩目标
     </view>
     <view class='chooseDate'>
       <view data-num="1" class="{{_num==1 ? 'active':''}}" bindtap='changeDate'>今日</view>
@@ -44,23 +44,23 @@
     <view class='customList'>
       <view>
         <view>新客</view>
-        <view>1.5万</view>
+        <view>{{dataList.newCustomer}}</view>
       </view>
       <view>
         <view>老客</view>
-        <view>2.5万</view>
+        <view>{{dataList.oldCustomer}}</view>
       </view>
       <view>
         <view>散客</view>
-        <view>1.2万</view>
+        <view>{{dataList.scatCustomer}}</view>
       </view>
       <view>
         <view>客单价</view>
-        <view>53</view>
+        <view>{{dataList.unitPrice}}</view>
       </view>
       <view>
         <view>客单件</view>
-        <view>1.5万</view>
+        <view>{{dataList.count}}</view>
       </view>
     </view>
   </view>

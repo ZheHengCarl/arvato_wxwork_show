@@ -30,7 +30,19 @@ Page({
     app.domain = 'https://minipro.arvatocrm.cn/shiseido';
     this.drawFinish(0.7);
     this.showMonth();
-
+    wx.request({
+      url: "https://minipro.arvatocrm.cn/arvato/show/json/get",
+      data: {
+        id: "kpi"
+      },
+      success: function (res) {
+        console.info(res);
+        var dataList = res.data.data.home;
+        that.setData({
+          dataList: dataList
+        })
+      }
+    })
   },
 
   drawFinish: function(p) {
