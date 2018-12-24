@@ -46,7 +46,8 @@ Page({
           'content-type': 'application/x-www-form-urlencoded'
         },
         success: function (res) {
-          wx.navigateTo({
+          console.log(res)
+          wx.redirectTo({
             url: "../swiper/swiper"
           })
         },
@@ -54,7 +55,7 @@ Page({
           console.info("发送ajax请求刀" + app.domain + "失败");
           console.info(res);
           // 解密成功或者失败都跳转到轮播图页
-          wx.navigateTo({
+          wx.redirectTo({
             url: "../swiper/swiper"
           })
         }

@@ -1,4 +1,4 @@
-// pages/kpi/kpiList/kpiList.js
+// pages/user/discount/index.js
 Page({
 
   /**

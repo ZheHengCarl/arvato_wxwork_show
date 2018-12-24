@@ -47,7 +47,7 @@
   margin: 0 auto;
   font-size: 30rpx;
   text-align: center;
-  color: #d2112b;
+  color: #DA202B;
 }
 
 .container .monthGoal image {
@@ -120,7 +120,7 @@
 .container .content .contentHeader{
   height: 80rpx;
   width: 1200rpx;
-  background-color: #d3112c;
+  background-color: #DA202B;
   color: #ffffff;
   position: relative;
 }
@@ -137,6 +137,7 @@
   display: block;
   height: 40rpx;
   margin-top: 20rpx;
+  font-size: 28rpx;
 }
 
 .container .content .contentHeader picker{

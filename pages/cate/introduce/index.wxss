@@ -1,0 +1,92 @@
+@import "../../../static/utils/common.wxss";
+
+.container {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 30rpx;
+  overflow: hidden
+}
+
+.search {
+  width: 100%;
+  height: 6%;
+  background-color: #f7f7f7;
+  border-radius: 8rpx;
+  margin-top: 30rpx;
+  position: relative;
+  margin-bottom: 30rpx;
+}
+
+.search image {
+  position: absolute;
+  width: 40rpx;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 20rpx;
+}
+
+.search input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-left: 80rpx;
+  color: #869da8;
+  font-size: 24rpx;
+}
+
+.produceList {
+  width: 100%;
+  height: 93%;
+  overflow-y: scroll;
+  padding-bottom: 30rpx;
+}
+
+.lists {
+  width: 100%;
+  height: 216rpx;
+  background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1545205702055.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #5f2424;
+  margin-bottom: 16rpx;
+  padding: 40rpx 100rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.lists view {
+  text-align: right;
+  font-size: 48rpx;
+  width: 100%
+}
+
+.lists .listIntro {
+  font-size: 24rpx;
+}
+
+.produceList .Friming{
+  color: #B95C81;
+  background-image: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1545205714211.png')
+}
+
+.produceList .Acne{
+  color: #8D5021;
+  background-image: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1545205724310.png')
+}
+
+.produceList .Moisturizing{
+  color: #16678D;
+  background-image: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1545205780416.png')
+}
+
+.produceList .Sensitive{
+  color: #C48845;
+  background-image: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1545207166492.png')
+}
+

@@ -1,0 +1,24 @@
+<view class='container'>
+  <view class='header'>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545296817244.jpg'></image>
+  </view>
+  <view class='section'>
+    <view class='item'>
+      <view>姓名：</view>
+      <view class='userData'>Gina</view>
+    </view>
+    <view class='item'>
+      <view>手机号码：</view>
+      <view class='userData'>1878859865</view>
+    </view>
+    <view class='item'>上传个人名片：</view>
+    <view class='addImg' bindtap='chooseImg'>
+      <image mode='aspectFit' src='{{imgs[0]}}'></image>
+      +
+    </view>
+  </view>
+  <view class='footer'>
+    <button bindtap='submit'>确认提交</button>
+    <button class='ignore'>忽略</button>
+  </view>
+</view>

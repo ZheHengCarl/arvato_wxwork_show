@@ -1,0 +1,29 @@
+<view class='container'>
+  <view class='search'>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543993101764.png'></image>
+    <input bindinput='showDemo' placeholder='输入产品名称'></input>
+  </view>
+
+  <view class='produceList'>
+    <view class='lists' bindtap='toMaterial'>
+      <view class='listIntro'>Anti-Wrinkless</view>
+      <view>抗皱</view>
+    </view>
+    <view class='lists Friming' bindtap='showDemo'>
+      <view class='listIntro'>Lifting & Friming</view>
+      <view>紧致</view>
+    </view>    
+    <view class='lists Acne' bindtap='showDemo'>
+      <view class='listIntro'>Acne Removal</view>
+      <view>祛痘</view>
+    </view>
+    <view class='lists Moisturizing' bindtap='showDemo'>
+      <view class='listIntro'>Moisturizing</view>
+      <view>保湿</view>
+    </view>
+    <view class='lists Sensitive' bindtap='showDemo'>
+      <view class='listIntro'>Sensitive Skin</view>
+      <view>敏感</view>
+    </view>
+  </view>
+</view>

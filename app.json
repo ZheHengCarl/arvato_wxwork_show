@@ -1,11 +1,11 @@
 {
   "pages": [
-    "pages/swiper/swiper",
     "pages/index/index",
     "pages/auth/auth",
+    "pages/swiper/swiper",
+    "pages/info/index",
     "pages/kpi/detail/detail",
     "pages/kpi/rank/rank",
-    "pages/kpi/kpiList/kpiList",
     "pages/user/mailList/mailList",
     "pages/user/userInfo/userInfo",
     "pages/workbench/workbench",
@@ -25,7 +25,13 @@
     "pages/sale/detail_user/index",
     "pages/sale/logistics/index",
     "pages/sale/good_bc/index",
-    "pages/sale/good_user/index"
+    "pages/sale/good_user/index",
+    "pages/cate/introduce/index",
+    "pages/cate/tips/index",
+    "pages/cate/brand/index",
+    "pages/cate/material/index",
+    "pages/user/discount/index",
+    "pages/kpi/kpiRole/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

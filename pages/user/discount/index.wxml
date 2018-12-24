@@ -1,0 +1,61 @@
+<view class='container'>
+  <view class='nav'>
+    <view class='active'>即将过期</view>
+    <view class=''>可使用</view>
+    <view class=''>已使用</view>
+    <view class=''>已过期</view>
+  </view>
+  <view class='content'>
+    <view class='title'>圣诞狂欢券</view>
+    <view class='couponList'>
+      <view class='couponItem'>
+        <view class='classify'>满减券</view>
+        <view class='left'>
+          <view class='money'>40</view>
+          <view class='dollar'>￥</view>
+          <view class='explain'>满199使用</view>
+        </view>
+        <view class='right'>
+          <view class='degree'>圣诞狂欢券-满199减40</view>
+          <view class='restTime'>2019.1.10到期（仅剩1天）</view>
+        </view>
+      </view>
+    </view>
+    <view class='title'>会员专享券</view>
+    <view class='couponList'>
+      <view class='couponItem'>
+        <view class='classify'>折扣券</view>
+        <view class='left'>
+          <view class='money'>8<text class='discount'>折</text></view>
+          <view class='explain'>满1000使用</view>
+        </view>
+        <view class='right'>
+          <view class='degree'>会员专享-满1000打8折</view>
+          <view class='restTime'>2019.1.13到期（仅剩3天）</view>
+        </view>
+      </view>
+      <view class='couponItem'>
+        <view class='classify'>折扣券</view>
+        <view class='left'>
+          <view class='money'>9<text class='discount'>折</text></view>
+          <view class='explain'>满1500使用</view>
+        </view>
+        <view class='right'>
+          <view class='degree'>会员专享-满1500打9折</view>
+          <view class='restTime'>2019.1.14到期（仅剩5天）</view>
+        </view>
+      </view>
+      <view class='couponItem'>
+        <view class='classify'>折扣券</view>
+        <view class='left'>
+          <view class='money'>6<text class='discount'>折</text></view>
+          <view class='explain'>满3000使用</view>
+        </view>
+        <view class='right'>
+          <view class='degree'>会员专享-满3000打6折</view>
+          <view class='restTime'>2019.1.14到期（仅剩5天）</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

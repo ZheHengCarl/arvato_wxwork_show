@@ -51,14 +51,15 @@ swiper-item image{
   display: block
 }
 .section{
-  width: 85%;
+  width: 100%;
   height: 60%;
-  margin: 0 auto;
+  padding:0 7%;
   overflow-y: scroll;
   overflow-x: hidden;
+  position: relative;
 }
 .search{
-  width: 100%;
+  width: 70%;
   height: 75rpx;
   background-color: #F7F7F7;
   border-radius: 8rpx;
@@ -85,6 +86,49 @@ swiper-item image{
   font-size: 24rpx;
 }
 
+.section cover-view{
+  width: 160rpx;
+  height: 80rpx;
+  background: #333333;
+  position: absolute;
+  right: 0;
+  top: 30rpx;
+  border-top-left-radius: 40rpx;
+  border-bottom-left-radius: 40rpx;
+  padding: 14rpx 30rpx;
+}
+
+.section cover-view cover-image{
+  width: 35rpx;
+  height: 37rpx;
+  margin-top: 5rpx;
+}
+
+.section cover-view .trans{
+  width: 60rpx;
+  height: 24rpx;
+  font-size: 24rpx;
+  color: #999999;
+  padding: 0;
+  line-height: 24rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 20rpx;
+  text-align: center;
+}
+
+.section cover-view .role{
+  width: 60rpx;
+  height: 24rpx;
+  font-size: 24rpx;
+  color: #999999;
+  padding: 0;
+  line-height: 24rpx;
+  position: absolute;
+ top: 40rpx;
+  right: 20rpx;
+  text-align: center;
+}
 
 .goodItem{
   padding: 30rpx 0;
@@ -176,7 +220,7 @@ swiper-item image{
   display: flex;
   justify-content: space-around;
   border-top: 1rpx solid #E6E4E4;
-  z-index: 9
+  z-index: 1
 }
 
 .footer view{
@@ -239,4 +283,92 @@ swiper-item image{
   color: #FFFFFF;
   text-align: center;
   margin-top: 10rpx;
+}
+
+.cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 2;
+  display: none;
+}
+
+.choose {
+  width: 600rpx;
+  height: 800rpx;
+  background: #fff;
+  /* background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544430916385.png'); */
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 80rpx;
+  border-radius: 12rpx;
+  z-index: 4;
+  box-sizing: border-box;
+  display: none;
+}
+
+.choose .chooseInfo {
+  text-align: center;
+  line-height: 140rpx;
+  color: #666666;
+  font-size: 34rpx;
+}
+
+.choose .chooseTip {
+  text-align: center;
+  font-size: 26rpx;
+  color: #ACACAC;
+  white-space: normal;
+  line-height: 40rpx;
+}
+
+.choose .chooseId{
+  margin-top: 150rpx;
+  display: flex;
+  justify-content: space-around;
+  overflow: hidden
+}
+
+.choose .chooseId .chooseItem cover-image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  box-sizing: border-box
+}
+
+.choose .chooseId .chooseItem .userChoose{
+  margin-top: 20rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #999999;
+}
+
+.choose .chooseId .active cover-image{
+ border: 2px solid #FF9EA2;
+}
+
+.choose .chooseId .active .userChoose{
+  color: #333333;
+}
+
+.ensureChoose{
+  margin-top: 50rpx;
+  width: 500rpx;
+  height: 100rpx;
+  border:none;
+  border-radius: 48rpx;
+  font-size: 34rpx;
+  background: #DA202B;
+  color: #fff;
+}
+
+.show{
+  display: block;
 }

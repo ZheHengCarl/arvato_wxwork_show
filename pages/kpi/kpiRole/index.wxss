@@ -1,0 +1,107 @@
+@import "../../../static/utils/common.wxss";
+
+.container {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  padding: 30rpx;
+  overflow: hidden
+}
+
+.search {
+  width: 100%;
+  height: 6%;
+  background-color: #f7f7f7;
+  border-radius: 8rpx;
+  position: relative;
+  margin-bottom: 30rpx;
+}
+
+.search image {
+  position: absolute;
+  width: 30rpx;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 20rpx;
+}
+
+.search input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding-left: 80rpx;
+  color: #869da8;
+  font-size: 24rpx;
+}
+
+.roleList{
+  height: 54%;
+  overflow-y: scroll;
+}
+
+.header{
+  width: 100%;
+  height: 30rpx;
+  border-left: 6rpx solid #DA202B;
+  padding-left: 20rpx;
+}
+
+.header view{
+  font-size: 30rpx;
+  color: #333333;
+  float: left;
+  line-height: 30rpx;
+}
+
+.header .total{
+  font-size: 28rpx;
+  color: #999999;
+  float: right
+}
+
+.content{
+  overflow: hidden;
+}
+
+.roleItem{
+  height: 140rpx;
+  border-bottom: 2rpx solid #F7F7F7;
+  padding: 25rpx 0
+}
+
+.roleItem image{
+  float: left;
+  width: 90rpx;
+  border-radius: 100%;
+}
+
+.roleItem .name{
+  float: left;
+  margin-left: 60rpx;
+  line-height: 90rpx;
+  font-size: 28rpx;
+  color: #999999;
+}
+
+.roleItem .kpidetail{
+  float: right;
+  width:150rpx;
+  height: 60rpx;
+  margin-top: 15rpx;
+  border: 2rpx solid #FFBDBD;
+  border-radius: 28rpx;
+  color: #DA202B;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-weight: bold
+}
+
+.lastRole{
+  height: 40%;
+  border-top: 20rpx solid #f7f7f7;
+  padding-top: 30rpx;
+}

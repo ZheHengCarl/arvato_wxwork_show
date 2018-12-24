@@ -12,11 +12,11 @@
         <view>入会27天新客</view>
       </view>
       <view class='listContent'>
-        <text>UAT\n总计2人需要关怀，还有1人尚未完成</text>
+        <text>UTM\n总计2人需要关怀，还有1人尚未完成</text>
         <image bindtap='showDetail' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
       </view>
       <view class='listContent disable'>
-        <text>NUAT\n总计2人需要关怀，还有1人尚未完成</text>
+        <text>NUTM\n总计2人需要关怀，还有1人尚未完成</text>
         <image bindtap='showDetail' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
       </view>
     </view>
@@ -25,11 +25,11 @@
         <view>入会55天新客</view>
       </view>
       <view class='listContent'>
-        <text>UAT\n总计2人需要关怀，还有1人尚未完成</text>
+        <text>UTM\n总计2人需要关怀，还有1人尚未完成</text>
         <image bindtap='showDetail' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
       </view>
       <view class='listContent disable'>
-        <text>NUAT\n总计2人需要关怀，还有1人尚未完成</text>
+        <text>NUTM\n总计2人需要关怀，还有1人尚未完成</text>
         <image bindtap='showDetail' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
       </view>
     </view>
@@ -38,7 +38,7 @@
         <view>入会55天新客</view>
       </view>
       <view class='editContent'>
-        <text>UAT\n总计2人需要关怀，还有1人尚未完成</text>
+        <text>UTM\n总计2人需要关怀，还有1人尚未完成</text>
         <image bindtap='hideDetail' mode='widthFix' style='width:30rpx' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543546420711.png'></image>
       </view>
       <view class='operate'>

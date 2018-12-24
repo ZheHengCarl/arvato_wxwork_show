@@ -11,6 +11,8 @@ Page({
     duration: 1000,
     margin: 40,
     circular: true,
+    role1: 0, 
+    coverShow:0,
     currentIndex:0
   },
   
@@ -46,4 +48,31 @@ Page({
       url: '../good_user/index',
     })
   },
+
+  showChangeRole: function () {
+    this.setData({
+      coverShow: 1,
+      chooseShow: 1
+    })
+  },
+
+  changeRole1: function (e) {
+    var role1 = e.currentTarget.dataset.role1;
+    this.setData({
+      role1: role1
+    })
+  },
+
+  changeIndex:function(){
+    var role = this.data.role1;
+    this.setData({
+      coverShow: 0,
+      chooseShow: 0
+    })
+    if (role == 1) {
+      wx.navigateTo({
+        url: '../index_bc/index'
+      })
+    }
+  }
 })

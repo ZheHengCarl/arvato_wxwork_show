@@ -24,7 +24,13 @@
       <text data-month='{{monthList[4]}}' bindtap='changeMonth'>{{monthList[4]}}月</text>
     </view>
     <view class="loadingParent">
-      <canvas canvas-id="canvasIndex"></canvas>
+      <canvas canvas-id="canvasIndex">
+        <cover-view bindtap='showChangeRole'>
+          <cover-image mode='widthFix' src='../../images/1545384759277.png'></cover-image>
+          <cover-view class='trans'>切换</cover-view>
+          <cover-view class='role'>角色</cover-view>
+        </cover-view>
+      </canvas>
       <view class='finish'>
         <text class='finishPercent'>{{dataList.finishPercent}}</text>
         <text class='percent'>%</text>
@@ -34,8 +40,14 @@
         </view>
       </view>
     </view>
-    <view class='finishMember'>全国已有
-      <text>{{dataList.finishMember}}</text>个区域完成了业绩目标
+    <view class='finishMember' wx:if='{{role==0}}'>
+      本店已有<text>{{dataList.finishMember}}</text>名店员完成了业绩目标
+    </view>
+    <view class='finishMember' wx:if='{{role==1}}'>
+      本区域已有<text>{{dataList.finishMember}}</text>家门店完成了业绩目标
+    </view>
+    <view class='finishMember' wx:if='{{role==2}}'>
+      全国已有<text>{{dataList.finishMember}}</text>个区域完成了业绩目标
     </view>
     <view class='chooseDate'>
       <view data-num="1" class="{{_num==1 ? 'active':''}}" bindtap='changeDate'>今日</view>
@@ -64,15 +76,10 @@
       </view>
     </view>
   </view>
+
   <view class='footer'>
-    <view>
-      <image bindtap='toCate' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540277630452.png"></image>
-      <text bindtap='toCate'>内容词典</text>
-    </view>
-    <view>
-      <image bindtap='toCare' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540277701250.png"></image>
-      <text bindtap='toCare'>客户关怀</text>
-    </view>
+    
+    
     <view>
       <image bindtap='toMailList' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540277718576.png"></image>
       <text bindtap='toMailList'>客户通讯录</text>
@@ -81,12 +88,20 @@
       <image bindtap='toSale' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540279706531.png"></image>
       <text bindtap='toSale'>电商分销平台</text>
     </view>
+    <view>
+      <image bindtap='toCate' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540277630452.png"></image>
+      <text bindtap='toCate'>内容词典</text>
+    </view>
+    <view>
+      <image bindtap='toCare' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540277701250.png"></image>
+      <text bindtap='toCare'>客户关怀</text>
+    </view>
   </view>
-  <view class="showMore {{_hide==1 ? 'hide':''}}">
+  <!-- <view class="showMore {{_hide==1 ? 'hide':''}}">
     <a href="">
       <image bindtap='showHideBtn' mode='aspectFit' src="http://minipro.arvatocrm.cn/arvato/img/?fileName=1540278029289.png"></image>
     </a>
-  </view>
+  </view> -->
   <cover-view class="cover {{coverShow==1 ? 'show':''}}"></cover-view>
   <cover-view class='error {{errorShow==1 ? "show":""}}'>
     <cover-view class='errorInfo'>提示</cover-view>
@@ -121,11 +136,11 @@
         <cover-image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></cover-image>
         <cover-view class='userchoice'>店长</cover-view>
       </cover-view>
-      <cover-view class='choiceItem'>
+      <cover-view bindtap='changeRole' data-role='2' class='choiceItem {{role==2 ? "active":""}}'>
         <cover-image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></cover-image>
         <cover-view class='userchoice'>区域长</cover-view>
       </cover-view>
     </cover-view>
-    <button class='ensurechoice'>确定</button>
+    <button class='ensurechoice' bindtap='ensureRole'>确定</button>
   </cover-view>
 </view>

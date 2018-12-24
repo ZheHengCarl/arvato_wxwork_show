@@ -1,0 +1,54 @@
+<view class='container'>
+  <view class='search'>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543993101764.png'></image>
+    <input bindinput='showDemo' placeholder='输入产品名称'></input>
+  </view>
+  <view class='nav'>
+    <view  data-index='0' class='{{currentIndex == 0?"active":""}}'>
+      <view>面部</view>
+    </view>
+    <view bindtap='showTap' data-index='1' class='{{currentIndex == 1?"active":""}}'>
+      <view>唇部</view>
+    </view>
+    <view bindtap='showTap' data-index='2' class='{{currentIndex == 2?"active":""}}'>
+      <view>眼部</view>
+    </view>
+    <view bindtap='showTap' data-index='3' class='{{currentIndex == 3?"active":""}}'>
+      <view>痘痘</view>
+    </view>
+    <view bindtap='showTap' data-index='4' class='{{currentIndex == 4?"active":""}}'>
+      <view>毛孔</view>
+    </view>
+    <view bindtap='showTap' data-index='5' class='{{currentIndex == 5?"active":""}}'>
+      <view>敏感</view>
+    </view>
+  </view>
+  <view class='section'>
+    <view class='tipList'>
+      <view class='tipItem'>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545206849061.png'></image>
+        <view class='content'>布优优老师课堂：圈粉无数的口碑系列，护肤老师有话说！</view>
+        <view class='label'>面部</view>
+        <view bindtap='showDemo' class='forward'>转发</view>
+      </view>
+      <view class='tipItem'>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545206862641.png'></image>
+        <view class='content'>肌肤小情绪不断？你需要了解肌肤生物钟 ！</view>
+        <view class='label'>面部</view>
+        <view bindtap='showDemo' class='forward'>转发</view>
+      </view>
+      <view class='tipItem'>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545206871575.png'></image>
+        <view class='content'>你和小芳之间只差支玻尿酸的距离 ！</view>
+        <view class='label'>面部</view>
+        <view bindtap='showDemo' class='forward'>转发</view>
+      </view>
+      <view class='tipItem'>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545206883710.png'></image>
+        <view class='content'>布优优老师课堂:圈粉无数的口碑系列，护肤老师有话说 ！</view>
+        <view class='label'>面部</view>
+        <view class='forward'>转发</view>
+      </view>
+    </view>
+  </view>
+</view>

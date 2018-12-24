@@ -1,9 +1,10 @@
 <view class='container'>
   <view class='header'>
-    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{margin}}rpx" next-margin="{{margin}}rpx" circular='{{circular}}' skip-hidden-item-layout ="true" indicator-color='RGB(230,228,228)' indicator-active-color='RGB(234,32,43)'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{margin}}rpx" next-margin="{{margin}}rpx" circular='{{circular}}' skip-hidden-item-layout="true" indicator-color='RGB(230,228,228)'
+      indicator-active-color='RGB(234,32,43)'>
       <block wx:for="{{imgUrls}}" wx:key=''>
         <swiper-item>
-          <image src="{{item}}" class="slide-image"/>
+          <image src="{{item}}" class="slide-image" />
         </swiper-item>
       </block>
     </swiper>
@@ -35,6 +36,11 @@
       <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543993101764.png'></image>
       <input bindinput='showDemo' placeholder='输入产品名称'></input>
     </view>
+    <cover-view bindtap='showChangeRole'>
+      <cover-image mode='widthFix' src='../../../images/1545384759277.png'></cover-image>
+      <cover-view class='trans'>切换</cover-view>
+      <cover-view class='role'>角色</cover-view>
+    </cover-view>
     <view class='goodList'>
       <view class='goodItem' bindtap='toGood'>
         <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
@@ -75,7 +81,7 @@
     </view>
   </view>
   <view class='footer'>
-    <view class='find active'>         
+    <view class='find active'>
       <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512520775.png'></image>
       <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515014055.png'></image>
       <text>发现</text>
@@ -85,7 +91,7 @@
       <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515612151.png'></image>
       <text>购物车</text>
     </view>
-    <view class='mine'bindtap='toMine'>
+    <view class='mine' bindtap='toMine'>
       <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512560261.png'></image>
       <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515040224.png'></image>
       <text>我的</text>
@@ -95,4 +101,21 @@
     <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544685784397.png'></image>
     <view>咨询</view>
   </view>
+  <cover-view class="cover {{coverShow==1 ? 'show':''}}"></cover-view>
+  <cover-view class='choose {{chooseShow==1 ? "show":""}}'>
+    <cover-view class='chooseInfo'>选择身份</cover-view>
+    <cover-view class='chooseTip'>不同身份可使用不同版本的电商功能</cover-view>
+    <cover-view class='chooseTip'>请选择您感兴趣的身份</cover-view>
+    <cover-view class='chooseId'>
+      <cover-view bindtap='changeRole1' data-role1='0' class='chooseItem {{role1==0 ? "active":""}}'>
+        <cover-image mode='widthFix' src='../../../images/avartar.png'></cover-image>
+        <cover-view class='userChoose'>消费者</cover-view>
+      </cover-view>
+      <cover-view bindtap='changeRole1' data-role1='1' class='chooseItem {{role1==1 ? "active":""}}'>
+        <cover-image mode='widthFix' src='../../../images/avartar.png'></cover-image>
+        <cover-view class='userChoose'>导购</cover-view>
+      </cover-view>
+    </cover-view>
+    <button class='ensureChoose' bindtap='changeIndex'>确定</button>
+  </cover-view>
 </view>

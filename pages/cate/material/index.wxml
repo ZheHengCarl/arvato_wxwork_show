@@ -1,0 +1,38 @@
+<view class='container'>
+  <view class='search'>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543993101764.png'></image>
+    <input bindinput='showDemo' placeholder='搜索'></input>
+  </view>
+  <view class='materialList'>
+    <view class='materialItem'>
+      <view class='layout'>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545277804681.png'></image>
+        <view class='content'>妆效清新</view>
+        <view class='lastcontent'>刷出少女肌</view>
+      </view>
+      <view class='title'>
+        <view>小爱课堂第一期：轻松打造甜美女孩</view>
+        <button>转发</button>
+      </view>
+      <view class='title'>
+        <view>小爱课堂第二期：各种脱妆浮粉怎么办？</view>
+        <button>转发</button>
+      </view>
+    </view>
+    <view class='materialItem'>
+      <view class='layout'>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545277792305.png'></image>
+        <view class='content'>独特烤粉工艺</view>
+        <view class='lastcontent'>完美自然服帖</view>
+      </view>
+      <view class='title'>
+        <view>上班妆容如何打造？小爱来指导</view>
+        <button>转发</button>
+      </view>
+      <view class='title'>
+        <view>日落暖冬 随意一抹 闪闪惹人爱</view>
+        <button>转发</button>
+      </view>
+    </view>
+  </view>
+</view>

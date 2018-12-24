@@ -31,10 +31,10 @@
     <view class='contentHeader'>
       <view><text>KPI</text></view>
       <view><text>当日</text></view>
-      <view><text>当月累计</text></view>
+      <view><text>当月累积</text></view>
+      <view><text>前年比</text></view>
       <view><text>月计划比</text></view>
-      <view><text>其他指标1</text></view>
-      <view><text>其他指标2</text></view>
+      <view><text>全国情况</text></view>
       <!-- <picker mode='selector' value='{{index}}' range='{{array}}'  bindchange='changeIndex'>
         {{array[index]}}
       </picker> -->

@@ -1,8 +1,9 @@
 var app = getApp();
 Page({
   data: {
-    coverShow: 0,
+    coverShow: 1,
     errorShow: 0,
+    choiceShow:1,
     sale: '1.2',
     saleMoney: '20',
     finishPercent: '70',
@@ -17,8 +18,8 @@ Page({
     _num:1,
     _hide:0,
     scrollTop: 0,
-    brand: 'SHISEIDO',
-    role1:0
+    role1:0,
+    role:0
   },
 
   onShow:function(){
@@ -94,14 +95,14 @@ Page({
     this.countMonth(thisMonth);
   },
 
-  handletouchtart: function(event) {
-    var startX = event.touches[0].pageX;
-    var startY = event.touches[0].pageY;
-    this.setData({
-      startX: startX,
-      startY: startY
-    })
-  },
+  // handletouchtart: function(event) {
+  //   var startX = event.touches[0].pageX;
+  //   var startY = event.touches[0].pageY;
+  //   this.setData({
+  //     startX: startX,
+  //     startY: startY
+  //   })
+  // },
 
   showHideBtn: function() {
     this.setData({
@@ -233,25 +234,29 @@ Page({
   },
 
   loadMore: function() {
-    wx.navigateTo({
-      url: '../kpi/detail/detail',
-      success: function () {
-
-      }, //成功后的回调；      
-      fail: function () {
-
-      },
-      //失败后的回调；      
-      complete: function () {
-
-      } //结束后的回调(成功，失败都会执行)
-    })
+    var role = this.data.role;
+    if(role == 0){
+      wx.navigateTo({
+        url: '../kpi/detail/detail?role='+role
+      })
+    }else{
+      wx.navigateTo({
+        url: '../kpi/kpiRole/index?role=' + role
+      })
+    }
   },
 
   changeRole1:function(e){
     var role1 = e.currentTarget.dataset.role1;
     this.setData({
       role1:role1
+    })
+  },
+
+  changeRole: function (e) {
+    var role = e.currentTarget.dataset.role;
+    this.setData({
+      role: role
     })
   },
 
@@ -270,5 +275,19 @@ Page({
         url: '../sale/index_bc/index'
       })
     }
+  },
+
+  ensureRole:function(){
+    this.setData({
+      coverShow: 0,
+      choiceShow: 0
+    })
+  },
+
+  showChangeRole:function(){
+    this.setData({
+      coverShow: 1,
+      choiceShow: 1
+    })
   }
 })

@@ -1,0 +1,37 @@
+<view class='container'>
+  <view class='brandList'>
+    <view class='brandItem'>
+      <view class='title'>
+          <view class='activity'>限量圣诞套装活动</view>
+          <view class='online'>线上</view>
+      </view>
+      <view class='time'>2018.12.16-2018.12.23</view>
+      <view class='condition'>参与条件：VIP会员</view>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545211147506.png'></image>
+      <view class='area'>活动范围：电商小程序</view>
+      <button bindtap='showDemo'>转发</button>
+    </view>
+    <view class='brandItem'>
+      <view class='title'>
+          <view class='activity'>年终盛典新品发布</view>
+          <view class='online'>线下</view>
+      </view>
+      <view class='time'>2018.12.11-2018.12.12</view>
+      <view class='condition'>参与条件：VIP会员</view>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545211170831.png'></image>
+      <view class='area'>活动范围：电商小程序</view>
+      <button bindtap='showDemo'>转发</button>
+    </view>
+    <view class='brandItem'>
+      <view class='title'>
+          <view class='activity'>限量圣诞套装活动</view>
+          <view class='online'>线下</view>
+      </view>
+      <view class='time'>2018.12.11-2018.12.12</view>
+      <view class='condition'>参与条件：VIP会员</view>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545211195660.png'></image>
+      <view class='area'>活动范围：电商小程序</view>
+      <button bindtap='showDemo'>转发</button>
+    </view>
+  </view>
+</view>

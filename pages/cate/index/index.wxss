@@ -1,49 +1,62 @@
 @import "../../../static/utils/common.wxss";
 .container{
-  background: #f3f3f3;
+  background: #ffffff;
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
-  padding: 40rpx 5%;
+  padding: 30rpx;
 }
-.container view .title{
-  box-sizing: border-box;
-  color: #fff;
-  background: hsl(352, 86%, 44%);
-  text-align: center;
-  font-size: 30rpx;
-  line-height: 70rpx;
-  margin: 0 40rpx;
-}
+
 .container .catelog-list{
-  margin-top: 40rpx;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
 }
-.container .catelog-list .lists{
-  border-top: 1px solid #d0d0d0;
+
+
+.container .lists{
+  width: 100%;
+  height: 18%;
+  margin-bottom: 2%;
   text-align: center;
-  line-height: 160rpx;
-  font-size: 32rpx;
+  border-radius: 12rpx;
+  background: #E9E9E9;
+  padding: 40rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
-.container .catelog-list .lists .icons{
-  width: 80rpx;
-  height: 80rpx;
-  background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=catelog-icons.png');
-  display: inline-block; 
-  background-size: 100% auto;
-  background-position: 0 0;
-  margin-right: 30rpx;
-  margin-bottom: -25rpx;
+.container .intro{
+  color: #453E3E;
 }
 
-.container .catelog-list .lists .activity{
-  background-position: 0 -78rpx;
+.container .brand{
+  background: #F3DFE7;
+  color: #BB567F;
 }
 
-.container .catelog-list .lists .vip{
-  background-position: 0 -156rpx;
+.container .invite{
+  background: #F5BAC7;
+  color: #BA2F4C;
 }
 
-.container .catelog-list .lists .invite{
-  background-position: 0 -234rpx;
+.container .tips{
+  background: #F3EAE3;
+  color: #8D5021;
+}
+
+.container .vips{
+  background: #DEC8E1;
+  color: #84438E
+}
+
+.container .lists view{
+  font-size: 48rpx;
+}
+
+.container .lists .listIntro{
+  font-size: 24rpx;
 }

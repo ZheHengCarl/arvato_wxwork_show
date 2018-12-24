@@ -1,0 +1,92 @@
+@import "../../../static/utils/common.wxss";
+
+.container {
+  background: #F5F5F5;
+  width: 100%;
+  height: 100%;
+  padding-top: 20rpx;
+}
+
+.brandList{
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll
+}
+
+.brandItem{
+  margin-bottom: 20rpx;
+  background: #ffffff;
+  padding: 40rpx 30rpx 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.brandItem .title{
+  
+}
+ 
+.brandItem .title .activity{
+  font-size: 30rpx;
+  color: #333333;
+  float: left;
+}
+
+
+.brandItem .title .online{
+  font-size: 18rpx;
+  color: #FB5F3B;
+  float: left;
+  width: 64rpx;
+  height: 30rpx;
+  border-radius: 16rpx;
+  background: #FFF2DF;
+  text-align: center;
+  margin: 5rpx 0 0 10rpx;
+}
+
+
+
+.brandItem .time{
+  width: 100%;
+  float: left;
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 15rpx;
+}
+
+.brandItem .condition{
+  width: 100%;
+  float: left;
+  font-size: 24rpx;
+  color: #999999;
+  margin-top: 20rpx;
+}
+
+.brandItem image{
+  width: 100%;
+  float: left;
+  margin-top: 15rpx;
+}
+
+.brandItem .area{
+  width: 100%;
+  float: left;
+  font-size: 22rpx;
+  color: #999999;
+  margin: 15rpx 0;
+}
+
+.brandItem button{
+  width: 136rpx;
+  height: 56rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 40rpx;
+  padding: 0;
+  border: none;
+  border-radius: 28rpx;
+  color: #FFFFFF;
+  font-size: 26rpx;
+  line-height: 56rpx;
+  background: #EB2E39
+}

@@ -67,7 +67,7 @@
       <view class='userLabel'>
         <view class='title'>
           <view class='label'>用户标签</view>
-          <view class='more' bindtap='showMore' data-index='1'>MORE +</view>
+          <view class='more' bindtap='showMore' data-index='1'>更多</view>
         </view>
         <view class='labelList'>
           <view wx:for='{{currUserInfo.tagList}}' wx:key=''>{{item}}</view>
@@ -98,8 +98,8 @@
         </view>
       </view>
       <view class='addButton'>
-        <button bindtap='showMore' data-index='2'>手动添加</button>
         <button bindtap='showMore' data-index='3'>标签库添加</button>
+        <button bindtap='showMore' data-index='2'>手动添加</button>
       </view>
     </view>
 

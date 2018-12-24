@@ -1,28 +1,25 @@
 <!--pages/wxwork/cate/index/index.wxml-->
 <view class="container">
-  <view class="orderInfo-list define-title">
-    <view class="title">内容词典</view>
-  </view>
   <view class="catelog-list">
-    <view class='lists' bindtap='toMessage'>
-      <text class='icons message'></text>
-      <text>产品简介</text>
+    <view class='lists intro' bindtap='toIntro'>
+      <view class='listIntro'>Product Introduction</view>
+      <view>产品简介</view>
     </view>
-    <view class='lists' bindtap='toActivity'>
-      <text class='icons activity'></text>
-      <text>品牌活动</text>
+    <view class='lists brand' bindtap='toBrand'>
+      <view class='listIntro'>Brand Promotion</view>
+      <view>品牌活动</view>
     </view>
-    <view class='lists' bindtap='toActivity'>
-      <text class='icons activity'></text>
-      <text>护肤小常识</text>
+    <view class='lists tips' bindtap='toTips'>
+      <view class='listIntro'>Skin Care Tips</view>
+      <view>护肤小常识</view>
     </view>
-    <view class='lists' bindtap='toVip'>
-      <text class='icons vip'></text>
-      <text>会员权益</text>
+    <view class='lists vips' bindtap='toVip'>
+      <view class='listIntro'>Invitation Expressions</view>
+      <view>会员权益</view>
     </view>
-    <view class='lists' bindtap='toYaoYue'>
-      <text class='icons invite'></text>
-      <text>邀约话术</text>
+    <view class='lists invite' bindtap='toYaoYue'>
+      <view class='listIntro'>Membership Benefits</view>
+      <view>邀约话术</view>
     </view>
   </view>
 </view>

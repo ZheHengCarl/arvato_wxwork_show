@@ -81,56 +81,21 @@ Page({
     })
   },
 
-  toMessage: function () {
+  toIntro:function(){
     wx.navigateTo({
-      url: '../message/message',
-      success: function () {
-
-      }, //成功后的回调；      
-      fail: function () {
-
-      },
-      //失败后的回调；      
-      complete: function () {
-
-      } //结束后的回调(成功，失败都会执行)
-
+      url: '../introduce/index',
     })
   },
 
-
-  toActivity: function () {
+  toTips: function () {
     wx.navigateTo({
-      url: '../activity/activity',
-      success: function () {
-
-      }, //成功后的回调；      
-      fail: function () {
-
-      },
-      //失败后的回调；      
-      complete: function () {
-
-      } //结束后的回调(成功，失败都会执行)
-
+      url: '../tips/index',
     })
   },
 
-
-  toYaoYue: function () {
+  toBrand: function () {
     wx.navigateTo({
-      url: '../invite/invite-list/invite-list',
-      success: function () {
-
-      }, //成功后的回调；      
-      fail: function () {
-
-      },
-      //失败后的回调；      
-      complete: function () {
-
-      } //结束后的回调(成功，失败都会执行)
-
+      url: '../brand/index',
     })
   }
 })

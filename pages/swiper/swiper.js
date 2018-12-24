@@ -58,7 +58,7 @@ Page({
     if(index == 5){
       // 跳转到选择用户身份页
       wx.redirectTo({
-        url: "../workbench/workbench"
+        url: "../info/index"
       })
     }
   }

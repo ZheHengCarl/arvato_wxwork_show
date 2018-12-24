@@ -56,10 +56,10 @@ view,text,a,input{
 .discount{
   position: absolute;
   right: 0;
-  top: 50rpx;
+  top: 150rpx;
   width: 150rpx;
   height: 70rpx;
-  background-color: #881A22;
+  background-color: #FFE6D3;
   display: flex;
   justify-content: space-around;
   border-top-left-radius: 34rpx;
@@ -74,7 +74,7 @@ view,text,a,input{
 
 .discount text{
   font-size: 20rpx;
-  color: #FFFFFF;
+  color: #DA202B;
   line-height: 70rpx;
 }
 
@@ -125,8 +125,9 @@ view,text,a,input{
   top: 25%;
   display: flex;
   justify-content: space-between;
-  padding-top: 36rpx;
-  border-bottom: 1rpx solid #DDDDDD
+  padding-top: 20rpx;
+  border-bottom: 12rpx solid #f5f5f5;
+  padding-bottom: 20rpx;
 }
 
 .nav .navList{
@@ -165,13 +166,13 @@ view,text,a,input{
 }
 
 .nav .active text{
-  color: #AC202A;
+  color: #DA202B;
 }
 
 .section{
   height: 60%;
   width: 100%;
-  background: #f5f5f5;
+  background: #FFFFFF;
   position: absolute;
   top: 40%;
 }
@@ -199,9 +200,9 @@ view,text,a,input{
 .label{
   float: left;
   font-size: 24rpx;
-  color: #969696;
+  color: #333333;
   line-height: 24rpx;
-  border-left: 4rpx solid #C71129;
+  border-left: 12rpx solid #DA202B;
   padding-left: 20rpx;
 }
 
@@ -209,12 +210,10 @@ view,text,a,input{
   float: right;
   width: 90rpx;
   height: 24rpx;
-  font-size: 16rpx;
+  font-size: 24rpx;
   line-height: 24rpx;
-  text-align: center;
-  border-radius: 12rpx;
-  background: #C61129;
-  color: #FFFFFF
+  text-align: right;
+  color: #999999
 }
 
 .labelList{
@@ -227,9 +226,9 @@ view,text,a,input{
 .labelList view{
   float: left;
   height: 54rpx;
-  background: #c5c5c5;
+  background: #F5F5F5;
   border-radius: 26rpx;
-  color: #FFFFFF;
+  color: #999999;
   font-size: 24rpx;
   line-height: 54rpx;
   margin-right: 20rpx;
@@ -240,10 +239,12 @@ view,text,a,input{
 .userPicture{
   width: 100%;
   height: 65%;
+  border-top: 6rpx solid #f5f5f5;
 }
 .pic{
   height: 20%;
-  padding-left: 50rpx
+  padding-left: 50rpx;
+  padding-top: 20rpx;
 }
 .userImage{
   width: 100%;
@@ -266,7 +267,7 @@ view,text,a,input{
   border-radius: 100%;
 }
 .userImage view{
-  background: url('http://minipro.arvatocrm.cn/arvato/img/?fileName=1544166420762.png');
+  background: #FF6B73;
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: absolute;
@@ -279,24 +280,24 @@ view,text,a,input{
   height: 90rpx;
   line-height: 90rpx;
   font-size: 24rpx;
-  top: 30rpx;
-  left: 30rpx;
+  top: 60rpx;
+  left: 110rpx;
 }
 .userImage .label2{
   width:120rpx;
   height: 120rpx;
   line-height: 120rpx;
   font-size: 26rpx;
-  top: 0;
-  right: 30rpx;
+  top: 20rpx;
+  right: 60rpx;
 }
 .userImage .label3{
   width:150rpx;
   height: 150rpx;
   line-height: 150rpx;
   font-size: 30rpx;
-  bottom: 30rpx;
-  right:200rpx;
+  bottom: 0rpx;
+  right:270rpx;
 }
 
 /* 添加标签 */
@@ -318,6 +319,7 @@ view,text,a,input{
   text-align: center;
   margin-bottom: 60rpx;
   font-weight: bold;
+  font-size: 30rpx;
 }
 
 .currentLabelList{
@@ -328,9 +330,9 @@ view,text,a,input{
 
 .currentLabelItem{
   float: left;
-  background: #c5c5c5;
+  background: #F5F5F5;
   border-radius: 26rpx;
-  color: #FFFFFF;
+  color: #929AAE;
   font-size: 24rpx;
   line-height: 54rpx;
   margin-right: 20rpx;
@@ -360,7 +362,7 @@ view,text,a,input{
 }
 
 .addButton button{
-  background: #b02532;
+  background:#DA202B;
   border-radius: 40rpx;
   height: 80rpx;
   color: #FFFFFF;
@@ -405,6 +407,7 @@ view,text,a,input{
   text-align: center;
   position: relative;
   margin-bottom: 10rpx;
+  border: 2rpx solid #DDDDDD
 }
 .addLabelItem image{
   width: 26rpx;
@@ -421,7 +424,7 @@ view,text,a,input{
   margin: auto;
   left: 0;
   right: 0;
-  color: #B52633;
+  color: #DA202B;
   font-size: 20rpx;
   text-decoration: underline;
   line-height: 40rpx;
@@ -439,7 +442,7 @@ view,text,a,input{
 }
 
 .ensureAddBtn button{
-  background: #b02532;
+  background: #DA202B;
   border-radius: 40rpx;
   height: 80rpx;
   color: #FFFFFF;
@@ -484,6 +487,7 @@ view,text,a,input{
   color: #C8C8C8;
   font-size: 24rpx;
   padding-left: 40%;
+  border: 2rpx solid #DDDDDD;
 }
 
 .searchLabel cover-image{
@@ -514,7 +518,7 @@ view,text,a,input{
 }
 
 .ensureAddBtnFrom button{
-  background: #b02532;
+  background: #DA202B;
   border-radius: 40rpx;
   height: 80rpx;
   color: #FFFFFF;
@@ -525,9 +529,9 @@ view,text,a,input{
 
 .LibraryItem{
   float: left;
-  background: #c5c5c5;
+  background: #F5F5F5;
   border-radius: 26rpx;
-  color: #FFFFFF;
+  color: #929AAE;
   font-size: 24rpx;
   line-height: 54rpx;
   margin-right: 20rpx;
@@ -537,7 +541,8 @@ view,text,a,input{
 }
 
 .LibraryList .active{
-  background: #b02532;
+  background: #DA202B;
+  color: #FFFFFF
 }
 
 /* 客户信息 */
@@ -588,7 +593,7 @@ view,text,a,input{
 .ensureBtn button{
   width: 500rpx;
   height: 80rpx;
-  background: #d22a3b;
+  background: #DA202B;
   margin-top: 20rpx;
   border-radius: 40rpx;
   color: #FFFFFF;
@@ -612,9 +617,13 @@ view,text,a,input{
 .pointNum,.pointOper,.operDetail{
   flex: 1;
   font-size: 60rpx;
-  color: #AF202A;
+  color: #DA202B;
   align-items:center; 
   display: flex;
+}
+
+.pointNum{
+  font-weight: bold;
 }
 
 .pointNum text,.pointOper text,.operDetail text{
@@ -686,7 +695,8 @@ view,text,a,input{
 }
 .pointState{
   font-size: 40rpx;
-  color: #AF202A
+  color: #DA202B;
+  font-weight: bold;
 }
 
 .present{

@@ -9,7 +9,7 @@ Page({
   },
 
   onLoad: function() {
-    app.domain = 'https://minipro.arvatocrm.cn/arvato_local_zk';
+    app.domain = 'https://minipro.arvatocrm.cn/arvato';
     // 进来之后先静默登录 
     this.login();
   },
@@ -36,13 +36,13 @@ Page({
               var flag = res.data.data.hasPhone;
               if (flag == true) {
                 // 如果有手机号的话就直接展示轮播图 没有的话就跳转到授权页
-                wx.navigateTo({
+                wx.redirectTo({
                   url: "../swiper/swiper"
                 })
               } else {
                 app.openid = res.data.data.openid;
                 app.sessionKey = res.data.data.sessionKey;
-                wx.navigateTo({
+                wx.redirectTo({
                   url: "../auth/auth"
                 })
               }
@@ -51,7 +51,7 @@ Page({
               console.info("发送ajax请求刀" + app.domain + "失败");
               console.info(res);
               // 服务器宕机了的话 
-              wx.navigateTo({
+              wx.redirectTo({
                 url: "../swiper/swiper"
               })
             }

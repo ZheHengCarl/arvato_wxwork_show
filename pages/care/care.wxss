@@ -58,7 +58,7 @@
 
 .taskList .nav .active{
   color: #ffffff;
-  background: #d3112c
+  background: #DA202B
 }
 
 .taskList .list{
@@ -77,7 +77,7 @@
 .taskList .list .listHeader view{
   font-size: 26rpx;
   color: #ffffff;
-  background: #d3112c;
+  background: #DA202B;
   width: 220rpx;
   margin: 20rpx auto;
   border-radius: 10rpx;
