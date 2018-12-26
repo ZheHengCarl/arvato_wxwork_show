@@ -81,9 +81,15 @@ Page({
     })
   },
 
-  toIntro:function(){
+  toIntro: function () {
     wx.navigateTo({
       url: '../introduce/index',
+    })
+  },
+
+  toInvite: function () {
+    wx.navigateTo({
+      url: '../invite/index',
     })
   },
 

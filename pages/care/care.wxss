@@ -4,7 +4,6 @@
   height: 100%;
   box-sizing: border-box;
   background: #f4f4f4;
-  overflow: hidden
 }
 
 .header{
@@ -58,7 +57,7 @@
 
 .taskList .nav .active{
   color: #ffffff;
-  background: #DA202B
+  background: #d3112c
 }
 
 .taskList .list{
@@ -77,7 +76,7 @@
 .taskList .list .listHeader view{
   font-size: 26rpx;
   color: #ffffff;
-  background: #DA202B;
+  background: #d3112c;
   width: 220rpx;
   margin: 20rpx auto;
   border-radius: 10rpx;
@@ -116,6 +115,7 @@
   position: absolute;
   right: 30rpx;
   top: 40rpx;
+  z-index: 99
 }
 
 .taskList .edit{
@@ -173,34 +173,59 @@
   border-bottom: 1rpx solid #CCCCCC;
 }
 
-.checkItem{
-  width: 100%;
-  display: flex;
-  height: 60rpx
+.userList checkbox-group{
+  width: 10%;
+  float: left;
 }
 
-.checkItem image,.checkItem checkbox,.checkItem text{
-  flex: 1;
+.userList checkbox-group checkbox{
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.userList .datalist{
+  width: 90%;
+  float: left;
+  display: flex
+}
+
+.datalist image,.datalist text{
+  flex: 2; 
   font-size: 26rpx;
   color: #646464;
   line-height: 60rpx;
   text-align: center;
 }
 
-.checkItem image{
+.datalist .avatar{
+  flex: 3
+}
+
+.datalist text{
+  flex: 4;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.datalist .username{
+  flex: 6;
+}
+
+.datalist image{
   width: 30rpx;
   height: 30rpx;
   margin-top: 15rpx;
 }
 
-.checkItem .avatar{
+.datalist .avatar{
   width: 50rpx;
   height: 50rpx;
   margin-top: 5rpx;
+  border-radius: 100%;
 }
 
-.checkItem .userName{
-  border-bottom: 1px solid #646464
+.datalist .userName{
+  border-bottom: 1px solid #646464;
 }
 
 checkbox .wx-checkbox-input {
@@ -219,6 +244,10 @@ checkbox .wx-checkbox-input {
   border-bottom: 1rpx solid #CCCCCC;
   margin-bottom: 20rpx;
   line-height: 40rpx
+}
+
+.operate{
+  box-sizing: border-box;
 }
 
 .operate .operBtn{
@@ -375,7 +404,7 @@ checkbox .wx-checkbox-input {
   right: 0;
 }
 
-.previewContent cover-view{
+.previewContent view{
   white-space:pre-wrap;
   color: #333333;
   margin: 0 45rpx;
@@ -407,18 +436,19 @@ checkbox .wx-checkbox-input {
   background-color: #d3112c;
   position: relative
 }
-.historyOrder .historyOrderHeader cover-view{
+.historyOrder .historyOrderHeader view{
   text-align: center;
   line-height: 80rpx;
   font-size: 34rpx;
   color: #ffffff
 }
-.historyOrder .historyOrderHeader cover-image{
+.historyOrder .historyOrderHeader image{
   width: 30rpx;
   height: 30rpx;
   position: absolute;
   top: 25rpx;
-  right: 25rpx
+  right: 25rpx;
+  z-index: 99;
 }
 .historyOrderList{
   width: 100%;
@@ -433,13 +463,50 @@ checkbox .wx-checkbox-input {
   border-radius: 10rpx;
   padding: 30rpx;
   box-sizing: border-box;
+  margin-bottom: 20rpx;
 }
-.historyOrderList .historyOrderItem .historyOrderTitle{
+
+ .historyOrderTitle,.historyOrderContent,.historyOrderFoot{
   width: 100%;
+  margin-top: 30rpx;
   display: flex;
   justify-content: space-around;
   color: #333333;
+  font-size: 22rpx;
+  text-align: center;
+  overflow: hidden;
+  align-items: center;
+}
+
+.historyOrderTitle{
   font-size: 24rpx;
+  font-weight: bold;
+}
+
+.historyOrderFoot{
+  font-size: 28rpx;
+  font-weight: bold
+}
+
+.orderTime,.goodDetail{
+  flex: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.goodDetail view{
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.price,.goodNum,.restPoint{
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .show{

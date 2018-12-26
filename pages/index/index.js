@@ -9,7 +9,7 @@ Page({
   },
 
   onLoad: function() {
-    app.domain = 'https://minipro.arvatocrm.cn/arvato';
+    app.domain = 'https://minipro.arvatocrm.cn/arvato_local_dyq';
     // 进来之后先静默登录 
     this.login();
   },

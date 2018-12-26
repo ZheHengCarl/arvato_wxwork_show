@@ -5,29 +5,51 @@
   </view>
 
   <view class='roleList'>
-    <view class='header'>
+    <view class='header' wx:if='{{role==1}}'>
       <view>员工</view>
       <view class='total'>总计15人</view>
     </view>
-    <view class='content'>
-      <view class='roleItem'>
-        <image mode='widthFix' ></image>
-        <view class='name'>橘右京</view>
-        <view class='kpidetail' bindtap='toDetail'>查看KPI</view>
+    <view class='header' wx:if='{{role==2}}'>
+      <view>门店</view>
+      <view class='total'>总计{{dataList.storeList.length}}家</view>
+    </view>
+    <view class='content' wx:if='{{role==1}}'>
+      <view class='roleItem' wx:key='' wx:for='{{dataList.bcList}}'>
+        <image src='{{item.avatar}}'></image>
+        <view class='name'>{{item.username}}</view>
+        <view data-id='{{item.userid}}' class='kpidetail' bindtap='toDetail'>查看KPI</view>
+      </view>
+    </view>
+    <view class='content' wx:if='{{role==2}}'>
+      <view class='roleItem' wx:key='' wx:for='{{dataList.storeList}}'>
+        <image src='{{item.avatar}}'></image>
+        <view class='name'>{{item.storename}}</view>
+        <view data-id='{{item.userid}}' class='kpidetail' bindtap='toDetail'>查看KPI</view>
       </view>
     </view>
   </view>
 
   <view class='roleList lastRole'>
-    <view class='header'>
-      <view>员工</view>
-      <view class='total'>总计4家</view>
+    <view class='header' wx:if='{{role==1}}'>
+      <view>门店</view>
+      <view class='total'>总计{{dataList.storeList.length}}家</view>
     </view>
-    <view class='content'>
-      <view class='roleItem'>
-        <image mode='widthFix' ></image>
-        <view class='name'>不知火舞</view>
-        <view class='kpidetail'>查看KPI</view>
+    <view class='header' wx:if='{{role==2}}'>
+      <view>区域</view>
+      <view class='total'>总计{{dataList.areaList.length}}个</view>
+    </view>
+    <view class='content' wx:if='{{role==1}}'>
+      <view class='roleItem' wx:key='' wx:for='{{dataList.storeList}}'>
+        <image src='{{item.avatar}}'></image>
+        <view class='name'>{{item.storename}}</view>
+        <view data-id='{{item.userid}}'class='kpidetail' bindtap='toDetail'>查看KPI</view>
+      </view>
+    </view>
+    <view class='content' wx:if='{{role==2}}'>
+      <view class='roleItem' wx:key='' wx:for='{{dataList.areaList}}'>
+        <image src='{{item.avatar}}'></image>
+        <view class='name'>{{item.areaname}}</view>
+        <view data-id='{{item.userid}}' class='kpidetail' bindtap='toDetail'>查看KPI</view>
       </view>
     </view>
   </view>

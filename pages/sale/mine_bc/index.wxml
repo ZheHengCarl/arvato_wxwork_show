@@ -2,7 +2,7 @@
   <view class='header'>
     <view class='cash'>
       <view>可提现金额</view>
-      <view class='cashNum'>￥189</view>
+      <view class='cashNum'>￥{{dataList.cash}}</view>
     </view>
     <view class='cashBtn'>
       <view bindtap='showDemo'>提现</view>
@@ -23,19 +23,19 @@
       <view class='incomeState'>
         <view class='incomeItem hasbottom'>
           <view>本月消费结算预估收入</view>
-          <view class='incomeItemMoney'>￥ 8.52</view>
+          <view class='incomeItemMoney'>￥ {{dataList.thismonth}}</view>
         </view>
         <view class='incomeItem hasbottom hasleft'>
           <view>上月消费结算预估收入</view>
-          <view class='incomeItemMoney'>￥ 62</view>
+          <view class='incomeItemMoney'>￥ {{dataList.lastmonth}}</view>
         </view>
         <view class='incomeItem'>
           <view>本月消费预估收入</view>
-          <view class='incomeItemMoney'>￥ 9.52</view>
+          <view class='incomeItemMoney'>￥ {{dataList.thismonth1}}</view>
         </view>
         <view class='incomeItem hasleft'>
           <view>上月消费预估收入</view>
-          <view class='incomeItemMoney'>￥ 18.52</view>
+          <view class='incomeItemMoney'>￥ {{dataList.lastmonth1}}</view>
         </view>
       </view>
     </view>
@@ -55,22 +55,22 @@
       </view>
       <view class='orderDetailData'>
         <view class='orderDetailItem hasright'>
-          <view class='orderDetailNum'>11</view>
+          <view class='orderDetailNum'>{{dataList.click}}</view>
           <view>点击数</view>
           <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544523937128.png'></image>
         </view>
         <view class='orderDetailItem'>
-          <view class='orderDetailNum'>18</view>
+          <view class='orderDetailNum'>{{dataList.ordernum}}</view>
           <view>付款订单(笔)</view>
           <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544523946614.png'></image>
         </view>
         <view class='orderDetailItem hasright hastop'>
-          <view class='orderDetailNum'>16.89</view>
+          <view class='orderDetailNum'>{{dataList.payincome}}</view>
           <view>付款预估收入</view>
           <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544523957483.png'></image>
         </view>
         <view class='orderDetailItem hastop'>
-          <view class='orderDetailNum'>20.89</view>
+          <view class='orderDetailNum'>{{dataList.countincome}}</view>
           <view>结算预估收入</view>
           <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544523966994.png'></image>
         </view>

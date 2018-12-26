@@ -11,9 +11,11 @@
   position: relative;
 }
 
-.header image{
+.header open-data{
   width: 160rpx;
+  height: 160rpx;
   border-radius: 100%;
+  overflow: hidden;
   position: absolute;
   top: 0;
   bottom: 0;

@@ -17,7 +17,7 @@
       <view class='listIntro'>Invitation Expressions</view>
       <view>会员权益</view>
     </view>
-    <view class='lists invite' bindtap='toYaoYue'>
+    <view class='lists invite' bindtap='toInvite'>
       <view class='listIntro'>Membership Benefits</view>
       <view>邀约话术</view>
     </view>

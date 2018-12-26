@@ -2,23 +2,30 @@
 <view class='container'>
   <view class='search'>
     <view class='searchBox'>
-      <input bindinput='getValue' placeholder='请输入昵称'></input>
       <cover-image mode='widthFix' bindtap='searchUser' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1539677268173.png'></cover-image>
+      <input bindinput='getValue' placeholder='昵称/备注/标签'></input>
     </view>
   </view>
-  <view class='mailLists' wx:for='{{userList}}' wx:key=''>
-    <view class='list' data-param='{{item.id}}' bindtap='toUserDetail'>
-      <view class='header'>
-        <image class='avator' src='{{item.avatar}}'></image>
-      </view>
-      <view class='nickName'>{{item.name}}</view>
-      <view class='userValue'>客户价值：
-        <text>100</text>
+  <view class='layout' wx:for='{{userList.userList}}' wx:key=''>
+    <view class='mailtitle'>
+      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545814986175.png'></image>
+      <view class='title'>{{item.groupName}}</view>
+      <view class='groupNum'>{{item.groupList.length}}人</view>
+    </view>
+    <view class='mailLists' wx:for='{{item.groupList}}' wx:key=''>
+      <view class='list' data-param='{{item.id}}' bindtap='toUserDetail'>
+        <view class='header'>
+          <image class='avator' src='{{item.avatar}}'></image>
+        </view>
+        <view class='nickName'>{{item.name}} | {{item.level}}</view>
+        <view class='userValue'>客户价值：
+          <text>{{item.value}}</text>
+        </view>
       </view>
     </view>
   </view>
   <view class='userNum'>
-    <text>●  </text>总计{{total}}位客户
+    <text>●  </text>总计{{userList.total}}位客户
     <text>  ●</text>
   </view>
 </view>

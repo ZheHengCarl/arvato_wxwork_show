@@ -10,100 +10,19 @@
     <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544528276475.png'></image>
   </view>
   <view class='section'>
-    <view class='detailList'>
+    <view class='detailList' wx:key='' wx:for='{{dataList}}'>
       <view class='detailHead'>
-        <view>2018年12月</view>
+        <view>{{item.month}}</view>
         <view>余额</view>
         <view></view>
       </view>
       <view class='detailContent'>
-        <view class='detailConentItem'>
-          <view class='date'>16日</view>
-          <view class='restMoney'>125.21</view>
+        <view class='detailConentItem' wx:key='' wx:for='{{item.detail}}'>
+          <view class='date'>{{item.date}}日</view>
+          <view class='restMoney'>{{item.balance}}</view>
           <view class='flow'>
-            <view class='flowMoney'>+ 6.62</view>
-            <view class='explain'>[ 月结佣金 ]</view>
-          </view>
-        </view>
-        <view class='detailConentItem'>
-          <view class='date'>16日</view>
-          <view class='restMoney'>125.21</view>
-          <view class='flow'>
-            <view class='flowMoney'>+ 6.62</view>
-            <view class='explain'>[ 月结佣金 ]</view>
-          </view>
-        </view>
-        <view class='detailConentItem'>
-          <view class='date'>16日</view>
-          <view class='restMoney'>125.21</view>
-          <view class='flow'>
-            <view class='flowMoney'>+ 6.62</view>
-            <view class='explain'>[ 月结佣金 ]</view>
-          </view>
-        </view>
-        <view class='detailConentItem'>
-          <view class='date'>16日</view>
-          <view class='restMoney'>125.21</view>
-          <view class='flow'>
-            <view class='flowMoney'>+ 6.62</view>
-            <view class='explain'>[ 月结佣金 ]</view>
-          </view>
-        </view>
-        <view class='detailConentItem'>
-          <view class='date'>16日</view>
-          <view class='restMoney'>125.21</view>
-          <view class='flow'>
-            <view class='flowMoney'>+ 6.62</view>
-            <view class='explain'>[ 月结佣金 ]</view>
-          </view>
-        </view>
-      </view>
-    </view>
-    <view class='detailList'>
-      <view class='detailHead'>
-        <view>2018年12月</view>
-        <view>余额</view>
-        <view></view>
-      </view>
-      <view class='detailContent'>
-        <view class='detailConentItem'>
-          <view class='date'>16日</view>
-          <view class='restMoney'>125.21</view>
-          <view class='flow'>
-            <view class='flowMoney'>+ 6.62</view>
-            <view class='explain'>[ 月结佣金 ]</view>
-          </view>
-        </view>
-        <view class='detailConentItem'>
-          <view class='date'>16日</view>
-          <view class='restMoney'>125.21</view>
-          <view class='flow'>
-            <view class='flowMoney'>+ 6.62</view>
-            <view class='explain'>[ 月结佣金 ]</view>
-          </view>
-        </view>
-        <view class='detailConentItem'>
-          <view class='date'>16日</view>
-          <view class='restMoney'>125.21</view>
-          <view class='flow'>
-            <view class='flowMoney'>+ 6.62</view>
-            <view class='explain'>[ 月结佣金 ]</view>
-          </view>
-        </view>
-        <view class='detailConentItem'>
-          <view class='date'>16日</view>
-          <view class='restMoney'>125.21</view>
-          <view class='flow'>
-            <view class='flowMoney'>+ 6.62</view>
-            <view class='explain'>[ 月结佣金 ]</view>
-          </view>
-        </view>
-        <view class='detailConentItem'>
-          <view class='date'>16日</view>
-          <view class='restMoney'>125.21</view>
-          <view class='flow'>
-            <view class='flowMoney'>+ 6.62</view>
-            <view class='explain'>[ 月结佣金 ]</view>
+            <view class='flowMoney'>{{item.flow}}</view>
+            <view class='explain'>[ {{item.explain}} ]</view>
           </view>
         </view>
       </view>

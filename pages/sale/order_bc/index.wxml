@@ -13,72 +13,26 @@
   </view>
 
   <view class='section'>
-    <view class='orderItem'>
+    <view class='orderItem' wx:key='' wx:for='{{orderList}}'>
       <view class='itemHead'>
-        <view>Gina</view>
-        <view class='lastBtn'>1873262886</view>
-        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544582254823.png'></image>
+        <view>{{item.bcname}}</view>
+        <view class='lastBtn'>{{item.phone}}</view>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544582254823.png' bindtap='showDemo'></image>
       </view>
       <view class='itemContent'>
-        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
-        <view class='goodName'>薇姿温泉矿物系列水活精华液</view>
-        <view class='goodInfo'>2018-11-5 18:08:20 创建 </view>
-        <view class='goodState'>已付款</view>
+        <image src='{{item.goods.goodimg}}'></image>
+        <view class='goodName'>{{item.goods.goodname}}</view>
+        <view class='goodInfo'>{{item.goods.creattime}} 创建 </view>
+        <view class='goodState'>{{item.goods.goodstate}}</view>
       </view>
       <view class='itemFoot'>
         <view class='itemList'>
           <view>付款金额： </view>
-          <view class='itemMoney'>￥62</view>
+          <view class='itemMoney'>￥{{item.sum}}</view>
         </view>
         <view class='itemList'>
           <view>付款预估收入： </view>
-          <view class='itemMoney'>￥8.52</view>
-        </view>
-      </view>
-    </view>
-    <view class='orderItem'>
-      <view class='itemHead'>
-        <view>Gina</view>
-        <view class='lastBtn'>1873262886</view>
-        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544582254823.png'></image>
-      </view>
-      <view class='itemContent'>
-        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
-        <view class='goodName'>薇姿温泉矿物系列水活精华液</view>
-        <view class='goodInfo'>2018-11-5 18:08:20 创建 </view>
-        <view class='goodState'>已付款</view>
-      </view>
-      <view class='itemFoot'>
-        <view class='itemList'>
-          <view>付款金额： </view>
-          <view class='itemMoney'>￥62</view>
-        </view>
-        <view class='itemList'>
-          <view>付款预估收入： </view>
-          <view class='itemMoney'>￥8.52</view>
-        </view>
-      </view>
-    </view>
-    <view class='orderItem'>
-      <view class='itemHead'>
-        <view>Gina</view>
-        <view class='lastBtn'>1873262886</view>
-        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544582254823.png'></image>
-      </view>
-      <view class='itemContent'>
-        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
-        <view class='goodName'>薇姿温泉矿物系列水活精华液</view>
-        <view class='goodInfo'>2018-11-5 18:08:20 创建 </view>
-        <view class='goodState'>已付款</view>
-      </view>
-      <view class='itemFoot'>
-        <view class='itemList'>
-          <view>付款金额： </view>
-          <view class='itemMoney'>￥62</view>
-        </view>
-        <view class='itemList'>
-          <view>付款预估收入： </view>
-          <view class='itemMoney'>￥8.52</view>
+          <view class='itemMoney'>￥{{item.income}}</view>
         </view>
       </view>
     </view>

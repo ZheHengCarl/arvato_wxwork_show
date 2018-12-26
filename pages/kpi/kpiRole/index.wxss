@@ -75,6 +75,7 @@
 .roleItem image{
   float: left;
   width: 90rpx;
+  height: 90rpx;
   border-radius: 100%;
 }
 

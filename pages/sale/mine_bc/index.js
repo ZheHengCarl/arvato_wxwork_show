@@ -1,4 +1,4 @@
-// pages/sale/mine_bc/index.js
+var app = getApp()
 Page({
 
   /**
@@ -6,6 +6,12 @@ Page({
    */
   data: {
     index:0
+  },
+
+  onLoad:function(){
+    this.setData({
+      dataList:app.bcsale.detail
+    })
   },
 
   toFind: function () {

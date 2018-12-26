@@ -26,28 +26,28 @@
   <view class='section'>
     <view class='tipList'>
       <view class='tipItem'>
-        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545206849061.png'></image>
-        <view class='content'>布优优老师课堂：圈粉无数的口碑系列，护肤老师有话说！</view>
-        <view class='label'>面部</view>
-        <view bindtap='showDemo' class='forward'>转发</view>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545206849061.png' bindtap='totipdetail'></image>
+        <view class='content' bindtap='totipdetail'>布优优老师课堂：圈粉无数的口碑系列，护肤老师有话说！</view>
+        <view class='label' bindtap='totipdetail'>面部</view>
+        <button bindtap='showDemo' class='forward'>转发</button>
       </view>
       <view class='tipItem'>
-        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545206862641.png'></image>
-        <view class='content'>肌肤小情绪不断？你需要了解肌肤生物钟 ！</view>
-        <view class='label'>面部</view>
-        <view bindtap='showDemo' class='forward'>转发</view>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545206862641.png' bindtap='totipdetail'></image>
+        <view class='content' bindtap='totipdetail'>肌肤小情绪不断？你需要了解肌肤生物钟 ！</view>
+        <view class='label' bindtap='totipdetail'>面部</view>
+        <button bindtap='showDemo' class='forward'>转发</button>
       </view>
       <view class='tipItem'>
-        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545206871575.png'></image>
-        <view class='content'>你和小芳之间只差支玻尿酸的距离 ！</view>
-        <view class='label'>面部</view>
-        <view bindtap='showDemo' class='forward'>转发</view>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545206871575.png' bindtap='totipdetail'></image>
+        <view class='content' bindtap='totipdetail'>你和小芳之间只差支玻尿酸的距离 ！</view>
+        <view class='label' bindtap='totipdetail'>面部</view>
+        <button bindtap='showDemo' class='forward'>转发</button>
       </view>
       <view class='tipItem'>
-        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545206883710.png'></image>
-        <view class='content'>布优优老师课堂:圈粉无数的口碑系列，护肤老师有话说 ！</view>
-        <view class='label'>面部</view>
-        <view class='forward'>转发</view>
+        <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545206883710.png' bindtap='totipdetail'></image>
+        <view class='content' bindtap='totipdetail'>布优优老师课堂:圈粉无数的口碑系列，护肤老师有话说 ！</view>
+        <view class='label' bindtap='totipdetail'>面部</view>
+        <button bindtap='showDemo' class='forward'>转发</button>
       </view>
     </view>
   </view>

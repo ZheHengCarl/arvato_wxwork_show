@@ -1,1 +1,5 @@
-{}
+{
+  "component": true,
+  "navigationBarTitleText": "客户关怀",
+  "usingComponents": {}
+}

@@ -2,15 +2,14 @@
 .container{
   width: 100%;
   height: 100%;
-  background-color: #fff;
+  background-color: #F7F7F7;
   overflow-y: scroll;
 }
 .container .search{
   width: 100%;
-  height: 20%;
-  background: #f6f6f6; 
+  height: 10%;
+  background: #ffffff; 
   overflow: hidden;
-  border-bottom: 2px solid #dcdcdc;
   position: relative;
 }
 .container .search .searchBox{
@@ -30,12 +29,12 @@
   left: 10%;
   height: 60rpx;
   width: 80%;
-  background: #ffffff;
+  background: #F7F7F7;
   border: 1px solid #EFEFEF;
   border-radius: 10rpx;
-  padding-left: 20rpx;
+  padding-right: 20rpx;
   font-size: 25rpx;
-  padding-right: 100rpx;
+  padding-left: 100rpx;
 }
 
 .container .search .searchBox cover-image{
@@ -43,23 +42,58 @@
   width: 30rpx;
   height: 30rpx;
   position: absolute;
-  right: 15%;
+  left: 15%;
   top: 15rpx;
   z-index: 999;
 }
 
-.container .search input::-webkit-input-placeholder{
-  color: #e0e0e0;
+input::-webkit-input-placeholder{
+  color: #c2ccd1;
 }
 
 .container .mailLists{
   box-sizing: border-box;
   width: 100%;
-  padding: 0 40rpx;
+  padding: 0 74rpx;
+  background: #ffffff
+}
+
+.container .layout{
+  overflow: hidden;
+  background: #ffffff;
+  margin-bottom: 16rpx;
+}
+
+.container .layout .mailtitle{
+  height: 80rpx;
+  padding: 0 30rpx;
+}
+
+.container .layout .mailtitle image{
+  width: 16rpx;
+  float: left;
+  margin-top: 26rpx;
+}
+
+.container .layout .mailtitle .title{
+  font-size: 28rpx;
+  color: #333333;
+  line-height: 80rpx;
+  margin-left: 25rpx;
+  float: left
+}
+
+.container .layout .mailtitle .groupNum{
+  float: right;
+  line-height: 80rpx;
+  color: #999999;
+  font-size: 28rpx;
+  width: 30%;
+  text-align: right
 }
 
 .container .mailLists .list{
-  border-bottom: 2rpx solid #e5e5e5;
+  border-bottom: 2rpx solid #F7F7F7;
   display: flex;
   height: 100rpx;
 }
@@ -77,23 +111,29 @@
   height: 100%
 }
 .container .mailLists .list .nickName{
-  flex: 1;
+  flex: 3;
   line-height: 100rpx;
-  color: #959595;
-  font-size: 32rpx;
+  color: #333333;
+  font-size: 28rpx;
 }
 .container .mailLists .list .userValue{
   flex: 2;
   text-align: right;
   line-height: 100rpx;
   font-size: 28rpx;
-  color: #adadad;
+  color: #999999;
 }
+
+.container .mailLists .list .userValue text{
+  color: #DA202B
+}
+
 .container .userNum{
   text-align: center;
   font-size: 30rpx;
-  margin-top: 20rpx;
+  margin: 50rpx 0;
   color: #666;
+  overflow: hidden
 }
 .container .userNum text{
   font-size: 20rpx;

@@ -8,6 +8,11 @@
   width: 100%;
   height: 300rpx
 }
+.header  image{
+  width: 95%;
+  margin: 0 auto;
+  display: block;
+}
 
 swiper{
   width: 100%;
@@ -20,7 +25,7 @@ swiper-item{
 }
 
 swiper-item image{
-  width: 95%;
+  width: 100%;
   height: 260rpx;
   border-radius: 8rpx;
 }
@@ -98,11 +103,22 @@ swiper-item image{
   border-bottom-left-radius: 40rpx;
   padding: 14rpx 30rpx;
 }
+.section cover-view .background{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0
+}
 
-.section cover-view cover-image{
+.section cover-view .transform{
   width: 35rpx;
   height: 37rpx;
-  margin-top: 5rpx;
+  top: 18rpx;
+  left: 30rpx;
+  position: absolute;
+  z-index: 3
 }
 
 .section cover-view .trans{
@@ -240,12 +256,12 @@ swiper-item image{
   width: 45rpx;
 }
 
-.footer view .choose{
+.footer view .choosen{
   opacity: 1;
   z-index: 1
 }
 
-.footer .active .choose{
+.footer .active .choosen{
   opacity: 0;
   z-index: -1
 }

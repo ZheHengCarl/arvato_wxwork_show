@@ -69,6 +69,7 @@
   float: left;
   font-size: 28rpx;
   color: #344C57;
+  font-weight: bold;
   margin-top: 26rpx;
   padding: 0 34rpx;
   line-height: 28rpx;
@@ -76,7 +77,8 @@
 }
 
 .itemHead .lastBtn{
-  border-right: none
+  border-right: none;
+  font-weight: normal;
 }
 
 

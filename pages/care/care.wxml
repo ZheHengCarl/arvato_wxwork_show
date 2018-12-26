@@ -4,20 +4,20 @@
   </view>
   <view class='taskList'>
     <view class='nav'>
-      <view class='active'>今日</view>
-      <view class=''>历史</view>
+      <view bindtap='changeData' data-index='0' class='{{currentIndex==0?"active":""}}'>今日</view>
+      <view bindtap='changeData' data-index='1' class='{{currentIndex==1?"active":""}}'>历史</view>
     </view>
     <view class="list {{listShow==1 ? 'show':''}}">
       <view class='listHeader'>
         <view>入会27天新客</view>
       </view>
       <view class='listContent'>
-        <text>UTM\n总计2人需要关怀，还有1人尚未完成</text>
-        <image bindtap='showDetail' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
+        <text>UTM\n总计{{today.day27.UTM.count}}人需要关怀，还有{{today.day27.UTM.unfinish}}人尚未完成</text>
+        <image bindtap='showDetail' data-type="utm27" mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
       </view>
       <view class='listContent disable'>
-        <text>NUTM\n总计2人需要关怀，还有1人尚未完成</text>
-        <image bindtap='showDetail' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
+        <text>NUTM\n总计{{today.day27.NUTM.count}}人需要关怀，还有{{today.day27.NUTM.count}}人尚未完成</text>
+        <image bindtap='showDetail' data-type="nutm27" mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
       </view>
     </view>
     <view class="list {{listShow==1 ? 'show':''}}">
@@ -25,49 +25,41 @@
         <view>入会55天新客</view>
       </view>
       <view class='listContent'>
-        <text>UTM\n总计2人需要关怀，还有1人尚未完成</text>
-        <image bindtap='showDetail' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
+        <text>UTM\n总计{{today.day55.UTM.count}}人需要关怀，还有{{today.day55.UTM.count}}人尚未完成</text>
+        <image bindtap='showDetail' data-type="utm55" mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
       </view>
       <view class='listContent disable'>
-        <text>NUTM\n总计2人需要关怀，还有1人尚未完成</text>
-        <image bindtap='showDetail' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
+        <text>NUTM\n总计{{today.day55.NUTM.count}}人需要关怀，还有{{today.day55.NUTM.count}}人尚未完成</text>
+        <image bindtap='showDetail' data-type="nutm55" mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
       </view>
     </view>
     <view class="edit {{editShow==1 ? 'show':''}}">
       <view class='editHeader'>
-        <view>入会55天新客</view>
+        <view>入会{{ctype=='utm27'||ctype == 'nutm27'?'27':'55'}}天新客</view>
       </view>
       <view class='editContent'>
-        <text>UTM\n总计2人需要关怀，还有1人尚未完成</text>
+        <text>{{ctype == 'utm27'||ctype == 'utm55'?'UTM':'NUTM'}}\n总计{{currentNccItem.count}}人需要关怀，还有{{currentNccItem.unfinish}}人尚未完成</text>
         <image bindtap='hideDetail' mode='widthFix' style='width:30rpx' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543546420711.png'></image>
       </view>
       <view class='operate'>
         <view class='userList'>
-          <checkbox-group bindchange="checkboxChange">
-            <label class="checkbox">
+          <checkbox-group>
+            <label class="checkbox" wx:for="{{currentNccItem.list}}" wx:key=''>
               <view class='checkItem'>
-                <checkbox value="1" />
-                <image mode='aspectFit' class='avatar' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></image>
-                <text bindtap='showHistory' class='userName'>name</text>
-                <text>未完成</text>
-                <image mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556673121.png'></image>
-                <image mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556702629.png'></image>
-              </view>
-            </label>
-            <label class="checkbox">
-              <view class='checkItem'>
-                <checkbox value="2" />
-                <image mode='aspectFit' class='avatar' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></image>
-                <text bindtap='showHistory' class='userName'>name</text>
-                <text>未完成</text>
-                <image mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556673121.png'></image>
-                <image mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556702629.png'></image>
+                <checkbox id="{{item.userid}}" disabled='{{item.finishstate == "已完成"?"disabled":""}}'/>
               </view>
             </label>
           </checkbox-group>
+          <view class='datalist' wx:for="{{currentNccItem.list}}" wx:key=''>
+            <image mode='aspectFit' class='avatar' src='{{item.avatar}}'></image>
+            <text bindtap='showHistory' class='userName'>{{item.username}}</text>
+            <text>{{item.finishstate}}</text>
+            <image mode='aspectFit' bindtap='telClick' data-mobile="{{item.phone}}" src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556673121.png'></image>
+            <image mode='aspectFit' bindtap='chatClick' data-chatid="{{item.userid}}" src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556702629.png'></image>
+          </view>
         </view>
         <view class='editSpace'>
-          亲爱的~距您上次购买资生堂产品已近一个月了，感受到我们的产品为您肌肤带来变化了吗？请尽快前往XXXX专柜即可领取悦薇珀翡塑颜臻白精华液中样一份。搭配您已购买的傲娇精华，抵御加修护，予肌肤持久粉透光采！我在专柜静候您的光临哦~
+          {{currentNccItem.greet}}
         </view>
         <view class='operBtn'>
           <view class='preview' bindtap='showPreview'>预览</view>
@@ -76,7 +68,8 @@
         <view class='ensureBtn'>
           <checkbox></checkbox>
           <text>全选</text>
-          <button>确认发送</button>
+          <!-- <button bindtap='sendNcc'>确认发送</button> -->
+          <button bindtap='showDemo'>确认发送</button>
         </view>
       </view>
     </view>
@@ -85,35 +78,57 @@
 <view class="cover {{coverShow==1 ? 'show':''}}"></view>
 <view class="coverContent {{coverContentShow==1 ? 'show':''}}">
   <image bindtap='hideEdit' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543549012749.png'></image>
-  <textarea cursor-spacing='20' value='亲爱的~距您上次购买资生堂产品已近一个月了，感受到我们的产品为您肌肤带来变化了吗？请尽快前往XXXX专柜即可领取悦薇珀翡塑颜臻白精华液中样一份。搭配您已购买的傲娇精华，抵御加修护，予肌肤持久粉透光采！我在专柜静候您的光临哦~'></textarea>
+  <textarea bindinput="textareaChange" cursor-spacing='20' value='{{currentNccItem.greet}}'></textarea>
   <view class='coverBtn'>
     <view bindtap='showPreview' class='coverPreview'>预览</view>
+    <!-- <view bindtap="greetSave">保存</view> -->
     <view>保存</view>
   </view>
 </view>
-<cover-view class="previewContent {{previewContentShow==1 ? 'show':''}}">
-  <cover-image class='logo' mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543557335152.png'></cover-image>
-  <cover-image class='goods' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543557349948.png'></cover-image>
-  <cover-image class='closePreview' bindtap='hidePreview' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543549012749.png'></cover-image>
-  <cover-view>亲爱的~距您上次购买资生堂产品已近一个月了，感受到我们的产品为您肌肤带来变化了吗？请尽快前往XXXX专柜即可领取悦薇珀翡塑颜臻白精华液中样一份。搭配您已购买的傲娇精华，抵御加修护，予肌肤持久粉透光采！我在专柜静候您的光临哦~
-  </cover-view>
-</cover-view>
-<cover-view class="historyOrder {{historyOrderShow==1 ? 'show':''}}">
-  <cover-view class='historyOrderHeader'>
-    <cover-view>订单记录</cover-view>
-    <cover-image bindtap='historyHide' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543385902625.png'></cover-image>
-  </cover-view>
-  <cover-view class='historyOrderList'>
-    <cover-view class='historyOrderItem'>
-      <cover-view class='historyOrderTitle'>
-        <cover-view>交易时间</cover-view>
-        <cover-view>产品明细</cover-view>
-        <cover-view>金额</cover-view>
-        <cover-view>数量</cover-view>
-        <cover-view>积分</cover-view>
-      </cover-view>
-      <cover-view class='historyOrderContent'>
-      </cover-view>
-    </cover-view>
-  </cover-view>
-</cover-view>
+<view class="previewContent {{previewContentShow==1 ? 'show':''}}">
+  <!-- <image class='logo' mode='aspectFit' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543557335152.png'></image>
+  <image class='goods' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543557349948.png'></image> -->
+  <image class='closePreview' bindtap='hidePreview' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543549012749.png'></image>
+  <view>{{currentNccItem.greet}}
+  </view>
+</view>
+<!-- <view class="historyOrder {{historyOrderShow==1 ? 'show':''}}">
+  <view class='historyOrderHeader'>
+    <view>订单记录</view>
+    <image bindtap='historyHide' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543385902625.png'></image>
+  </view>
+
+
+  <view class='historyOrderList'>
+    <view class='historyOrderItem' wx:for="{{orderList}}" wx:key=''>
+      <view class='historyOrderTitle'>
+        <view class='orderTime'>交易时间</view>
+        <view class='goodDetail'>产品明细</view>
+        <view class='price'>金额</view>
+        <view class='goodNum'>数量</view>
+        <view class='restPoint'>积分</view>
+      </view>
+      <view class='historyOrderContent'>
+        <view class='orderTime'>{{item.orderdate}}</view>
+        <view class='goodDetail'>
+          <view  wx:for="{{item.commodityList}}" wx:for-item="commodity">{{commodity.GoodsName}}</view>
+        </view>
+        <view class='price'>{{item.money}}</view>
+        <view class='goodNum'>{{item.count}}</view>
+        <view class='restPoint'>{{item.Point}}</view>
+      </view>
+      <view class='historyOrderFoot'>
+        <view class='orderTime'></view>
+        <view class='goodDetail'>合计：</view>
+        <view class='price'>{{item.money}}</view>
+        <view class='goodNum'>{{item.count}}</view>
+        <view class='restPoint'>{{item.Point}}</view>
+      </view>
+    </view>
+
+   
+
+  </view>
+
+
+</view> -->

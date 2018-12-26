@@ -1,4 +1,4 @@
-// pages/sale/order_bc/index.js
+var app = getApp();
 Page({
 
   /**
@@ -7,6 +7,12 @@ Page({
   data: {
     index:0,
     index1:0
+  },
+
+  onLoad:function(){
+    this.setData({
+      orderList: app.bcsale.orderList
+    })
   },
 
   toFind: function () {

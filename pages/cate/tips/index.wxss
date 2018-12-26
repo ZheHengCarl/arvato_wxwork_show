@@ -111,3 +111,7 @@
   bottom: 20rpx;
   right: 30rpx;
 }
+
+.tipItem button[class="forward"]::after {
+  border: 0;
+} 

@@ -1,8 +1,0 @@
-<view class="container">
-  <view class="orderInfo-list define-title">
-    <view class="title">{{title}}</view>
-  </view>
-  <view id="content" wx:for='{{content}}'>
-    <view><text selectable="true">{{item}}</text></view>
-  </view>
-</view>

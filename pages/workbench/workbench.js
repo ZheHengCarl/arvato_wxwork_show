@@ -4,14 +4,6 @@ Page({
     coverShow: 1,
     errorShow: 0,
     choiceShow:1,
-    sale: '1.2',
-    saleMoney: '20',
-    finishPercent: '70',
-    hasFinishNum: '123,000',
-    goalNum: '176,000',
-    finishMember: '3',
-    newClientNum: '12',
-    newOrderNum: '22',
     month: '',
     monthList: [],
     corpid: 'wxe9bf86cf4a032523',
@@ -28,6 +20,7 @@ Page({
 
   onLoad: function() {
     var that = this;
+    var dataList;
     app.domain = 'https://minipro.arvatocrm.cn/shiseido';
     this.drawFinish(0.7);
     this.showMonth();
@@ -38,7 +31,16 @@ Page({
       },
       success: function (res) {
         console.info(res);
-        var dataList = res.data.data.home;
+        app.kpidata = res.data;
+        var role = that.data.role;
+        if(role == 0){
+          dataList = res.data.bckpi.home;
+        }else if(role == 1){
+          dataList = res.data.storekpi.home;
+        }else{
+          dataList = res.data.areakpi.home;
+        }
+        console.log(dataList)
         that.setData({
           dataList: dataList
         })
@@ -237,7 +239,7 @@ Page({
     var role = this.data.role;
     if(role == 0){
       wx.navigateTo({
-        url: '../kpi/detail/detail?role='+role
+        url: '../kpi/detail/detail?role=' + role +'&id=1001101'
       })
     }else{
       wx.navigateTo({
@@ -255,8 +257,17 @@ Page({
 
   changeRole: function (e) {
     var role = e.currentTarget.dataset.role;
+    var dataList;
+    if (role == 0) {
+      dataList = app.kpidata.bckpi.home;
+    } else if (role == 1) {
+      dataList = app.kpidata.storekpi.home;
+    } else {
+      dataList = app.kpidata.areakpi.home;
+    }
     this.setData({
-      role: role
+      role: role,
+      dataList: dataList
     })
   },
 

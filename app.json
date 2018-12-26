@@ -12,8 +12,6 @@
     "pages/care/care",
     "pages/cate/index/index",
     "pages/cate/vip/vip",
-    "pages/cate/invite/invite-list/invite-list",
-    "pages/cate/invite/invite-detail/invite-detail",
     "pages/sale/index_bc/index",
     "pages/sale/index_user/index",
     "pages/sale/mine_bc/index",
@@ -31,7 +29,11 @@
     "pages/cate/brand/index",
     "pages/cate/material/index",
     "pages/user/discount/index",
-    "pages/kpi/kpiRole/index"
+    "pages/kpi/kpiRole/index",
+    "pages/cate/invite/index",
+    "pages/cate/materialdetail/index",
+    "pages/cate/branddetail/index",
+    "pages/cate/tipdetail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

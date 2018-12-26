@@ -6,7 +6,7 @@ Page({
    */
   data: {
     brand:'',
-    pageSize:10,
+    pageSize:15,
     pageNum:1,
     inputValue:'',
     total:0
@@ -40,8 +40,7 @@ Page({
         console.log('userList', userList)
         app.userList = userList;
         that.setData({
-          userList: userList,
-          total: userList.length
+          userList: userList
         })
       }
     })

@@ -111,16 +111,22 @@ view, text, a {
 .section .loadingParent canvas cover-view{
   width: 160rpx;
   height: 80rpx;
-  background: #333333;
   position: absolute;
   right: 0;
   top: 30rpx;
-  border-top-left-radius: 40rpx;
-  border-bottom-left-radius: 40rpx;
   padding: 14rpx 30rpx;
 }
 
-.section .loadingParent canvas cover-view cover-image{
+.section .loadingParent canvas cover-view .background{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0
+}
+
+.section .loadingParent canvas cover-view .transform{
   width: 35rpx;
   height: 37rpx;
   margin-top: 5rpx;
@@ -160,7 +166,7 @@ view, text, a {
 }
 
 .section .loadingParent .finish .finishPercent {
-  font-size: 156rpx;
+  font-size: 148rpx;
   color: #DA202B;
   margin-left: 90rpx;
 }

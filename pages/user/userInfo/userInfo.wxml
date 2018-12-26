@@ -10,11 +10,11 @@
         <image mode='widthFix' src='{{currUserInfo.avatar}}'></image>
         <image class='sexIcon' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086613843.png'></image>
       </view>
-      <view class='talk'>
+      <view class='talk' bindtap='showDemo'>
         <image class='talkIcon' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086578867.png'></image>
       </view>
     </view>
-    <view class='discount'>
+    <view class='discount' bindtap='toDiscount'>
       <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086740589.png'></image>
       <text>优惠券</text>
     </view>
@@ -108,9 +108,25 @@
       <view class='showAddLabel'>
         <view class='addByHandTitle'>手动添加</view>
         <view class='addLabelList'>
-          <view class='addLabelItem' wx:for-index="index" wx:for='{{handLabelList}}' wx:key=''>
-            {{item}}
-            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png' data-addlabelindex='{{index}}' bindtap='removeHandLabel'></image>
+          <view class='addLabelItem'>
+            {{handLabelList[0]}}
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png' data-addlabelindex='0' bindtap='removeHandLabel'></image>
+          </view>
+          <view class='addLabelItem'>
+            {{handLabelList[1]}}
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png' data-addlabelindex='1' bindtap='removeHandLabel'></image>
+          </view>
+          <view class='addLabelItem'>
+            {{handLabelList[2]}}
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png' data-addlabelindex='2' bindtap='removeHandLabel'></image>
+          </view>
+          <view class='addLabelItem'>
+            {{handLabelList[3]}}
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png' data-addlabelindex='3' bindtap='removeHandLabel'></image>
+          </view>
+          <view class='addLabelItem'>
+            {{handLabelList[4]}}
+            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544164568497.png' data-addlabelindex='4' bindtap='removeHandLabel'></image>
           </view>
         </view>
         <view class='handAddBtn' bindtap='modalinput'>增加标签</view>

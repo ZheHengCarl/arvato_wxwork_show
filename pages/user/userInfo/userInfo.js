@@ -52,6 +52,7 @@ Page({
   },
 
   onLoad: function(options) {
+    var that = this;
     var id = options.id;
     if (!id) {
       id = 1;
@@ -59,15 +60,27 @@ Page({
     console.info(id);
     // 从app.userList里面找出当前ID的用户的信息
     var userList = app.userList;
-    for (var i = 0; i < userList.length; i++) {
-      var item = userList[i];
-      if (item.id == id) {
-        this.setData({
-          currUserInfo: item
-        });
+    wx.request({
+      url: "https://minipro.arvatocrm.cn/arvato/show/json/get",
+      data: {
+        id: "userinfo"
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function (res) {
+        console.info(res);
+        var userList = res.data;
+        for (var i = 0; i < userList.length; i++) {
+          var item = userList[i];
+          if (item.id == id) {
+            that.setData({
+              currUserInfo: item
+            });
+          }
+        }
       }
-    }
-    var that = this;
+    })
     // 请求默认的标签
     wx.request({
       url: "https://minipro.arvatocrm.cn/arvato/show/json/get",
@@ -137,6 +150,14 @@ Page({
     }
   },
 
+  showDemo: function () {
+    wx.showModal({
+      title: '提示',
+      content: '很遗憾，此版本仅为演示版，无法使用该功能。',
+      showCancel: false
+    })
+  },
+
   bindRegionChange(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -150,9 +171,19 @@ Page({
     })
   },
   modalinput: function() {
-    this.setData({
-      hiddenmodalput: !this.data.hiddenmodalput
-    })
+    var handLabelList = this.data.handLabelList;
+    if (handLabelList.length == 5){
+      wx.showModal({
+        title: '提示',
+        content: '一次最多添加五个标签',
+        showCancel: false
+      })
+    }else{
+      this.setData({
+        hiddenmodalput: !this.data.hiddenmodalput
+      })
+    }
+    
   },
   //取消按钮  
   cancel: function() {
@@ -175,6 +206,7 @@ Page({
       this.setData({
         hiddenmodalput: true,
         inputValue: '',
+        handLabel:'',
         handLabelList: handLabelList
       });
     }
@@ -234,5 +266,11 @@ Page({
       }
     }
     return arr;
+  },
+
+  toDiscount:function(){
+    wx.navigateTo({
+      url: '../discount/index',
+    })
   }
 })

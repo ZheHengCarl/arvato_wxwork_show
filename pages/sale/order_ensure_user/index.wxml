@@ -1,9 +1,9 @@
 <view class='container'>
   <view class='header'>
-    <view class='nickName'>Gina </view>
+    <view class='nickName'>{{dataList.userInfo.username}}</view>
     <view class='userInfo'>
-      <view class='phone'>18736552886</view>
-      <view class='site'>上海市大宁广场A3欧唯特</view>
+      <view class='phone'>{{dataList.userInfo.phone}}</view>
+      <view class='site'>{{dataList.userInfo.address}}</view>
     </view>
     <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544602724631.png'></image>
   </view>
@@ -19,19 +19,19 @@
   </view>
   <view class='goodList'>
     <view class='goodItem'>
-      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
+      <image src='{{dataList.cart.goods.goodimg}}'></image>
       <view class='goodInfo'>
-        <view class='goodName'>薇姿温泉矿物系列水活精华液</view>
+        <view class='goodName'>{{dataList.cart.goods.goodname}}</view>
         <view class='goodIntroduce'>
-          <view class='goodPrice'>￥ 106</view>
-          <view class='goodContent'>50ml</view>
+          <view class='goodPrice'>￥ {{dataList.cart.goods.price}}</view>
+          <view class='goodContent'>{{dataList.cart.goods.goodcontent}}</view>
         </view>
         <view class='tips'>支持7天无理由退货</view>
       </view>
       <view class='buyNum'>
         <view class='countTitle'>购买数量</view>
         <view class='count'>
-          <view>-</view><view class='num'>2</view><view>+</view>
+          <view data-num='{{num}}' bindtap='minus'>-</view><view class='num'>{{num}}</view><view data-num='{{num}}' bindtap='plus'>+</view>
         </view>
       </view>
     </view>
@@ -39,7 +39,7 @@
   <view class='amount'>
     <view class='money'>
       <view>商品金额</view>
-      <view class='amountMoney'>￥ 106</view>
+      <view class='amountMoney'>￥ {{count}}</view>
     </view>
     <view class='freight'>
       <view>运费</view>
@@ -47,7 +47,7 @@
     </view>
   </view>
   <view class='footer'>
-    <view class='payMoney'>应付： <text>￥ 106</text></view>
+    <view class='payMoney'>应付： <text>￥ {{count+12}}</text></view>
     <view class='payBtn' bindtap='toMine'>提交订单</view>
   </view>
 </view>

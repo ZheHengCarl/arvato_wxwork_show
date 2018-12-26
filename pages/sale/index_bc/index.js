@@ -1,20 +1,34 @@
+var app= getApp()
 Page({
   data: {
-    imgUrls: [
-      'http://pic.90sjimg.com/back_pic/qk/back_origin_pic/00/03/95/402a9568fbe5e37f34aa64bba094df0c.jpg',
-      'https://images2015.cnblogs.com/blog/1083235/201705/1083235-20170529224430274-470334084.png',
-      'https://images2015.cnblogs.com/blog/1083235/201705/1083235-20170529224451586-1329647239.png'
-    ],
-    indicatorDots: true,
+    imgUrls: ['http://minipro.arvatocrm.cn/arvato/img/?fileName=1545644255640.png'],
+    indicatorDots: false,
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    margin: 40,
+    margin: 0,
     circular: true,
     currentIndex: 0,
     role1: 1,
     coverShow: 0,
     currentIndex: 0
+  },
+
+  onLoad:function(){
+    var that = this;
+    wx.request({
+      url: "https://minipro.arvatocrm.cn/arvato/show/json/get",
+      data: {
+        id: "sale"
+      },
+      success: function (res) {
+        console.info(res);
+        app.bcsale = res.data.bc;
+        that.setData({
+          dataList: res.data.bc.goodsList
+        })
+      }
+    })
   },
 
   changeNav: function (e) {

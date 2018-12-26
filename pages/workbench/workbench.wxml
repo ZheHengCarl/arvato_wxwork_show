@@ -2,11 +2,11 @@
   <view class="header {{_hide==1 ? 'hide':''}}">
     <view>
       <view class='seeled'>今日累积销售额</view>
-      <view class='seelMoney'><text>{{dataList.sale}}</text>万元</view>
+      <view class='seelMoney'><text>{{dataList.today}}</text>万元</view>
     </view>
     <view>
       <view class='seeled'>本月累积销售额</view> 
-      <view class='seelMoney'><text>{{dataList.saleMoney}}</text>万元</view>
+      <view class='seelMoney'><text>{{dataList.thismonth}}</text>万元</view>
     </view>
     <view class='pull'>
       <view>
@@ -26,13 +26,14 @@
     <view class="loadingParent">
       <canvas canvas-id="canvasIndex">
         <cover-view bindtap='showChangeRole'>
-          <cover-image mode='widthFix' src='../../images/1545384759277.png'></cover-image>
+          <cover-image class='transform' mode='widthFix' src='../../images/1545384759277.png'></cover-image>
+          <cover-image class='background' mode='widthFix' src='../../images/1545729026741.png'></cover-image>
           <cover-view class='trans'>切换</cover-view>
           <cover-view class='role'>角色</cover-view>
         </cover-view>
       </canvas>
       <view class='finish'>
-        <text class='finishPercent'>{{dataList.finishPercent}}</text>
+        <text class='finishPercent'>{{dataList.finishstate}}</text>
         <text class='percent'>%</text>
         <view class='monthGoal'>
           <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=coin.png'></image>
@@ -41,13 +42,13 @@
       </view>
     </view>
     <view class='finishMember' wx:if='{{role==0}}'>
-      本店已有<text>{{dataList.finishMember}}</text>名店员完成了业绩目标
+      本店已有<text>{{dataList.finishmember}}</text>名店员完成了业绩目标
     </view>
     <view class='finishMember' wx:if='{{role==1}}'>
-      本区域已有<text>{{dataList.finishMember}}</text>家门店完成了业绩目标
+      本区域已有<text>{{dataList.finishmember}}</text>家门店完成了业绩目标
     </view>
     <view class='finishMember' wx:if='{{role==2}}'>
-      全国已有<text>{{dataList.finishMember}}</text>个区域完成了业绩目标
+      全国已有<text>{{dataList.finishmember}}</text>个区域完成了业绩目标
     </view>
     <view class='chooseDate'>
       <view data-num="1" class="{{_num==1 ? 'active':''}}" bindtap='changeDate'>今日</view>
@@ -56,23 +57,23 @@
     <view class='customList'>
       <view>
         <view>新客</view>
-        <view>{{dataList.newCustomer}}</view>
+        <view>{{dataList.customer[0]}}</view>
       </view>
       <view>
         <view>老客</view>
-        <view>{{dataList.oldCustomer}}</view>
+        <view>{{dataList.customer[1]}}</view>
       </view>
       <view>
         <view>散客</view>
-        <view>{{dataList.scatCustomer}}</view>
+        <view>{{dataList.customer[2]}}</view>
       </view>
       <view>
         <view>客单价</view>
-        <view>{{dataList.unitPrice}}</view>
+        <view>{{dataList.customer[3]}}</view>
       </view>
       <view>
         <view>客单件</view>
-        <view>{{dataList.count}}</view>
+        <view>{{dataList.customer[4]}}</view>
       </view>
     </view>
   </view>
@@ -113,11 +114,11 @@
     <cover-view class='chooseTip'>请选择您感兴趣的身份</cover-view>
     <cover-view class='chooseId'>
       <cover-view bindtap='changeRole1' data-role1='0' class='chooseItem {{role1==0 ? "active":""}}'>
-        <cover-image mode='widthFix' src='../../images/avartar.png'></cover-image>
+        <cover-image mode='widthFix' src='../../images/user.png'></cover-image>
         <cover-view class='userChoose'>消费者</cover-view>
       </cover-view>
       <cover-view bindtap='changeRole1' data-role1='1' class='chooseItem {{role1==1 ? "active":""}}'>
-        <cover-image mode='widthFix' src='../../images/avartar.png'></cover-image>
+        <cover-image mode='widthFix' src='../../images/bc.png'></cover-image>
         <cover-view class='userChoose'>导购</cover-view>
       </cover-view>
     </cover-view>
@@ -129,15 +130,15 @@
     <cover-view class='choiceTip'>请选择您感兴趣的身份</cover-view>
     <cover-view class='choiceId'>
       <cover-view bindtap='changeRole' data-role='0' class='choiceItem {{role==0 ? "active":""}}'>
-        <cover-image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></cover-image>
+        <cover-image mode='widthFix' src='../../images/bc.png'></cover-image>
         <cover-view class='userchoice'>导购</cover-view>
       </cover-view>
       <cover-view bindtap='changeRole' data-role='1' class='choiceItem {{role==1 ? "active":""}}'>
-        <cover-image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></cover-image>
+        <cover-image mode='widthFix' src='../../images/store.png'></cover-image>
         <cover-view class='userchoice'>店长</cover-view>
       </cover-view>
       <cover-view bindtap='changeRole' data-role='2' class='choiceItem {{role==2 ? "active":""}}'>
-        <cover-image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></cover-image>
+        <cover-image mode='widthFix' src='../../images/area.png'></cover-image>
         <cover-view class='userchoice'>区域长</cover-view>
       </cover-view>
     </cover-view>

@@ -11,12 +11,12 @@
         <view class='lastcontent'>刷出少女肌</view>
       </view>
       <view class='title'>
-        <view>小爱课堂第一期：轻松打造甜美女孩</view>
-        <button>转发</button>
+        <view bindtap='tomaterialdetail'>小爱课堂第一期：轻松打造甜美女孩</view>
+        <button bindtap='showDemo'>转发</button>
       </view>
       <view class='title'>
-        <view>小爱课堂第二期：各种脱妆浮粉怎么办？</view>
-        <button>转发</button>
+        <view bindtap='tomaterialdetail'>小爱课堂第二期：各种脱妆浮粉怎么办？</view>
+        <button bindtap='showDemo'>转发</button>
       </view>
     </view>
     <view class='materialItem'>
@@ -26,12 +26,12 @@
         <view class='lastcontent'>完美自然服帖</view>
       </view>
       <view class='title'>
-        <view>上班妆容如何打造？小爱来指导</view>
-        <button>转发</button>
+        <view bindtap='tomaterialdetail'>上班妆容如何打造？小爱来指导</view>
+        <button bindtap='showDemo'>转发</button>
       </view>
       <view class='title'>
-        <view>日落暖冬 随意一抹 闪闪惹人爱</view>
-        <button>转发</button>
+        <view bindtap='tomaterialdetail'>日落暖冬 随意一抹 闪闪惹人爱</view>
+        <button bindtap='showDemo'>转发</button>
       </view>
     </view>
   </view>

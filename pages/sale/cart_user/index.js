@@ -1,13 +1,21 @@
+var app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    num: 2,
+    num: 1,
     count: 0,
-    price: 189,
+    price: 180,
     selected: 0
+  },
+
+  onLoad:function(){
+    this.setData({
+      dataList: app.usersale.cart,
+      num: app.usersale.cart.goods.count
+    })
   },
 
   minus: function (e) {

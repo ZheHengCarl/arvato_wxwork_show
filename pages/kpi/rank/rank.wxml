@@ -1,16 +1,13 @@
 <view class='container'>
   <view class='screen'>
-    <view class='city'>
-      <picker mode='selector'>请选择城市</picker>
-      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540435872138.png'></image>
+    <view class='city' bindtap='showDemo'>
+      <view mode='selector'>请选择城市</view>
     </view>
-    <view class='time beginTime'>
-      <picker mode='date'>开始时间</picker>
-      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540435872138.png'></image>
+    <view class='time beginTime' bindtap='showDemo'>
+      <view mode='date'>开始时间</view>
     </view>至
-    <view class='time finishTime'>
-      <picker mode='date'>结束时间</picker>
-      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540435872138.png'></image>
+    <view class='time finishTime' bindtap='showDemo'>
+      <view mode='date'>结束时间</view>
     </view>
   </view>
    <view class='middleLine'>
@@ -20,25 +17,16 @@
   </view>
   <view class='rank'>
     <view class='store'>
-      <!-- <view>第一八佰伴</view>
-      <view>第一八佰</view>
-      <view>第一八</view>
-      <view>第佰伴</view> -->
+      <view wx:key='' wx:for='{{rank}}'>{{item.storename}}</view>
     </view>
     <view class='progress'>
-      <progress active color='#DA202B' percent='100' stroke-width='12' backgroundColor='#ffffff'  ></progress>
-      <progress active color='#DA202B' percent='70' stroke-width='12' backgroundColor='#ffffff' ></progress>
-      <progress active color='#DA202B' percent='60' stroke-width='12' backgroundColor='#ffffff' ></progress>
-      <progress active color='#DA202B' percent='50' stroke-width='12' backgroundColor='#ffffff' ></progress>
+      <progress active color='#DA202B' percent='{{item.percent}}' stroke-width='12' backgroundColor='#ffffff'  wx:key='' wx:for='{{rank}}' ></progress>
     </view>
     <view class='number'>
-      <!-- <view>3113</view>
-      <view>2113</view>
-      <view>1113</view>
-      <view>113</view> -->
+      <view wx:key='' wx:for='{{rank}}'>{{item.data}}</view>
     </view>
   </view>
-  <view class='loadMore'>
+  <!-- <view class='loadMore'>
     <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1540278055767.png'></image>
-  </view>
+  </view> -->
 </view>

@@ -5,19 +5,47 @@ Page({
    * 页面的初始数据
    */
   data: {
-    finishPercent: '70',
-    array:['月计划比','其他指标1','其他指标2'],
-    index:0
+    index: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.drawFinish(0.7);
+    var role = options.role;
+    var id = options.id;
+    var dataList = app.kpidata;
+    var kpi;
+    console.log(role, id, dataList);
+    if(role==0){
+      kpi = dataList.bckpi;
+    }else if(role == 1){
+      if(id.length ==7){
+        for (var i in dataList.storekpi.bcList) {
+          if (id == dataList.storekpi.bcList[i].userid) {
+            kpi = dataList.storekpi.bcList[i]
+          }
+        }
+      }else{
+        kpi = dataList.storekpi.storeList[0]
+      }
+    }else if(role == 2){
+      if (id.length == 5) {
+        for (var i in dataList.storekpi.storeList) {
+          if (id == dataList.storekpi.storeList[i].userid) {
+            kpi = dataList.storekpi.storeList[i]
+          }
+        }
+      } else {
+        kpi = dataList.areakpi.areaList[0]
+      }
+    }
     this.setData({
-      avatar:app.avatar
+      role:role,
+      kpi:kpi
     })
+    console.log(kpi)
+    this.drawFinish(0.7);
   },
 
   /**
@@ -47,7 +75,7 @@ Page({
     var h = wx.getSystemInfoSync().windowHeight / 2 * 0.35;
     var f = 1 - p;
     ctx.setLineWidth(5);
-    ctx.setStrokeStyle('#d2112b');
+    ctx.setStrokeStyle('#DA202B');
     ctx.setLineCap('round');
     ctx.beginPath();
     ctx.arc(w, h, h - 15, -1 * Math.PI, -f * Math.PI, false);
@@ -61,19 +89,9 @@ Page({
   },
 
   showSort:function(){
+    var role = this.data.role;
     wx.navigateTo({
-      url: '../rank/rank',
-      success: function () {
-
-      }, //成功后的回调；      
-      fail: function () {
-
-      },
-      //失败后的回调；      
-      complete: function () {
-
-      } //结束后的回调(成功，失败都会执行)
-
+      url: '../rank/rank?role='+role
     })
   },
 

@@ -1,12 +1,13 @@
 <view class='container'>
   <view class='header'>
-    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{margin}}rpx" next-margin="{{margin}}rpx" circular='{{circular}}' skip-hidden-item-layout ="true" indicator-color='RGB(230,228,228)' indicator-active-color='RGB(234,32,43)'>
+    <!-- <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" previous-margin="{{margin}}rpx" next-margin="{{margin}}rpx" circular='{{circular}}' skip-hidden-item-layout ="true" indicator-color='RGB(230,228,228)' indicator-active-color='RGB(234,32,43)'>
       <block wx:for="{{imgUrls}}" wx:key=''>
         <swiper-item>
           <image src="{{item}}" class="slide-image"/>
         </swiper-item>
       </block>
-    </swiper>
+    </swiper> -->
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545644255640.png'></image>
   </view>
   <view class='nav'>
     <view bindtap='changeNav' data-index='0' class='{{currentIndex == 0?"active":""}}'>
@@ -36,61 +37,23 @@
       <input bindinput='showDemo' placeholder='输入产品名称'></input>
     </view>
     <cover-view bindtap='showChangeRole'>
-      <cover-image mode='widthFix' src='../../../images/1545384759277.png'></cover-image>
+      <cover-image class='transform' mode='widthFix' src='../../../images/1545384759277.png'></cover-image>
+          <cover-image class='background' mode='widthFix' src='../../../images/1545729026741.png'></cover-image>
       <cover-view class='trans'>切换</cover-view>
       <cover-view class='role'>角色</cover-view>
     </cover-view>
     <view class='goodList'>
-      <view class='goodItem' bindtap='toGood'>
-        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
-        <view class='goodName'>薇姿矿物矿泉系列水活精华液（30ml）</view>
+      <view class='goodItem' bindtap='toGood' wx:key='' wx:for='{{dataList}}'>
+        <image src='{{item.goodimg}}'></image>
+        <view class='goodName'>{{item.goodname}}</view>
         <view class='goodInfo'>
-          <view class='goodIntroduce'>保湿 | 补水</view>
-          <view class='goodPrice'>￥189</view>
-          <view class='goodSale'>月销100笔</view>
+          <view class='goodIntroduce'>{{item.goodlabel}}</view>
+          <view class='goodPrice'>￥{{item.price}}</view>
+          <view class='goodSale'>月销{{item.sales}}笔</view>
         </view>
         <view class='discount'>
           <text>赚  </text>
-          <text class='discountPrice'>46元</text>
-        </view>
-      </view>
-      <view class='goodItem' bindtap='toGood'>
-        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
-        <view class='goodName'>薇姿矿物矿泉系列水活精华液（30ml）</view>
-        <view class='goodInfo'>
-          <view class='goodIntroduce'>保湿 | 补水</view>
-          <view class='goodPrice'>￥189</view>
-          <view class='goodSale'>月销100笔</view>
-        </view>
-        <view class='discount'>
-          <text>赚  </text>
-          <text class='discountPrice'>46元</text>
-        </view>
-      </view>
-      <view class='goodItem' bindtap='toGood'>
-        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
-        <view class='goodName'>薇姿矿物矿泉系列水活精华液（30ml）</view>
-        <view class='goodInfo'>
-          <view class='goodIntroduce'>保湿 | 补水</view>
-          <view class='goodPrice'>￥189</view>
-          <view class='goodSale'>月销100笔</view>
-        </view>
-        <view class='discount'>
-          <text>赚  </text>
-          <text class='discountPrice'>46元</text>
-        </view>
-      </view>
-      <view class='goodItem' bindtap='toGood'>
-        <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
-        <view class='goodName'>薇姿矿物矿泉系列水活精华液（30ml）</view>
-        <view class='goodInfo'>
-          <view class='goodIntroduce'>保湿 | 补水</view>
-          <view class='goodPrice'>￥189</view>
-          <view class='goodSale'>月销100笔</view>
-        </view>
-        <view class='discount'>
-          <text>赚  </text>
-          <text class='discountPrice'>46元</text>
+          <text class='discountPrice'>{{item.income}}元</text>
         </view>
       </view>
     </view>
@@ -98,17 +61,17 @@
   <view class='footer'>
     <view class='find active'>         
       <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512520775.png'></image>
-      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515014055.png'></image>
+      <image class='choosen' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515014055.png'></image>
       <text>发现</text>
     </view>
     <view class='order' bindtap='toOrder'>
       <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512544189.png'></image>
-      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515027857.png'></image>
+      <image class='choosen' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515027857.png'></image>
       <text>订单</text>
     </view>
     <view class='mine' bindtap='toMine'>
       <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512560261.png'></image>
-      <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515040224.png'></image>
+      <image class='choosen' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515040224.png'></image>
       <text>我的</text>
     </view>
   </view>
@@ -120,11 +83,11 @@
     <cover-view class='chooseTip'>请选择您感兴趣的身份</cover-view>
     <cover-view class='chooseId'>
       <cover-view bindtap='changeRole1' data-role1='0' class='chooseItem {{role1==0 ? "active":""}}'>
-        <cover-image mode='widthFix' src='../../../images/avartar.png'></cover-image>
+        <cover-image mode='widthFix' src='../../../images/user.png'></cover-image>
         <cover-view class='userChoose'>消费者</cover-view>
       </cover-view>
       <cover-view bindtap='changeRole1' data-role1='1' class='chooseItem {{role1==1 ? "active":""}}'>
-        <cover-image mode='widthFix' src='../../../images/avartar.png'></cover-image>
+        <cover-image mode='widthFix' src='../../../images/bc.png'></cover-image>
         <cover-view class='userChoose'>导购</cover-view>
       </cover-view>
     </cover-view>

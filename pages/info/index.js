@@ -40,28 +40,35 @@ Page({
 
   submit:function(){
     var imgs = this.data.imgs;
-    if(imgs.length==0){
+    if(imgs&&imgs.length>0){
+      var param = {
+        file: imgs[0],
+        openId: app.openId,
+        name: "Gina",
+        mobile: "18788598656"
+      }
+      console.log(param)
+      wx.uploadFile({
+        url: app.domain + '/show/infoConfirm',
+        filePath: imgs[0],
+        name: 'file',
+        formData: param,
+        success:function(res){
+          console.log('submit',res);
+        }
+        })
+    } else {
       wx.showModal({
         title: '提示',
         content: '请先上传个人名片',
+        showCancel: false
       })
     }
-    var param = {
-      img:imgs[0],
-      username:"Gina",
-      phone:"18788598656"
-    }
-    wx.request({
-      url: app.domain+'/show/infoConfirm',
-      data:param,
-      success:function(res){
-        console.log(res)
-      },
-      complete:function(){
-        wx.redirectTo({
-          url: '../workbench/workbench',
-        })
-      }
+  },
+   
+  ignore:function(){
+    wx.redirectTo({
+      url: '../workbench/workbench',
     })
   }
 })

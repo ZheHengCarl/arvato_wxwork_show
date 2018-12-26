@@ -1,10 +1,11 @@
 <view class='container'>
   <view class='header'>
-    <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=avartar.png'></image>
-    <view class='nickName'>Gina</view>
+    <image src='{{dataList.avatar}}'></image>
+    <view class='nickName'>{{dataList.username}}</view>
     <view class='userInfo'>
-      <view>会员</view>
-      <view>积分：120</view>
+      <view wx:if='{{dataList.isvip ==1}}'>会员</view>
+      <view wx:if='{{dataList.isvip ==0}}'>非会员</view>
+      <view>积分：{{dataList.point}}</view>
     </view>
   </view> 
 
@@ -20,58 +21,22 @@
       </view>
     </view>
     <view class='orderList'>
-      <view class='orderItem'>
+       <view class='orderItem' wx:key='' wx:for='{{orderList}}'>
         <view class='orderHead'>
-          <view class='orderNum'>订单编号：223568</view>
-          <view class='orderState'>已付款</view>
+          <view class='orderNum'>订单编号：{{item.ordernum}}</view>
+          <view class='orderState'>{{item.orderstate}}</view>
         </view>
         <view class='goodList'>
-          <view class='goodItem'>
-            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
-            <view class='goodName'>薇姿温泉矿物系列水活精华液  </view>
-            <view class='goodIntroduce'>50ml</view>
-            <view class='count'>合计： <text>￥8.85</text></view>
+          <view class='goodItem' wx:key='' wx:for='{{item.ordercontent}}'>
+            <image src='{{item.goodimg}}'></image>
+            <view class='goodName'>{{item.goodname}}</view>
+            <view class='goodIntroduce'>{{item.goodcontent}}</view>
+            <view class='count'>合计： <text>￥{{item.sum}}</text></view>
           </view>
         </view>
         <view class='orderFoot'>
           <view class='receive' bindtap='showDemo'>确认收货</view>
           <view class='logistics' bindtap='toLogistics'>查看物流</view>
-        </view>
-      </view>
-       <view class='orderItem'>
-        <view class='orderHead'>
-          <view class='orderNum'>订单编号：223568</view>
-          <view class='orderState'>已付款</view>
-        </view>
-        <view class='goodList'>
-          <view class='goodItem'>
-            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
-            <view class='goodName'>薇姿温泉矿物系列水活精华液  </view>
-            <view class='goodIntroduce'>50ml</view>
-            <view class='count'>合计： <text>￥8.85</text></view>
-          </view>
-        </view>
-        <view class='orderFoot'>
-          <view class='receive' bindtap='showDemo'>确认收货</view>
-          <view class='logistics'>查看物流</view>
-        </view>
-      </view>
-       <view class='orderItem'>
-        <view class='orderHead'>
-          <view class='orderNum'>订单编号：223568</view>
-          <view class='orderState'>已付款</view>
-        </view>
-        <view class='goodList'>
-          <view class='goodItem'>
-            <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543996502.png'></image>
-            <view class='goodName'>薇姿温泉矿物系列水活精华液  </view>
-            <view class='goodIntroduce'>50ml</view>
-            <view class='count'>合计： <text>￥8.85</text></view>
-          </view>
-        </view>
-        <view class='orderFoot'>
-          <view class='receive' bindtap='showDemo'>确认收货</view>
-          <view class='logistics'>查看物流</view>
         </view>
       </view>
     </view>

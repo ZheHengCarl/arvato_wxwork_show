@@ -1,32 +1,18 @@
-var app = getApp();
+// pages/cate/materialdetail/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    content:[]
+    link:"https://mp.weixin.qq.com/s/-sasd9hHfx9sKAbyZiOsWQ"
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this;
-    var title = options.title;
-    var yaoYueContent = app.yaoYueContent;
-    var content = this.data.content;
-    console.log(title, yaoYueContent);
-    for (var i = 0; i < yaoYueContent.length;i++){
-      if (yaoYueContent[i].title == title){
-        content = yaoYueContent[i].content;
-        that.setData({
-          content: content,
-          title:title
-        })
-        return
-      }
-    }
+
   },
 
   /**

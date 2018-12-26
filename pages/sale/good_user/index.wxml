@@ -1,5 +1,5 @@
 <view class='container'>
-  <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544690700765.png'></image>
+  <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545632517592.png'></image>
   <view class='footer'>
     <view class='home' bindtap='toIndex'>
       <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544692525430.png'></image>

@@ -1,11 +1,13 @@
 <view class='container'>
   <view class='header'>
-    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545296817244.jpg'></image>
+    <open-data type="userAvatarUrl"></open-data>
   </view>
   <view class='section'>
     <view class='item'>
       <view>姓名：</view>
-      <view class='userData'>Gina</view>
+      <view class='userData'>
+        <open-data type="userNickName" lang="zh_CN"></open-data>
+      </view>
     </view>
     <view class='item'>
       <view>手机号码：</view>
@@ -19,6 +21,6 @@
   </view>
   <view class='footer'>
     <button bindtap='submit'>确认提交</button>
-    <button class='ignore'>忽略</button>
+    <button class='ignore' bindtap='ignore'>忽略</button>
   </view>
 </view>

@@ -1,3 +1,4 @@
+@import "../../../static/utils/common.wxss";
 .container{
   width: 100%;
   height: 100%;
@@ -23,12 +24,12 @@
 
 .container .loadingParent .finish .finishPercent {
   font-size: 80rpx;
-  color: #d2112b;
+  color: #DA202B;
 }
 
 .container .loadingParent .finish .percent {
   font-size: 50rpx;
-  color: #d2112b;
+  color: #DA202B;
 }
 
 .container .loadingParent .showSort{
@@ -140,30 +141,17 @@
   font-size: 28rpx;
 }
 
-.container .content .contentHeader picker{
-  flex: 1;
-  line-height: 80rpx;
-  text-align: center;
-}
-.container .content .contentHeader image{
-  width: 20rpx;
-  position: absolute;
-  right: 6rpx;
-  top: 30rpx;
-}
-
 .container .content .contentCenter{
-  width: 100%;
+  width: 1200rpx;
 }
 
 .container .content .items{
   width: 100%;
-  display: flex;
 }
 
 .container .content .items view{
-  width: 25%;
-  flex:1;
+  width: 200rpx;
+  float: left;
   text-align: center;
   margin: 10rpx 0;
   font-size: 22rpx;
