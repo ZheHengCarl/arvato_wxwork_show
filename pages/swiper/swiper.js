@@ -57,9 +57,17 @@ Page({
     // console.info(index);
     if(index == 5){
       // 跳转到选择用户身份页
-      wx.redirectTo({
-        url: "../info/index"
-      })
+      console.log(app.hasPhone)
+      if(app.hasPhone == true){
+        wx.redirectTo({
+          url: "../workbench/workbench"
+        })
+      }else{
+        wx.redirectTo({
+          url: "../info/index"
+        })
+      }
+      
     }
   }
 })

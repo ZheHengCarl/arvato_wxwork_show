@@ -37,10 +37,7 @@
       <input bindinput='showDemo' placeholder='输入产品名称'></input>
     </view>
     <cover-view bindtap='showChangeRole'>
-      <cover-image class='transform' mode='widthFix' src='../../../images/1545384759277.png'></cover-image>
-          <cover-image class='background' mode='widthFix' src='../../../images/1545729026741.png'></cover-image>
-      <cover-view class='trans'>切换</cover-view>
-      <cover-view class='role'>角色</cover-view>
+        <cover-image class='background' mode='widthFix' src='../../../images/1545729026741.png'></cover-image>
     </cover-view>
     <view class='goodList'>
       <view class='goodItem' bindtap='toGood' wx:key='' wx:for='{{dataList}}'>

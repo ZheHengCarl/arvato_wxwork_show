@@ -26,10 +26,7 @@
     <view class="loadingParent">
       <canvas canvas-id="canvasIndex">
         <cover-view bindtap='showChangeRole'>
-          <cover-image class='transform' mode='widthFix' src='../../images/1545384759277.png'></cover-image>
           <cover-image class='background' mode='widthFix' src='../../images/1545729026741.png'></cover-image>
-          <cover-view class='trans'>切换</cover-view>
-          <cover-view class='role'>角色</cover-view>
         </cover-view>
       </canvas>
       <view class='finish'>

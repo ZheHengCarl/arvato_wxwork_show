@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -54,7 +54,7 @@
 				{
 					"id": 2,
 					"name": "test",
-					"pathName": "pages/user/mailList/mailList",
+					"pathName": "pages/info/index",
 					"query": ""
 				},
 				{

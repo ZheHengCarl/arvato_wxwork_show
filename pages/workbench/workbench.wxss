@@ -123,7 +123,7 @@ view, text, a {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 0
+  z-index: -1;
 }
 
 .section .loadingParent canvas cover-view .transform{

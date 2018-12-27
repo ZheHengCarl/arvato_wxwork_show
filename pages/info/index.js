@@ -6,14 +6,16 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    username:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.setData({
+      phone: app.phone
+    })
   },
 
   chooseImg: function () {
@@ -40,12 +42,14 @@ Page({
 
   submit:function(){
     var imgs = this.data.imgs;
+    var name = this.data.username;
     if(imgs&&imgs.length>0){
+      if(name != ''){
       var param = {
         file: imgs[0],
         openId: app.openId,
-        name: "Gina",
-        mobile: "18788598656"
+        name: name,
+        mobile: app.phone
       }
       console.log(param)
       wx.uploadFile({
@@ -55,8 +59,20 @@ Page({
         formData: param,
         success:function(res){
           console.log('submit',res);
+        },
+        complete:function(){
+          wx.redirectTo({
+            url: '../workbench/workbench',
+          })
         }
         })
+      }else{
+        wx.showModal({
+          title: '提示',
+          content: '请输入您的名字',
+          showCancel: false
+        })
+      }
     } else {
       wx.showModal({
         title: '提示',
@@ -70,5 +86,11 @@ Page({
     wx.redirectTo({
       url: '../workbench/workbench',
     })
+  },
+
+  changename:function(e){
+    this.setData({
+      username:e.detail.value
+    }) 
   }
 })

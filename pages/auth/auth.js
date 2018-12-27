@@ -51,7 +51,7 @@ Page({
         },
         success: function (res) {
           console.log(res);
-          
+          app.phone = res.data.data
           wx.redirectTo({
             url: "../swiper/swiper"
           })

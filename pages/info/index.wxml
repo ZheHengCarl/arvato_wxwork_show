@@ -6,12 +6,12 @@
     <view class='item'>
       <view>姓名：</view>
       <view class='userData'>
-        <open-data type="userNickName" lang="zh_CN"></open-data>
+        <input bindinput='changename' data-name='{{username}}' placeholder='请输入您的名字' value='{{username}}'></input>
       </view>
     </view>
     <view class='item'>
       <view>手机号码：</view>
-      <view class='userData'>1878859865</view>
+      <view class='userData'>{{phone}}</view>
     </view>
     <view class='item'>上传个人名片：</view>
     <view class='addImg' bindtap='chooseImg'>

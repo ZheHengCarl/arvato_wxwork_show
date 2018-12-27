@@ -9,7 +9,7 @@ Page({
   },
 
   onLoad: function() {
-    app.domain = 'https://minipro.arvatocrm.cn/arvato_local_dyq';
+    app.domain = 'https://minipro.arvatocrm.cn/arvato';
     // 进来之后先静默登录 
     this.login();
   },
@@ -33,6 +33,8 @@ Page({
               console.info("登录返回结果");
               console.info(res);
               app.openId = res.data.data.openId;
+              app.hasPhone = res.data.data.hasPhone;
+              app.phone = res.data.data.mobile;
               var flag = res.data.data.hasPhone;
               if (flag == true) {
                 // 如果有手机号的话就直接展示轮播图 没有的话就跳转到授权页
