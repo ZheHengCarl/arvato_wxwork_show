@@ -1,11 +1,16 @@
-@import "../../../static/utils/common.wxss";
 .container{
   width: 100%;
   padding-bottom: 100rpx;
+  overflow: hidden
 }
 
-.container image{
+.container .pic {
+  overflow: hidden
+}
+
+.container .pic image{
   width: 100%;
+  display: block
 }
 
 .footer{

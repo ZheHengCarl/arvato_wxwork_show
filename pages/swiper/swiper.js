@@ -3,7 +3,7 @@ var app = getApp()
 Page({
   data: {
     imageList: [
-      'https://minipro.arvatocrm.cn/arvato/img/?fileName=1545019540267.png',         'https://minipro.arvatocrm.cn/arvato/img/?fileName=1545019550607.png',
+      'https://minipro.arvatocrm.cn/arvato/img/?fileName=1545019540267.png', 'https://minipro.arvatocrm.cn/arvato/img/?fileName=1545019550607.png',
       'https://minipro.arvatocrm.cn/arvato/img/?fileName=1545019559956.png',
       'https://minipro.arvatocrm.cn/arvato/img/?fileName=1545019569727.png',
       'https://minipro.arvatocrm.cn/arvato/img/?fileName=1545019578610.png',
@@ -63,19 +63,33 @@ Page({
     }
   },
 
-  towork: function () {
-      // 跳转到选择用户身份页
-      // console.log(app.hasPhone)
-
-    if (app.hasPhone == true) {
-      wx.redirectTo({
-        url: "../workbench/workbench"
-      })
-    } else {
-      wx.redirectTo({
-        url: "../info/index"
-      })
-    }
+  towork: function() {
+    // 跳转到选择用户身份页
+    // console.log(app.hasPhone)
+    console.log(app.openId)
+    wx.request({
+      url: app.domain + '/show/getPic',
+      method: "POST",
+      data: {
+        openId: 'oMDVs5ZPXTIWJ99NmXt8v5vtWGV8'
+      },
+      header: {
+        'content-type': 'application/x-www-form-urlencoded'
+      },
+      success: function(res) {
+        // console.log(res)
+        // console.log(res.data.data.hasPic)
+        if (res.data.data.hasPic) {
+          wx.redirectTo({
+            url: "../workbench/workbench"
+          })
+        } else {
+          wx.redirectTo({
+            url: "../info/index"
+          })
+        }
+      }
+    })
   },
 
   handletouchtart: function(event) {

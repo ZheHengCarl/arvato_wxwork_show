@@ -54,6 +54,7 @@
   color: #333333;
   float: left;
   line-height: 30rpx;
+  font-weight: bold;
 }
 
 .header .total{

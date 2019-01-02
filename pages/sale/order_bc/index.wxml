@@ -9,7 +9,8 @@
     <view data-index1='0' class='{{index1==0?"active":""}}' bindtap='changeIndex1'>待付款</view>
     <view data-index1='1' class='{{index1==1?"active":""}}' bindtap='changeIndex1'>已付款</view>
     <view data-index1='2' class='{{index1==2?"active":""}}' bindtap='changeIndex1'>已收货</view>
-    <view data-index1='3' class='lastBtn {{index1==3?"active":""}}' bindtap='changeIndex1'>已结算</view>
+    <view data-index1='3' class='{{index1==3?"active":""}}' bindtap='changeIndex1'>已结算</view>
+     <view data-index1='4' class='lastBtn {{index1==4?"active":""}}' bindtap='changeIndex1'>已失效</view>
   </view>
 
   <view class='section'>

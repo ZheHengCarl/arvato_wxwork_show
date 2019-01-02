@@ -189,7 +189,8 @@ swiper-item image{
 }
 
 .discount .discountPrice{
-  font-size: 34rpx
+  font-size: 34rpx;
+  line-height: 60rpx;
 }
 
 .footer{

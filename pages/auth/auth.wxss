@@ -19,7 +19,7 @@
   font-size: 30rpx;
   color: #E17878;
   line-height: 35rpx;
-  margin-top: 300rpx;
+  margin-top: 400rpx;
 }
 .auth image{
   width: 35rpx;
@@ -29,7 +29,7 @@
   width: 80%;
   height: 100rpx;
   margin: 0 auto;
-  margin-top: 166rpx;
+  margin-top: 66rpx;
 }
 .button button{
   background: #DA202B;

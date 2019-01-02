@@ -17,7 +17,14 @@ Page({
       orderList: app.usersale.orderList
     })
   },
-
+  
+  showDemo: function (e) {
+    wx.showModal({
+      title: '提示',
+      content: '很遗憾，此版本仅为演示版，无法使用该功能。',
+      showCancel: false
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

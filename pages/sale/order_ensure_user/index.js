@@ -5,16 +5,26 @@ Page({
    * 页面的初始数据
    */
   data: {
-    price:180
+    price:180,
+    num:1,
+    count: 180
   },
 
   onLoad: function (options) {
-    var num = options.num;
+    if (options.num){
+      var num = options.num;
+    }
+    if (app.usersale.cart.goods.price){
+      var price = app.usersale.cart.goods.price
+    }
+    if (options.num && app.usersale.cart.goods.price){
+     var count= num * app.usersale.cart.goods.price
+    }
     this.setData({
       dataList: app.usersale,
       num: num,
-      price: app.usersale.cart.goods.price,
-      count: num * app.usersale.cart.goods.price
+      price: price,
+      count: count
     })
   },
 

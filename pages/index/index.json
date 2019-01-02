@@ -1,6 +1,5 @@
 {
   "component": true,
   "enablePullDownRefresh": false,
-  "navigationBarTitleText":"资生堂",
   "usingComponents": {}
 }

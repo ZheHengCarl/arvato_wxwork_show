@@ -244,7 +244,8 @@ Page({
     var ensureLibList = [];
     for (var i in labelLib) {
       if (labelLib[i].labelchoose == 1) {
-        ensureLibList.push(labelLib[i].labelName)
+        ensureLibList.push(labelLib[i].labelName);
+        labelLib[i].labelchoose = 0
       }
     }
     tagList = tagList.concat(ensureLibList);
@@ -252,7 +253,8 @@ Page({
     tagList = this.removeDuplicatedItem(tagList);
     this.setData({
       ['currUserInfo.tagList']: tagList,
-      labelTab: 1
+      labelTab: 1,
+      labelLib: labelLib
     })
   },
 

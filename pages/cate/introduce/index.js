@@ -67,7 +67,7 @@ Page({
   showDemo: function () {
     wx.showModal({
       title: '提示',
-      content: '很遗憾，此版本仅为演示版，无法使用该功能。',
+      content: '很遗憾，此版本仅为演示版，如需查看请点击【抗皱】。',
       showCancel: false
     })
   },

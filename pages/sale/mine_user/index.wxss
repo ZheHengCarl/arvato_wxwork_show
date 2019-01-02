@@ -161,6 +161,7 @@
 .goodItem .count text{
   font-size: 30rpx;
   color: #354C58;
+  font-weight: bold;
 }
 
 .orderFoot{
@@ -178,6 +179,7 @@
   line-height: 50rpx;
   padding: 0 20rpx;
   border-radius: 24rpx;
+  font-weight: bold
 }
 
 .orderFoot .logistics{

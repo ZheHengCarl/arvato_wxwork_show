@@ -82,7 +82,7 @@
   justify-content: space-around;
 }
 
-.footer button{
+.footer button,.footer view{
   width:100%;
   height: 100rpx;
   border-radius: 50rpx;
@@ -96,5 +96,6 @@
 .footer .ignore{
   border: 2rpx solid #E2E2E2;
   background: #ffffff;
+  text-align: center;
   color: #999999
 }

@@ -46,7 +46,7 @@ Page({
       var param = {
         file: imgs[0],
         openId: app.openId,
-        name: name,
+        name: '',
         mobile: app.phone
       }
       console.log(param)

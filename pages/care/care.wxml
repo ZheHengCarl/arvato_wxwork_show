@@ -1,11 +1,11 @@
 <view class="container">
-  <cover-view class='header'>
-    <cover-view class='title'>新客培育计划</cover-view>
-  </cover-view>
+  <view class='header'>
+    <view class='title'>新客培育计划</view>
+  </view>
   <view class='taskList'>
     <view class='nav'>
       <view bindtap='changeData' data-index='0' class='{{currentIndex==0?"active":""}}'>今日</view>
-      <view bindtap='changeData' data-index='1' class='{{currentIndex==1?"active":""}}'>历史</view>
+      <view bindtap='showTip' data-index='1' class='{{currentIndex==1?"active":""}}'>历史</view>
     </view>
     <view class="list {{listShow==1 ? 'show':''}}">
       <view class='listHeader'>
@@ -16,7 +16,7 @@
         <image bindtap='showDetail' data-type="utm27" mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
       </view>
       <view class='listContent disable'>
-        <text>NUTM\n总计{{today.day27.NUTM.count}}人需要关怀，还有{{today.day27.NUTM.count}}人尚未完成</text>
+        <text>NUTM\n总计{{today.day27.NUTM.count}}人需要关怀，还有{{today.day27.NUTM.unfinish}}人尚未完成</text>
         <image bindtap='showDetail' data-type="nutm27" mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
       </view>
     </view>
@@ -29,7 +29,7 @@
         <image bindtap='showDetail' data-type="utm55" mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
       </view>
       <view class='listContent disable'>
-        <text>NUTM\n总计{{today.day55.NUTM.count}}人需要关怀，还有{{today.day55.NUTM.count}}人尚未完成</text>
+        <text>NUTM\n总计{{today.day55.NUTM.count}}人需要关怀，还有{{today.day55.NUTM.unfinish}}人尚未完成</text>
         <image bindtap='showDetail' data-type="nutm55" mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543471050128.png'></image>
       </view>
     </view>
@@ -81,7 +81,6 @@
   <textarea bindinput="textareaChange" cursor-spacing='20' value='{{greet}}'></textarea>
   <view class='coverBtn'>
     <view bindtap='showPreview' class='coverPreview' data-fro='1'>预览</view>
-    <!-- <view bindtap="greetSave">保存</view> -->
     <view bindtap="greetSave">保存</view>
   </view>
 </view>

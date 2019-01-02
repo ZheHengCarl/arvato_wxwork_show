@@ -322,6 +322,14 @@ Page({
     })
   },
 
+  showTip: function () {
+    wx.showModal({
+      title: '提示',
+      content: '很遗憾，此版本仅为演示版，如需查看请点击【今日】',
+      showCancel: false
+    })
+  },
+
 
 
 

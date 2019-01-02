@@ -10,7 +10,7 @@
     </view>
     <view class='pull'>
       <view>
-        <text bindtap='loadMore' class='lookMore'>查看更多</text>
+        <view bindtap='loadMore' class='lookMore'>查看更多</view>
       </view>
     </view>
   </view>
@@ -49,7 +49,7 @@
     </view>
     <view class='chooseDate'>
       <view data-num="1" class="{{_num==1 ? 'active':''}}" bindtap='changeDate'>今日</view>
-      <view data-num="2" class="{{_num==2 ? 'active':''}}" bindtap='changeDate'>本月</view>
+      <view data-num="2" class="{{_num==2 ? 'active':''}}" bindtap='showTip'>本月</view>
     </view>
     <view class='customList'>
       <view>

@@ -1,4 +1,6 @@
 <view class='container'>
-  <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545632529730.png'></image>
+  <view class='pic'>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1546416280649.png'></image>
+  </view>
   <view class='footer' bindtap='showDemo'>立即分享</view>
 </view>

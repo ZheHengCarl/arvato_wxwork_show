@@ -21,6 +21,6 @@
   </view>
   <view class='footer'>
     <button bindtap='submit'>确认提交</button>
-    <button class='ignore' bindtap='ignore'>忽略</button>
+    <view class='ignore' bindtap='ignore'>忽略</view>
   </view>
 </view>

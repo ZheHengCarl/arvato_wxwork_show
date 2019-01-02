@@ -7,15 +7,15 @@
         <image class='phoneIcon' data-phone="{{currUserInfo.mobile}}" mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086562067.png'></image>
       </view>
       <view class='avatar'>
-        <image mode='widthFix' src='{{currUserInfo.avatar}}'></image>
-        <image class='sexIcon' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086613843.png'></image>
+        <image src='{{currUserInfo.avatar}}'></image>
+        <image class='sexIcon' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086613843.png'></image>
       </view>
       <view class='talk' bindtap='showDemo'>
-        <image class='talkIcon' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086578867.png'></image>
+        <image class='talkIcon' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086578867.png'></image>
       </view>
     </view>
     <view class='discount' bindtap='toDiscount'>
-      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086740589.png'></image>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086740589.png'></image>
       <text>优惠券</text>
     </view>
     <view class='userInfo'>

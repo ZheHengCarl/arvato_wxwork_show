@@ -2,10 +2,12 @@
   <swiper class="swiper" bindchange="getCurrIndex"  indicator-dots="{{indicatorDots}}" vertical="{{vertical}}" autoplay="{{autoplay}}" duration="{{duration}}" circular="{{circular}}" >  
     <block wx:for="{{imageList}}" wx:key=''>  
       <swiper-item bingtap='handletap' bindtouchstart="handletouchtart" bindtouchend="handletouchend" >  
-        <image src="{{item}}" mode="scaleToFill" bindload="imageLoad"         
-        class="itemimage" style="height:100%;width:100%;"/> 
-        <image bindtap='towork' class='skip {{index==5?"hide":"show"}}' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545975320795.png'></image> 
-        <image bindtap='towork' class='inter {{index==5?"show":"hide"}}' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545975334072.png'></image> 
+        <image src="{{item}}" mode="widthFix" bindload="imageLoad"         
+        class="itemimage" style="width:100%;"/> 
+        <!-- <image bindtap='towork' class='skip {{index==5?"hide":"show"}}' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545975320795.png'></image>  -->
+        <view bindtap='towork' class='skip {{index==5?"hide":"show"}}'>跳过</view>
+        <view bindtap='towork' class='inter {{index==5?"show":"hide"}}'>进入</view>
+        <!-- <image bindtap='towork' class='inter {{index==5?"show":"hide"}}' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545975334072.png'></image>  -->
       </swiper-item>  
     </block>  
   </swiper>  

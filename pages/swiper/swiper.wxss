@@ -1,26 +1,45 @@
 @import "../../static/utils/common.wxss";
+.container{
+  background: #fef1f6
+}
+
 swiper-item {
   position: relative;
   overflow: hidden
 }
 
-.skip{
+.itemimage{
   position: absolute;
-  width: 115rpx;
-  height: 45rpx;
-  top: 30rpx;
-  right: 10rpx;
-  z-index: 22
+  margin: auto;
+  top: 70rpx;
+  left: 0;
+  right: 0;
 }
 
+.skip,.inter{
+  position: absolute;
+  width: 100rpx;
+  height: 50rpx;
+  border:2rpx solid #859ba7;
+  top: 60rpx;
+  right: 30rpx;
+  z-index: 22;
+  text-align: center;
+  background: #fff;
+  color: #5d7581;
+  line-height: 50rpx;
+  font-size: 30rpx;
+  border-radius: 8rpx;
+}
+/* 
 .inter{
   position: absolute;
-  width: 150rpx;
-  height: 70rpx;
+  width: 100rpx;
+  height: 50rpx;
   bottom: 30rpx;
-  right: 10rpx;
+  right: 30rpx;
   z-index: 22
-}
+} */
 
 .show{
   display: block

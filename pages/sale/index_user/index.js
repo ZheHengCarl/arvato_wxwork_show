@@ -48,6 +48,14 @@ Page({
     })
   },
 
+  showTip:function(){
+    wx.showModal({
+      title: '提示',
+      content: '很遗憾，此版本仅为演示版，如需查看请点击【热卖】',
+      showCancel: false
+    })
+  },
+
   toMine: function() {
     wx.redirectTo({
       url: '../mine_user/index',

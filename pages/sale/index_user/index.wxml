@@ -15,19 +15,19 @@
       <view>热卖</view>
       <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
     </view>
-    <view bindtap='changeNav' data-index='1' class='{{currentIndex == 1?"active":""}}'>
+    <view bindtap='showTip' data-index='1' class='{{currentIndex == 1?"active":""}}'>
       <view>产品系列</view>
       <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
     </view>
-    <view bindtap='changeNav' data-index='2' class='{{currentIndex == 2?"active":""}}'>
+    <view bindtap='showTip' data-index='2' class='{{currentIndex == 2?"active":""}}'>
       <view>面部</view>
       <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
     </view>
-    <view bindtap='changeNav' data-index='3' class='{{currentIndex == 3?"active":""}}'>
+    <view bindtap='showTip' data-index='3' class='{{currentIndex == 3?"active":""}}'>
       <view>眼部</view>
       <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
     </view>
-    <view bindtap='changeNav' data-index='4' class='{{currentIndex == 4?"active":""}}'>
+    <view bindtap='showTip' data-index='4' class='{{currentIndex == 4?"active":""}}'>
       <view>唇部</view>
       <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
     </view>

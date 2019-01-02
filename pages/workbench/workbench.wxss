@@ -63,7 +63,9 @@
   font-size: 20rpx;
   color: #fff;
   position: absolute;
+  left: 0;
   bottom:30rpx;
+  z-index: 99
 }
 
 .section {
@@ -169,6 +171,7 @@
 .section .loadingParent .finish .finishPercent {
   font-size: 144rpx;
   color: #DA202B;
+  font-weight: 1
 }
 
 .section .loadingParent .finish .percent {
@@ -436,7 +439,8 @@
   width: 100rpx;
   height: 100rpx;
   border-radius: 100%;
-  box-sizing: border-box
+  box-sizing: border-box;
+  border:2rpx solid #ffffff;
 }
 
 .choose .chooseId .chooseItem .userChoose{

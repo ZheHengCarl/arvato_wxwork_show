@@ -326,8 +326,8 @@ checkbox .wx-checkbox-input {
   position: absolute;
   width: 26rpx;
   height: 26rpx;
-  top: 12rpx;
-  right: 12rpx;
+  top: 16rpx;
+  right: 20rpx;
   z-index: 99
 }
 
@@ -381,8 +381,8 @@ checkbox .wx-checkbox-input {
   position: absolute;
   width: 26rpx;
   height: 26rpx;
-  top: 12rpx;
-  right: 12rpx;
+  top: 16rpx;
+  right: 20rpx;
 }
 
 .previewContent .logo{

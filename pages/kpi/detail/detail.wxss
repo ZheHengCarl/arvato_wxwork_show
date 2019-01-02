@@ -17,7 +17,7 @@
 .container .loadingParent .finish {
   width: 100%;
   position: absolute;
-  bottom: 20rpx;
+  bottom: 50rpx;
   left: 0;
   text-align: center;
 }
@@ -61,7 +61,7 @@
 .container .avatar {
   width: 100rpx;
   height: 100rpx;
-  margin: 10rpx auto 0;
+  margin: 15rpx auto 0;
   border-radius: 100%;
   overflow: hidden;
   border: 1px solid #eee;
@@ -73,9 +73,10 @@
 }
 
 .container .chooseItem{
-  margin: 10rpx auto 0;
+  margin: 20rpx auto 0;
   text-align: center;
   color: #121212;
+  font-size: 26rpx;
 }
 
 .container .chooseItem picker{
@@ -89,7 +90,7 @@
 }
 
 .container .middleLine{
-  margin-top: 20rpx;
+  margin-top: 30rpx;
   width: 100%;
   text-align: center;
 }
@@ -111,7 +112,7 @@
 .container .content{
   /* width: 100%; */
   overflow: scroll;
-  margin-top: 20rpx;
+  margin-top: 30rpx;
 }
 
 .container .content::-webkit-scrollbar{

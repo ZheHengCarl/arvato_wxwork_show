@@ -49,6 +49,7 @@ view,text,a,input{
 
 .headerInfo .avatar .sexIcon{
   width: 30rpx;
+  height: 30rpx;
   position: absolute;
   bottom: 4rpx;
   right: 4rpx;
