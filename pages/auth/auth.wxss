@@ -34,5 +34,6 @@
 .button button{
   background: #DA202B;
   border-radius: 8rpx;
-  color: #ffffff
+  color: #ffffff;
+  border: none;
 }

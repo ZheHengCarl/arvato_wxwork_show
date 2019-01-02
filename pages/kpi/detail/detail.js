@@ -30,10 +30,11 @@ Page({
         kpi = dataList.storekpi.storeList[0]
       }
     }else if(role == 2){
+      console.log(id.length)
       if (id.length == 5) {
-        for (var i in dataList.storekpi.storeList) {
-          if (id == dataList.storekpi.storeList[i].userid) {
-            kpi = dataList.storekpi.storeList[i]
+        for (var i in dataList.areakpi.storeList) {
+          if (id == dataList.areakpi.storeList[i].userid) {
+            kpi = dataList.areakpi.storeList[i]
           }
         }
       } else {

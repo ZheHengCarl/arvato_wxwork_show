@@ -3,8 +3,8 @@
   <!-- 用户信息 -->
   <view class='header'>
     <view class='headerInfo'>
-      <view class='phone'>
-        <image class='phoneIcon' bindtap='phoneClick' data-phone="{{currUserInfo.mobile}}" mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086562067.png'></image>
+      <view class='phone' bindtap='showDemo'>
+        <image class='phoneIcon' data-phone="{{currUserInfo.mobile}}" mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544086562067.png'></image>
       </view>
       <view class='avatar'>
         <image mode='widthFix' src='{{currUserInfo.avatar}}'></image>
@@ -272,7 +272,7 @@
 
     <!-- 标签输入框 -->
     <modal hidden="{{hiddenmodalput}}" title="请输入标签名" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">  
-    <input bindinput='saveLabelName' maxlength='7' type='text' placeholder="请输入内容" value='{{inputValue}}' auto-focus/>  
+    <input bindinput='saveLabelName' maxlength='7' type='text' placeholder="请输入内容" value='{{inputValue}}'/>  
 </modal> 
   </view>
 </view>

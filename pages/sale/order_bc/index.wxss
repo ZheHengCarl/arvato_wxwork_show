@@ -85,6 +85,7 @@
 .itemHead image{
   float: right;
   width: 34rpx;
+  height: 30rpx;
   margin: 24rpx 30rpx 0 0;
 }
 
@@ -177,6 +178,7 @@
   right: 0;
   top: 8rpx;
   width: 45rpx;
+  height: 45rpx;
 }
 
 .footer view .choose{

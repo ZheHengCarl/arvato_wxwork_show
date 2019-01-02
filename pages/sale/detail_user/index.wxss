@@ -39,7 +39,8 @@
 .title text{
   line-height: 90rpx;
   font-size: 30rpx;
-  color: #333333
+  color: #333333;
+  font-weight: bold;
 }
 
 .mybc{
@@ -98,6 +99,7 @@
   color: #362D20;
   font-size: 30rpx;
   line-height: 90rpx;
+  font-weight: bold;
 }
 
 .equityContent{
@@ -109,6 +111,7 @@
   float: left;
   font-size: 24rpx;
   color: #ffffff;
+  font-weight: bold;
 }
 
 .equityItem .equityNum{
@@ -156,7 +159,8 @@
 .orderTitle text{
   line-height: 90rpx;
   font-size: 30rpx;
-  color: #333333
+  color: #333333;
+  font-weight: bold;
 }
 
 .userInfo{
@@ -170,6 +174,7 @@
   font-size: 28rpx;
   color: #333333;
   padding-top: 20rpx;
+  font-weight: bold;
 }
 
 .userInfo .address{
@@ -210,7 +215,8 @@
   left: 0;
   padding-left: 170rpx;
   font-size: 30rpx;
-  color: #354C58
+  color: #354C58;
+  font-weight: bold;
 }
 
 .goodItem .goodState{
@@ -238,6 +244,7 @@
   color: #354C58;
   font-size: 30rpx;
   line-height: 50rpx;
+  font-weight: bold;
 }
 
 .ask{
@@ -253,4 +260,5 @@
   line-height: 64rpx;
   border-top-left-radius: 32rpx;
   border-bottom-left-radius: 32rpx;
+  font-weight: bold;
 }

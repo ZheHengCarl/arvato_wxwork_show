@@ -15,6 +15,16 @@ Page({
 
   onLoad: function() {
     var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        console.log(res)
+        if (res.model.indexOf("iPhone X") > -1) {
+          that.setData({
+            isIphoneX: true
+          })
+        }
+      }
+    })　
     wx.request({
       url: "https://minipro.arvatocrm.cn/arvato/show/json/get",
       data: {
@@ -39,7 +49,7 @@ Page({
   },
 
   toMine: function() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../mine_user/index',
     })
   },
@@ -60,6 +70,12 @@ Page({
   toGood: function() {
     wx.navigateTo({
       url: '../good_user/index',
+    })
+  },
+
+  toworkbench: function () {
+    wx.redirectTo({
+      url: '../../workbench/workbench',
     })
   },
 
@@ -84,7 +100,7 @@ Page({
       chooseShow: 0
     })
     if (role == 1) {
-      wx.navigateTo({
+      wx.redirectTo({
         url: '../index_bc/index'
       })
     }

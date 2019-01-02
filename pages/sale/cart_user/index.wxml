@@ -1,8 +1,10 @@
 <view class='container'>
   <view class='goodList'>
     <view class='goodItem'>
-      <view bindtap='changeSelect' data-select='{{selected}}' class='select {{selected==1?"selected":""}}'></view>
-      <image src='{{dataList.goods.goodimg}}'></image>
+      <view class='selectBox' bindtap='changeSelect' data-select='{{selected}}'>
+        <view class='select {{selected==1?"selected":""}}'></view>
+      </view>
+      <image class='selectImg' src='{{dataList.goods.goodimg}}'></image>
       <view class='goodInfo'>
         <view class='goodName'>{{dataList.goods.goodname}}</view>
         <view class='goodIntroduce'>{{dataList.goods.goodcontent}}</view>
@@ -18,7 +20,13 @@
     <view class='disableList'>
       <view class='goodItem' wx:key='' wx:for='{{dataList.Invalidgood}}'>
         <view class='select'></view>
-        <image src='{{item.goodimg}}'></image>
+        <view class='soleOut'>
+          <image src='{{item.goodimg}}'></image>
+          <view class='soleInfo'>
+            <view>无货</view>
+            <view class='soleTip'>sold out</view>
+          </view>
+        </view>
         <view class='goodInfo'>
           <view class='disablegoodName goodName'>{{item.goodname}}</view>
           <view class='disablegoodIntroduce goodIntroduce'>{{item.goodcontent}}</view>
@@ -28,7 +36,7 @@
     </view>
   </view>
   <view class='footer'>
-    <view class='select'></view>
+    <view class='selectBox' bindtap='showDemo'><view class='select'></view></view>    
     <view class='countAll'>合计：￥ {{count}} </view>
     <view class='placeOrder useful' bindtap='toEnsureOrder'>下单</view>
   </view>

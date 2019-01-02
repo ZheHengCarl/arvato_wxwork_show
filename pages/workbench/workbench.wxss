@@ -1,8 +1,4 @@
 @import "../../static/utils/common.wxss";
-view, text, a {
-  font-family: '思源黑体';
-}
-
 .container {
   width: 100%;
   height: 100%;
@@ -66,6 +62,8 @@ view, text, a {
 .header .pull {
   font-size: 20rpx;
   color: #fff;
+  position: absolute;
+  bottom:30rpx;
 }
 
 .section {
@@ -94,6 +92,7 @@ view, text, a {
 .section .month .active {
   border-bottom: 3px solid #DA202B;
   color: #DA202B;
+  font-weight: 500
 }
 
 .section .loadingParent {
@@ -159,20 +158,21 @@ view, text, a {
 }
 .section .loadingParent .finish {
   width: 50%;
-  height: 80%;
+  height: 100%;
   position: absolute;
   left: 25%;
   bottom: 0;
+  padding-top: 90rpx;
+  text-align: center
 }
 
 .section .loadingParent .finish .finishPercent {
-  font-size: 148rpx;
+  font-size: 144rpx;
   color: #DA202B;
-  margin-left: 90rpx;
 }
 
 .section .loadingParent .finish .percent {
-  font-size: 45rpx;
+  font-size: 42rpx;
   color: #DA202B;
 }
 
@@ -181,7 +181,8 @@ view, text, a {
   width: 100%;
   left: 0;
   bottom: 0;
-  font-size: 30rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
   text-align: center;
   color: #DA202B;
 }
@@ -413,6 +414,7 @@ view, text, a {
   line-height: 140rpx;
   color: #666666;
   font-size: 34rpx;
+  font-weight: bold;
 }
 
 .choose .chooseTip {
@@ -442,6 +444,7 @@ view, text, a {
   text-align: center;
   font-size: 30rpx;
   color: #999999;
+  font-weight: bold;
 }
 
 .choose .chooseId .active cover-image{
@@ -486,6 +489,7 @@ view, text, a {
   line-height: 140rpx;
   color: #666666;
   font-size: 34rpx;
+  font-weight: bold;
 }
 
 .choice .choiceTip {
@@ -507,7 +511,8 @@ view, text, a {
   width: 100rpx;
   height: 100rpx;
   border-radius: 100%;
-  box-sizing: border-box
+  box-sizing: border-box;
+  border: 2rpx solid #ffffff;
 }
 
 .choice .choiceId .choiceItem .userchoice{
@@ -515,6 +520,7 @@ view, text, a {
   text-align: center;
   font-size: 30rpx;
   color: #999999;
+  font-weight: bold;
 }
 
 .choice .choiceId .active cover-image{

@@ -11,6 +11,7 @@
 
 .header  image{
   width: 95%;
+  height: 300rpx;
   margin: 0 auto;
   display: block;
 }
@@ -42,10 +43,12 @@ swiper-item image{
 }
 .nav view view{
   font-size: 28rpx;
-  color: #869DA8
+  color: #869DA8;
+  font-weight: bold;
 }
 .nav view image{
   width: 30rpx;
+  height: 18rpx;
   margin: 10rpx auto 0;
   display: none
 }
@@ -74,6 +77,7 @@ swiper-item image{
 .search image{
   position: absolute;
   width: 40rpx;
+  height: 40rpx;
   margin: auto;
   top: 0;
   bottom: 0;
@@ -91,59 +95,18 @@ swiper-item image{
   font-size: 24rpx;
 }
 
-.section cover-view{
+.transform{
   width: 160rpx;
   height: 80rpx;
-  background: 'http://minipro.arvatocrm.cn/arvato/img/?fileName=1545729026741.png';
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
   position: absolute;
   right: 0;
-  top: 30rpx;
-  padding: 14rpx 30rpx;
+  top: 400rpx;
 }
-.section cover-view .background{
+
+
+.transform image{
   width: 100%;
   height: 100%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 0
-}
-
-.section cover-view .transform{
-  width: 35rpx;
-  height: 37rpx;
-  top: 18rpx;
-  left: 30rpx;
-  position: absolute;
-  z-index: 3
-}
-
-.section cover-view .trans{
-  width: 60rpx;
-  height: 24rpx;
-  font-size: 24rpx;
-  color: #999999;
-  padding: 0;
-  line-height: 24rpx;
-  position: absolute;
-  top: 10rpx;
-  right: 20rpx;
-  text-align: center;
-}
-
-.section cover-view .role{
-  width: 60rpx;
-  height: 24rpx;
-  font-size: 24rpx;
-  color: #999999;
-  padding: 0;
-  line-height: 24rpx;
-  position: absolute;
- top: 40rpx;
-  right: 20rpx;
-  text-align: center;
 }
 
 .goodItem{
@@ -170,6 +133,7 @@ swiper-item image{
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  font-weight: bold;
 }
 
 .goodItem .goodInfo{
@@ -239,6 +203,11 @@ swiper-item image{
   z-index: 1
 }
 
+.fitBottom{
+  height: 140rpx;
+  padding-bottom: 40rpx;
+}
+
 .footer view{
   text-align: center;
   position: relative;
@@ -252,6 +221,7 @@ swiper-item image{
   right: 0;
   top: 8rpx;
   width: 45rpx;
+  height: 45rpx;
 }
 
 .footer view .choosen{
@@ -285,12 +255,13 @@ swiper-item image{
   background: #FF777E;
   position: fixed;
   right: 20rpx;
-  bottom: 100rpx;
+  bottom: 140rpx;
 }
 
 .ask image{
   display: block;
   width: 30rpx;
+  height: 40rpx;
   margin: 20rpx auto 0;
 }
 

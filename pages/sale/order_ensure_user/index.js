@@ -8,12 +8,13 @@ Page({
     price:180
   },
 
-  onLoad: function () {
+  onLoad: function (options) {
+    var num = options.num;
     this.setData({
       dataList: app.usersale,
-      num: app.usersale.cart.goods.count,
+      num: num,
       price: app.usersale.cart.goods.price,
-      count: app.usersale.cart.goods.count * app.usersale.cart.goods.price
+      count: num * app.usersale.cart.goods.price
     })
   },
 

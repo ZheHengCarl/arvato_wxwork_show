@@ -78,6 +78,10 @@
     </view>
   </view>
   <view class='footer'>
+    <view class='home' bindtap='toworkbench'>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1546397911728.png'></image>
+      <text>工作台</text>
+    </view>
     <view class='find' bindtap='toFind'>         
       <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512520775.png'></image>
       <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515014055.png'></image>

@@ -1,7 +1,7 @@
 <view class="container">
-  <view class='header'>
-    <view class='title'>新客培育计划</view>
-  </view>
+  <cover-view class='header'>
+    <cover-view class='title'>新客培育计划</cover-view>
+  </cover-view>
   <view class='taskList'>
     <view class='nav'>
       <view bindtap='changeData' data-index='0' class='{{currentIndex==0?"active":""}}'>今日</view>
@@ -46,7 +46,7 @@
           <checkbox-group>
             <label class="checkbox" wx:for="{{currentNccItem.list}}" wx:key=''>
               <view class='checkItem'>
-                <checkbox id="{{item.userid}}" disabled='{{item.finishstate == "已完成"?"disabled":""}}'/>
+                <checkbox id="{{item.userid}}" checked='{{item.checked}}' disabled='{{item.finishstate == "已完成"?"disabled":""}}'/>
               </view>
             </label>
           </checkbox-group>
@@ -54,19 +54,19 @@
             <image mode='aspectFit' class='avatar' src='{{item.avatar}}'></image>
             <text bindtap='showHistory' class='userName'>{{item.username}}</text>
             <text>{{item.finishstate}}</text>
-            <image mode='aspectFit' bindtap='telClick' data-mobile="{{item.phone}}" src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556673121.png'></image>
-            <image mode='aspectFit' bindtap='chatClick' data-chatid="{{item.userid}}" src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556702629.png'></image>
+            <image mode='aspectFit' bindtap='showDemo' data-mobile="{{item.phone}}" src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556673121.png'></image>
+            <image mode='aspectFit' bindtap='showDemo' data-chatid="{{item.userid}}" src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543556702629.png'></image>
           </view>
         </view>
         <view class='editSpace'>
           {{currentNccItem.greet}}
         </view>
         <view class='operBtn'>
-          <view class='preview' bindtap='showPreview'>预览</view>
+          <view class='preview' bindtap='showPreview' data-fro='0'>预览</view>
           <view bindtap='showEdit'>编辑</view>
         </view>
         <view class='ensureBtn'>
-          <checkbox></checkbox>
+          <checkbox bindtap='checkedAll' checked="{{checkedAll}}"></checkbox>
           <text>全选</text>
           <!-- <button bindtap='sendNcc'>确认发送</button> -->
           <button bindtap='showDemo'>确认发送</button>
@@ -78,11 +78,11 @@
 <view class="cover {{coverShow==1 ? 'show':''}}"></view>
 <view class="coverContent {{coverContentShow==1 ? 'show':''}}">
   <image bindtap='hideEdit' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543549012749.png'></image>
-  <textarea bindinput="textareaChange" cursor-spacing='20' value='{{currentNccItem.greet}}'></textarea>
+  <textarea bindinput="textareaChange" cursor-spacing='20' value='{{greet}}'></textarea>
   <view class='coverBtn'>
-    <view bindtap='showPreview' class='coverPreview'>预览</view>
+    <view bindtap='showPreview' class='coverPreview' data-fro='1'>预览</view>
     <!-- <view bindtap="greetSave">保存</view> -->
-    <view>保存</view>
+    <view bindtap="greetSave">保存</view>
   </view>
 </view>
 <view class="previewContent {{previewContentShow==1 ? 'show':''}}">

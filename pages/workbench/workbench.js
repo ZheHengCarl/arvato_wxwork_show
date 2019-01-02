@@ -51,18 +51,19 @@ Page({
   drawFinish: function(p) {
     var ctx = wx.createCanvasContext('canvasIndex');
     var w = wx.getSystemInfoSync().windowWidth / 2;
-    var h = wx.getSystemInfoSync().windowHeight / 2 * 0.5;
+    var h = wx.getSystemInfoSync().windowHeight / 100*27;
+    console.log(w,h)
     var f = 1 - p;
     ctx.setLineWidth(5);
     ctx.setStrokeStyle('#DA202B');
     ctx.setLineCap('round');
     ctx.beginPath();
-    ctx.arc(w, h, h - 15, -1 * Math.PI, -f * Math.PI, false);
+    ctx.arc(w, h, h-30, -1 * Math.PI, -f * Math.PI, false);
     ctx.stroke();    
     ctx.setStrokeStyle('#dcdcdc');    
     ctx.setLineCap('round');    
     ctx.beginPath();    
-    ctx.arc(w, h, h - 15, -f * Math.PI, 0 * Math.PI, false); 
+    ctx.arc(w, h, h-30, -f * Math.PI, 0 * Math.PI, false); 
     ctx.stroke();    
     ctx.draw();
   },
@@ -196,35 +197,13 @@ Page({
 
   toCare: function () {
     wx.navigateTo({
-      url: '../care/care',
-      success: function () {
-
-      }, //成功后的回调；      
-      fail: function () {
-
-      },
-      //失败后的回调；      
-      complete: function () {
-
-      } //结束后的回调(成功，失败都会执行)
-
+      url: '../care/care'
     })
   },
 
   toMailList: function() {
     wx.navigateTo({
-      url: '../user/mailList/mailList',
-      success: function() {
-
-      }, //成功后的回调；      
-      fail: function() {
-
-      },
-      //失败后的回调；      
-      complete: function() {
-
-      } //结束后的回调(成功，失败都会执行)
-
+      url: '../user/mailList/mailList'
     })
   },
 
@@ -278,11 +257,11 @@ Page({
       chooseShow: 0
     })
     if(role == 0){
-      wx.navigateTo({
+      wx.redirectTo({
         url: '../sale/index_user/index'
       })
     } else if (role == 1){
-      wx.navigateTo({
+      wx.redirectTo({
         url: '../sale/index_bc/index'
       })
     }

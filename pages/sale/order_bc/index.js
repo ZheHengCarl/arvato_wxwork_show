@@ -16,13 +16,13 @@ Page({
   },
 
   toFind: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../index_bc/index',
     })
   },
 
   toMine: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../mine_bc/index',
     })
   },
@@ -32,6 +32,12 @@ Page({
       title: '提示',
       content: '很遗憾，此版本仅为演示版，无法使用该功能。',
       showCancel: false
+    })
+  },
+
+  toworkbench: function () {
+    wx.redirectTo({
+      url: '../../workbench/workbench',
     })
   },
 

@@ -7,38 +7,35 @@
         </swiper-item>
       </block>
     </swiper> -->
-    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545644255640.png'></image>
+    <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1545644255640.png'></image>
   </view>
   <view class='nav'>
     <view bindtap='changeNav' data-index='0' class='{{currentIndex == 0?"active":""}}'>
       <view>热卖</view>
-      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
     </view>
     <view bindtap='changeNav' data-index='1' class='{{currentIndex == 1?"active":""}}'>
       <view>产品系列</view>
-      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
     </view>
     <view bindtap='changeNav' data-index='2' class='{{currentIndex == 2?"active":""}}'>
       <view>面部</view>
-      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
     </view>
     <view bindtap='changeNav' data-index='3' class='{{currentIndex == 3?"active":""}}'>
       <view>眼部</view>
-      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
     </view>
     <view bindtap='changeNav' data-index='4' class='{{currentIndex == 4?"active":""}}'>
       <view>唇部</view>
-      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544514162965.png'></image>
     </view>
   </view>
   <view class='section'>
     <view class='search'>
-      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543993101764.png'></image>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1543993101764.png'></image>
       <input bindinput='showDemo' placeholder='输入产品名称'></input>
     </view>
-    <cover-view bindtap='showChangeRole'>
-        <cover-image class='background' mode='widthFix' src='../../../images/1545729026741.png'></cover-image>
-    </cover-view>
     <view class='goodList'>
       <view class='goodItem' bindtap='toGood' wx:key='' wx:for='{{dataList}}'>
         <image src='{{item.goodimg}}'></image>
@@ -55,24 +52,30 @@
       </view>
     </view>
   </view>
-  <view class='footer'>
+  <view class="footer {{isIphoneX ?'fitBottom':''}}">
+    <view class='home' bindtap='toworkbench'>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1546397911728.png'></image>
+      <text>工作台</text>
+    </view>
     <view class='find active'>         
-      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512520775.png'></image>
-      <image class='choosen' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515014055.png'></image>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512520775.png'></image>
+      <image class='choosen' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515014055.png'></image>
       <text>发现</text>
     </view>
     <view class='order' bindtap='toOrder'>
-      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512544189.png'></image>
-      <image class='choosen' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515027857.png'></image>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512544189.png'></image>
+      <image class='choosen' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515027857.png'></image>
       <text>订单</text>
     </view>
     <view class='mine' bindtap='toMine'>
-      <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512560261.png'></image>
-      <image class='choosen' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515040224.png'></image>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512560261.png'></image>
+      <image class='choosen' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515040224.png'></image>
       <text>我的</text>
     </view>
   </view>
-  
+  <view class='transform' bindtap='showChangeRole'>
+    <image class='background' src='../../../images/1545729026741.png'></image>
+  </view>
   <cover-view class="cover {{coverShow==1 ? 'show':''}}"></cover-view>
   <cover-view class='choose {{chooseShow==1 ? "show":""}}'>
     <cover-view class='chooseInfo'>选择身份</cover-view>
@@ -80,11 +83,11 @@
     <cover-view class='chooseTip'>请选择您感兴趣的身份</cover-view>
     <cover-view class='chooseId'>
       <cover-view bindtap='changeRole1' data-role1='0' class='chooseItem {{role1==0 ? "active":""}}'>
-        <cover-image mode='widthFix' src='../../../images/user.png'></cover-image>
+        <cover-image src='../../../images/user.png'></cover-image>
         <cover-view class='userChoose'>消费者</cover-view>
       </cover-view>
       <cover-view bindtap='changeRole1' data-role1='1' class='chooseItem {{role1==1 ? "active":""}}'>
-        <cover-image mode='widthFix' src='../../../images/bc.png'></cover-image>
+        <cover-image src='../../../images/bc.png'></cover-image>
         <cover-view class='userChoose'>导购</cover-view>
       </cover-view>
     </cover-view>

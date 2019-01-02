@@ -13,7 +13,8 @@ Page({
     editShow: 0,
     checkedList:[],
     checkedAll:false,
-    ctype:'utm27'
+    ctype:'utm27',
+    greet:''
   },
 
   /**
@@ -39,7 +40,8 @@ Page({
         id: "care"
       },
       success: function (res) {
-        console.log(res)
+        console.log(res);
+        app.greet = res.data.today.day27.UTM.greet;
         that.setData({
           today:res.data.today
         })
@@ -57,36 +59,47 @@ Page({
   showEdit:function(){
     this.setData({
       coverShow: 1,
-      coverContentShow: 1
+      coverContentShow: 1,
+      greet: app.greet
     })
   },
 
   hideEdit: function () {
+    console.log(app.greet)
     this.setData({
       coverShow: 0,
-      coverContentShow: 0
+      coverContentShow: 0, 
+      ['currentNccItem.greet']: app.greet
     })
+    
   },
 
-  showPreview: function(){
+  showPreview: function(e){
+    var fro = e.currentTarget.dataset.fro;
     this.setData({
       coverShow: 1,
       previewContentShow: 1,
-      coverContentShow: 0
+      coverContentShow: 0,
+      fro:fro
     })
   },
 
   hidePreview: function () {
+    var fro = this.data.fro;
     this.setData({
       coverShow: 0,
       previewContentShow: 0
     })
+    if (fro == '1') {
+      this.setData({
+        coverShow: 1,
+        coverContentShow: 1
+      })
+    }
   },
 
   // 点击界面下拉小箭头 展示待发送的人员列表
   showDetail:function(event){
-    // console.info(this.data.nccList);
-    // console.info(getCurrentPages().length);
     // 活动类型分为四种 分别是 utm27天 utm55天 utm27天 utm55天
     var today = this.data.today;
     console.log(today);
@@ -173,7 +186,7 @@ Page({
     }
     for (var i = 0; i < dataList.length; i++) {
       var item = dataList[i];
-      if(item.status != 1){
+      if (item.finishstate != '已完成'){
         item.checked = this.data.checkedAll;
       }
     }
@@ -220,22 +233,11 @@ Page({
     // 发送请求给后台 保存当前的greetContent 并且得到greetId
     var currentNccItem = this.data.currentNccItem; 
     var greet = currentNccItem.greet;
-    // ajax的成功的回调 调用 hideEdit
-    wx.request({
-      url: app.domain + '/admin/wxwork/ncc/task/insertGreet',
-      data: {
-        staffId: app.staffId,
-        greet: greet
-      },
-      success: function (res) {
-        console.log(res);
-        currentNccItem.greetId = res.data.data;
-        that.setData({
-          currentNccItem: currentNccItem
-        });
-      }
-    })  
-    this.hideEdit();
+    app.greet = greet
+    this.setData({
+      coverShow: 0,
+      coverContentShow: 0,
+    });
   },
 
   // 点击确认发送时候的按钮

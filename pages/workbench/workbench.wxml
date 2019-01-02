@@ -123,7 +123,7 @@
   </cover-view>
   <cover-view class='choice {{choiceShow==1 ? "show":""}}'>
     <cover-view class='choiceInfo'>选择身份</cover-view>
-    <cover-view class='choiceTip'>不同身份可使用不同版本的电商功能</cover-view>
+    <cover-view class='choiceTip'>不同身份可查看不同权限的KPI信息</cover-view>
     <cover-view class='choiceTip'>请选择您感兴趣的身份</cover-view>
     <cover-view class='choiceId'>
       <cover-view bindtap='changeRole' data-role='0' class='choiceItem {{role==0 ? "active":""}}'>

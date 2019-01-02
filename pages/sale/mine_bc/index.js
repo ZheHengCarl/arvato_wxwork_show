@@ -15,13 +15,13 @@ Page({
   },
 
   toFind: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../index_bc/index',
     })
   },
 
   toOrder: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../order_bc/index',
     })
   },
@@ -29,6 +29,12 @@ Page({
   toDetail: function () {
     wx.navigateTo({
       url: '../detail_bc/index',
+    })
+  },
+
+  toworkbench: function () {
+    wx.redirectTo({
+      url: '../../workbench/workbench',
     })
   },
 

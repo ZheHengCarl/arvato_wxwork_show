@@ -43,7 +43,7 @@
 
 .section .item .userData{
   float: right;
-  width: 67%;
+  width: 57%;
   color: #333333;
   border-bottom: 2rpx solid #EEEEEE;
   padding-left: 60rpx;

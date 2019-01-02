@@ -27,7 +27,7 @@
           <view class='orderState'>{{item.orderstate}}</view>
         </view>
         <view class='goodList'>
-          <view class='goodItem' wx:key='' wx:for='{{item.ordercontent}}'>
+          <view class='goodItem' wx:key='' wx:for='{{item.ordercontent}}' bindtap='todetail'>
             <image src='{{item.goodimg}}'></image>
             <view class='goodName'>{{item.goodname}}</view>
             <view class='goodIntroduce'>{{item.goodcontent}}</view>
@@ -43,6 +43,10 @@
   </view>
 
   <view class='footer'>
+    <view class='home' bindtap='toworkbench'>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1546397911728.png'></image>
+      <text>工作台</text>
+    </view>
     <view class='find' bindtap='toFind'>         
       <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512520775.png'></image>
       <image class='choose' mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515014055.png'></image>

@@ -7,7 +7,7 @@
     <view>
       2018年12月1日-2018年10月8日
     </view>
-    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544528276475.png'></image>
+    <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544528276475.png' bindtap='showDemo'></image>
   </view>
   <view class='section'>
     <view class='detailList' wx:key='' wx:for='{{dataList}}'>

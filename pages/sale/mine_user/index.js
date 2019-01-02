@@ -16,10 +16,11 @@ Page({
       dataList:app.usersale.userInfo,
       orderList: app.usersale.orderList
     })
+    console.log(app.usersale.userInfo, app.usersale.orderList)
   },
 
   toFind:function(){
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../index_user/index',
     })
   },
@@ -48,6 +49,18 @@ Page({
     var index = e.currentTarget.dataset.index;
     this.setData({
       index:index
+    })
+  },
+
+  todetail:function(){
+    wx.navigateTo({
+      url: '../detail_user/index',
+    })
+  },
+
+  toworkbench: function () {
+    wx.redirectTo({
+      url: '../../workbench/workbench',
     })
   }
 

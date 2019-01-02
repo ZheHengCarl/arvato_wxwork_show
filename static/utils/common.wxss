@@ -16,4 +16,5 @@ page{
 }
 text,view,input,button,image,cover-image,cover-view,swiper{
   box-sizing: border-box;
+  font-family: 'SourceHanSansCN-Light'
 }

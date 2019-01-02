@@ -2,8 +2,8 @@
 <view class='container'>
   <view class='search'>
     <view class='searchBox'>
-      <cover-image mode='widthFix' bindtap='searchUser' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1539677268173.png'></cover-image>
-      <input bindinput='getValue' placeholder='昵称/备注/标签'></input>
+      <image mode='widthFix' bindtap='searchUser' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1539677268173.png'></image>
+      <input bindinput='showDemo' placeholder='昵称/备注/标签'></input>
     </view>
   </view>
   <view class='layout' wx:for='{{userList.userList}}' wx:key=''>

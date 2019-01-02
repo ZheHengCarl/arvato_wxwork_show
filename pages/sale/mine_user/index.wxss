@@ -69,6 +69,7 @@
   line-height: 100rpx;
   color: #4D0305;
   font-size: 30rpx;
+  font-weight: bold
 }
 
 .section .sectionHead .nav{
@@ -80,6 +81,7 @@
 .section .sectionHead .nav view{
   color: #869DA8;
   font-size: 28rpx;
+  font-weight: bold
 }
 
 .section .sectionHead .nav .active{
@@ -209,6 +211,7 @@
   right: 0;
   top: 8rpx;
   width: 45rpx;
+  height: 45rpx;
 }
 
 .footer view .choose{

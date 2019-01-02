@@ -29,7 +29,8 @@ view,text,a,input{
 }
 
 .headerInfo .phone image,.headerInfo .talk image{
-  width: 100%
+  width: 100%;
+  height: 100%
 }
 
 .headerInfo .avatar{
@@ -42,6 +43,7 @@ view,text,a,input{
 
 .headerInfo .avatar image{
   width: 100%;
+  height: 100%;
   border-radius: 100%;
 }
 
@@ -69,6 +71,7 @@ view,text,a,input{
 
 .discount image{
   width: 36rpx;
+  height: 24rpx;
   margin-top: 22rpx
 }
 
@@ -76,6 +79,7 @@ view,text,a,input{
   font-size: 20rpx;
   color: #DA202B;
   line-height: 70rpx;
+  font-weight: bold;
 }
 
 .vipLevel{
@@ -103,7 +107,8 @@ view,text,a,input{
 }
 
 .userInfo .nickName{
-  font-size: 28rpx
+  font-size: 28rpx;
+  font-weight: bold;
 }
 
 .userInfo .point{
@@ -138,6 +143,7 @@ view,text,a,input{
 
 .nav .navList image{
   width: 60rpx;
+  height: 60rpx;
   position: absolute;
   margin: auto;
   left: 0;
@@ -158,6 +164,7 @@ view,text,a,input{
   position: absolute;
   width: 100%;
   top: 100rpx;
+  font-weight: bold;
 }
 
 .nav .active .choose{
@@ -204,6 +211,7 @@ view,text,a,input{
   line-height: 24rpx;
   border-left: 12rpx solid #DA202B;
   padding-left: 20rpx;
+  font-weight: bold;
 }
 
 .more{
@@ -213,7 +221,8 @@ view,text,a,input{
   font-size: 24rpx;
   line-height: 24rpx;
   text-align: right;
-  color: #999999
+  color: #999999;
+  font-weight: bold;
 }
 
 .labelList{
@@ -368,7 +377,8 @@ view,text,a,input{
   color: #FFFFFF;
   font-size: 30rpx;
   width: 40%;
-  margin: auto
+  margin: auto;
+  font-weight: bold;
 }
 
 /* 手动添加 */
@@ -514,7 +524,8 @@ view,text,a,input{
   bottom: 0;
   display: flex;
   justify-content: space-around;
-  background: #FFFFFF
+  background: #FFFFFF;
+  font-weight: bold;
 }
 
 .ensureAddBtnFrom button{
@@ -623,13 +634,14 @@ view,text,a,input{
 }
 
 .pointNum{
-  font-weight: bold;
+  font-weight: bolder;
 }
 
 .pointNum text,.pointOper text,.operDetail text{
   display: block;
   width: 100%;
   text-align: center;
+  font-weight: bold;
 }
 
 .reduce{
@@ -679,6 +691,7 @@ view,text,a,input{
 .orderPlace{
   color: #323232;
   font-size: 30rpx;
+  font-weight: bold;
 }
 
 .orderTime,.goodsName,.price{

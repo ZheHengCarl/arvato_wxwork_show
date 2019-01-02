@@ -42,9 +42,7 @@ Page({
 
   submit:function(){
     var imgs = this.data.imgs;
-    var name = this.data.username;
     if(imgs&&imgs.length>0){
-      if(name != ''){
       var param = {
         file: imgs[0],
         openId: app.openId,
@@ -66,13 +64,6 @@ Page({
           })
         }
         })
-      }else{
-        wx.showModal({
-          title: '提示',
-          content: '请输入您的名字',
-          showCancel: false
-        })
-      }
     } else {
       wx.showModal({
         title: '提示',

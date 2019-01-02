@@ -43,9 +43,20 @@ Page({
   },
 
   toEnsureOrder:function(){
-    wx.navigateTo({
-      url: '../order_ensure_user/index',
-    })
+    var num = this.data.num;
+    var count = this.data.count;
+    if(count!=0){
+      wx.navigateTo({
+        url: '../order_ensure_user/index?num=' + num,
+      })
+    }else{
+      wx.showModal({
+        title: '提示',
+        content: '请先勾选商品',
+        showCancel:false
+      })
+    }
+    
   },
 
   changeSelect: function (e) {
@@ -64,5 +75,13 @@ Page({
         count: price * num
       })
     }
-  }
+  },
+
+  showDemo: function (e) {
+    wx.showModal({
+      title: '提示',
+      content: '很遗憾，此版本仅为演示版，无法使用该功能。',
+      showCancel: false
+    })
+  },
 })

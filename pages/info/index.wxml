@@ -6,7 +6,7 @@
     <view class='item'>
       <view>姓名：</view>
       <view class='userData'>
-        <input bindinput='changename' data-name='{{username}}' placeholder='请输入您的名字' value='{{username}}'></input>
+        <open-data type="userNickName"></open-data>
       </view>
     </view>
     <view class='item'>

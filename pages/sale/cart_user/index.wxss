@@ -12,6 +12,12 @@
   position: relative
 }
 
+.goodItem .selectBox{
+  width: 90rpx;
+  height: 100%;
+  float: left
+}
+
 .goodItem .select{
   width: 32rpx;
   height: 32rpx;
@@ -19,19 +25,57 @@
   border: 2rpx solid #869CA7;
   float: left;
   margin:96rpx 30rpx;
-  background: #ffffff
+  background: #ffffff;
+  background-size: 100% 100%;
+  background-repeat: no-repeat
 }
 
 
 .goodItem .selected{
-  background: #DA202B
+  background-image: url('https://minipro.arvatocrm.cn/arvato/img/?fileName=1546051475362.png');
+  border:none
 }
 
-.goodItem image{
+.goodItem .soleOut,.goodItem .selectImg{
   width: 160rpx;
   height: 160rpx;
   float: left;
   margin-top: 32rpx;
+  position: relative
+}
+
+.goodItem .soleOut image{
+  width: 160rpx;
+  height: 160rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0
+}
+
+.goodItem .soleOut .soleInfo{
+  width: 120rpx;
+  height: 120rpx;
+  padding: 20rpx 0;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-radius: 100%;
+  background:rgba(133,166,195,0.5);
+}
+
+.goodItem .soleOut .soleInfo view{
+  color: #eee;
+  text-align: center;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+
+.goodItem .soleOut .soleInfo .soleTip{
+  font-size: 24rpx;
 }
 
 .goodItem .goodInfo{
@@ -120,6 +164,12 @@
   border-top: 2rpx solid #f7f7f7;
 }
 
+.footer .selectBox{
+  width: 90rpx;
+  height: 100%;
+  float: left
+}
+
 .footer .select{
   width: 32rpx;
   height: 32rpx;
@@ -133,7 +183,8 @@
   font-size: 28rpx;
   color: #DA202B;
   line-height: 100rpx;
-  padding-left: 140rpx;
+  padding-left: 90rpx;
+  float: left
 }
 
 .footer .placeOrder{
