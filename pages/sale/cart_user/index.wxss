@@ -64,7 +64,7 @@
   bottom: 0;
   right: 0;
   border-radius: 100%;
-  background:rgba(133,166,195,0.5);
+  background:rgba(133,166,195,0.8);
 }
 
 .goodItem .soleOut .soleInfo view{
@@ -221,6 +221,10 @@
 .fitBottom{
   height: 140rpx;
   padding-bottom: 40rpx;
+}
+
+.fitfooter{
+  bottom:140rpx;
 }
 
 .footer view{

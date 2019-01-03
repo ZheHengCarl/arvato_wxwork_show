@@ -17,6 +17,7 @@
   font-size: 28rpx;
   color: #869DA8;
   line-height: 80rpx;
+  font-weight: bold
 }
 
 .nav .active{
@@ -38,6 +39,7 @@
   border-right: 2rpx solid #869CA7;
   line-height: 24rpx;
   padding: 0 34rpx;
+  font-weight: bold;
 }
 
 .classify .active{
@@ -78,7 +80,6 @@
 
 .itemHead .lastBtn{
   border-right: none;
-  font-weight: normal;
 }
 
 
@@ -150,6 +151,7 @@
 .itemFoot .itemList .itemMoney{
   font-size: 30rpx;
   color: #354C58;
+  font-weight: bold;
 }
 
 .footer{
@@ -163,6 +165,12 @@
   justify-content: space-around;
   border-top: 1rpx solid #E6E4E4;
   z-index: 9
+}
+
+
+.fitBottom{
+  height: 140rpx;
+  padding-bottom: 40rpx;
 }
 
 .footer view{

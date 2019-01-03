@@ -101,6 +101,18 @@ Page({
 
   },
 
+  onShareAppMessage(res) {
+    if (res.from === 'menu') {
+      // 来自页面内转发按钮
+      console.log(res.target)
+    }
+    return {
+      title: 'arvato智能工作台',
+      path: '/pages/index/index',
+      imageUrl: 'https://minipro.arvatocrm.cn/arvato/img/?fileName=1546512521362.png'
+    }
+  }, 
+
   // 点击拨打电话触发的方法
   phoneClick: function(e) {
     var phoneNumber = e.target.dataset.phone;

@@ -9,11 +9,23 @@ Page({
     index1: 0
   },
 
-  onLoad: function() {
+  onLoad: function () {
+    var that = this
+    wx.getSystemInfo({
+      success: function (res) {
+        console.log(res)
+        if (res.model.indexOf("iPhone X") > -1) {
+          that.setData({
+            isIphoneX: true
+          })
+        }
+      }
+    })　
     this.setData({
       orderList: app.bcsale.orderList,
       dataList: app.bcsale.orderList
     })
+    this.changeIndex();
   },
 
   toFind: function() {
@@ -43,7 +55,11 @@ Page({
   },
 
   changeIndex: function(e) {
-    var index = e.currentTarget.dataset.index;
+    if(e){
+      var index = e.currentTarget.dataset.index;
+    }else{
+      var index = 0
+    }
     this.setData({
       index: index
     })

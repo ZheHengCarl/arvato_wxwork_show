@@ -14,10 +14,10 @@
       <view class='myOrder'>我的订单</view>
       <view class='nav'>
         <view data-index='0' class='{{index==0?"active":""}}' bindtap='changeIndex'>全部</view>
-        <view data-index='1' class='{{index==1?"active":""}}' bindtap='changeIndex'>待付款</view>
-        <view data-index='2' class='{{index==2?"active":""}}' bindtap='changeIndex'>待收货</view>
-        <view data-index='3' class='{{index==3?"active":""}}' bindtap='changeIndex'>已完成</view>
-        <view data-index='4' class='{{index==4?"active":""}}' bindtap='changeIndex'>已取消</view>
+        <view data-index='1' class='{{index==1?"active":""}}' bindtap='showTip'>待付款</view>
+        <view data-index='2' class='{{index==2?"active":""}}' bindtap='showTip'>待收货</view>
+        <view data-index='3' class='{{index==3?"active":""}}' bindtap='showTip'>已完成</view>
+        <view data-index='4' class='{{index==4?"active":""}}' bindtap='showTip'>已取消</view>
       </view>
     </view>
     <view class='orderList'>
@@ -42,7 +42,7 @@
     </view>
   </view>
 
-  <view class='footer'>
+  <view class="footer {{isIphoneX ?'fitBottom':''}}">
     <view class='home' bindtap='toworkbench'>
       <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1546397911728.png'></image>
       <text>工作台</text>

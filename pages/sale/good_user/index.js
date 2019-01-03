@@ -7,6 +7,19 @@ Page({
   data: {
 
   },
+  onLoad:function(){
+    var that = this
+    wx.getSystemInfo({
+      success: function (res) {
+        console.log(res)
+        if (res.model.indexOf("iPhone X") > -1) {
+          that.setData({
+            isIphoneX: true
+          })
+        }
+      }
+    })　
+  },
   
   toIndex:function(){
     wx.redirectTo({

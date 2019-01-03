@@ -47,7 +47,7 @@
 .header .userInfo view{
   float: left;
   border: 2rpx solid #ffffff;
-  border-radius: 20rpx;
+  border-radius: 40rpx;
   padding: 0 26rpx;
   margin-right: 20rpx;
   line-height: 40rpx;
@@ -198,6 +198,11 @@
   justify-content: space-around;
   border-top: 1rpx solid #E6E4E4;
   z-index: 9
+}
+
+.fitBottom{
+  height: 140rpx;
+  padding-bottom: 40rpx;
 }
 
 .footer view{

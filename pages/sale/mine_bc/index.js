@@ -8,7 +8,18 @@ Page({
     index:0
   },
 
-  onLoad:function(){
+  onLoad: function () {
+    var that = this
+    wx.getSystemInfo({
+      success: function (res) {
+        console.log(res)
+        if (res.model.indexOf("iPhone X") > -1) {
+          that.setData({
+            isIphoneX: true
+          })
+        }
+      }
+    })　
     this.setData({
       dataList:app.bcsale.detail
     })

@@ -21,6 +21,7 @@
 .search image {
   position: absolute;
   width: 40rpx;
+  height: 40rpx;
   margin: auto;
   top: 0;
   bottom: 0;

@@ -77,7 +77,7 @@
       </view>
     </view>
   </view>
-  <view class='footer'>
+  <view class="footer {{isIphoneX ?'fitBottom':''}}">
     <view class='home' bindtap='toworkbench'>
       <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1546397911728.png'></image>
       <text>工作台</text>

@@ -25,6 +25,10 @@
   display: flex;
 }
 
+.fitBottom{
+  height: 140rpx;
+  padding-bottom: 40rpx;
+}
 
 .footer .home{
   border-top: 0;

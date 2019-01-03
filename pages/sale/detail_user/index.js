@@ -12,6 +12,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this
+    wx.getSystemInfo({
+      success: function (res) {
+        console.log(res)
+        if (res.model.indexOf("iPhone X") > -1) {
+          that.setData({
+            isIphoneX: true
+          })
+        }
+      }
+    })　
     this.setData({
       dataList: app.usersale.userInfo,
       orderList: app.usersale.orderList
