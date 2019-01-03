@@ -327,7 +327,8 @@ swiper-item image{
   width: 100rpx;
   height: 100rpx;
   border-radius: 100%;
-  box-sizing: border-box
+  box-sizing: border-box;
+  border:2rpx solid #ffffff;
 }
 
 .choose .chooseId .chooseItem .userChoose{
@@ -338,7 +339,7 @@ swiper-item image{
 }
 
 .choose .chooseId .active cover-image{
- border: 2px solid #FF9EA2;
+ border: 2px solid #DA202B;
 }
 
 .choose .chooseId .active .userChoose{

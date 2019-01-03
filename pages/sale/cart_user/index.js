@@ -46,7 +46,7 @@ Page({
     var num = this.data.num;
     var count = this.data.count;
     if(count!=0){
-      wx.navigateTo({
+      wx.redirectTo({
         url: '../order_ensure_user/index?num=' + num,
       })
     }else{
@@ -82,6 +82,37 @@ Page({
       title: '提示',
       content: '很遗憾，此版本仅为演示版，无法使用该功能。',
       showCancel: false
+    })
+  }, 
+  
+  toMine: function () {
+    wx.redirectTo({
+      url: '../mine_user/index',
+    })
+  },
+
+  toIndex: function () {
+    wx.redirectTo({
+      url: '../index_user/index',
+    })
+  },
+
+  changeNav: function (e) {
+    var index = e.currentTarget.dataset.index;
+    this.setData({
+      currentIndex: index
+    })
+  },
+
+  toGood: function () {
+    wx.redirectTo({
+      url: '../good_user/index',
+    })
+  },
+
+  toworkbench: function () {
+    wx.redirectTo({
+      url: '../../workbench/workbench',
     })
   },
 })

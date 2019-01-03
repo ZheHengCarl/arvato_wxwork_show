@@ -62,7 +62,7 @@
   font-size: 56rpx;
   text-align: center;
   line-height: 240rpx;
-  color: #FA65B2;
+  color: #DA202B;
 }
 
 .addImg image{

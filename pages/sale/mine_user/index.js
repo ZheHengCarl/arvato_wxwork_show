@@ -26,7 +26,7 @@ Page({
   },
 
   toCart: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../cart_user/index',
     })
   },

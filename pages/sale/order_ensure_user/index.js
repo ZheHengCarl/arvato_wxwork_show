@@ -29,10 +29,16 @@ Page({
   },
 
   toMine:function(){
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../mine_user/index',
     })
   }, 
+
+  toCart: function () {
+    wx.redirectTo({
+      url: '../cart_user/index',
+    })
+  },
   
   minus: function (e) {
     var num = e.currentTarget.dataset.num;

@@ -48,6 +48,7 @@
   </view>
   <view class='footer'>
     <view class='payMoney'>应付： <text>￥ {{count+12}}</text></view>
+    <view class='cancel' bindtap='toCart'>取消订单</view>
     <view class='payBtn' bindtap='toMine'>提交订单</view>
   </view>
 </view>

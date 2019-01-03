@@ -67,17 +67,18 @@ Page({
     // 跳转到选择用户身份页
     // console.log(app.hasPhone)
     console.log(app.openId)
+    var url = app.domain + "/show/getPic";
     wx.request({
-      url: app.domain + '/show/getPic',
+      url: url,
       method: "POST",
       data: {
-        openId: 'oMDVs5ZPXTIWJ99NmXt8v5vtWGV8'
+        openId: app.openId
       },
       header: {
         'content-type': 'application/x-www-form-urlencoded'
       },
       success: function(res) {
-        // console.log(res)
+        console.log(res)
         // console.log(res.data.data.hasPic)
         if (res.data.data.hasPic) {
           wx.redirectTo({

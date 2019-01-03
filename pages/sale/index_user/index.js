@@ -63,7 +63,7 @@ Page({
   },
 
   toCart: function() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../cart_user/index',
     })
   },
@@ -76,7 +76,7 @@ Page({
   },
 
   toGood: function() {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../good_user/index',
     })
   },

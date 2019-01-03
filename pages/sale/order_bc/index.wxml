@@ -21,10 +21,10 @@
         <image mode='widthFix' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544582254823.png' bindtap='showDemo'></image>
       </view>
       <view class='itemContent'>
-        <image src='{{item.goods.goodimg}}'></image>
-        <view class='goodName'>{{item.goods.goodname}}</view>
-        <view class='goodInfo'>{{item.goods.creattime}} 创建 </view>
-        <view class='goodState'>{{item.goods.goodstate}}</view>
+        <image src='{{item.goodimg}}'></image>
+        <view class='goodName'>{{item.goodname}}</view>
+        <view class='goodInfo'>{{item.creattime}} 创建 </view>
+        <view class='goodState'>{{item.goodstate}}</view>
       </view>
       <view class='itemFoot'>
         <view class='itemList'>
@@ -32,7 +32,8 @@
           <view class='itemMoney'>￥{{item.sum}}</view>
         </view>
         <view class='itemList'>
-          <view>付款预估收入： </view>
+          <view wx:if='{{index1!=3}}'>付款预估收入: </view>
+          <view wx:if='{{index1==3}}'>结算预估收入: </view>
           <view class='itemMoney'>￥{{item.income}}</view>
         </view>
       </view>

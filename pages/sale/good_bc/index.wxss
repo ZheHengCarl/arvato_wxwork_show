@@ -10,6 +10,7 @@
 
 .container .pic image{
   width: 100%;
+  height:2745.34rpx;
   display: block
 }
 

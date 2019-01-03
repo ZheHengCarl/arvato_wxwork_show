@@ -9,19 +9,19 @@ Page({
   },
   
   toIndex:function(){
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../index_user/index',
     })
   },
 
   toCart: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../cart_user/index',
     })
   },
 
   toOrder: function () {
-    wx.navigateTo({
+    wx.redirectTo({
       url: '../order_ensure_user/index',
     })
   }

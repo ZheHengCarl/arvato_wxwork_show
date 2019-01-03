@@ -208,10 +208,12 @@
   bottom: 0;
   left: 0;
   background: #ffffff;
+  display: flex;
+  border-top: 2rpx solid#E6E4E4
 }
 
 .footer .payMoney{
-  float: left;
+  flex: 1;
   color: #DA202B;
   font-size: 28rpx;
   padding-left: 30rpx;
@@ -224,13 +226,23 @@
 }
 
 .footer .payBtn{
-  float: right;
-  width: 320rpx;
+  flex: 1;
   text-align: center;
   line-height: 100rpx;
   background: #DA202B;
   color: #ffffff;
   font-weight: bold;
   font-size: 30rpx;
+}
 
+.footer .cancel{
+  flex: 1;
+  background: #f7f7f7;
+  height: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #354B57;
+  background: #ffffff;
+  border-left: 2rpx solid #E6E4E4
 }

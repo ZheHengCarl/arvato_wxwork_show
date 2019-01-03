@@ -35,9 +35,30 @@
       </view>
     </view>
   </view>
-  <view class='footer'>
+  <view class='bottom'>
     <view class='selectBox' bindtap='showDemo'><view class='select'></view></view>    
     <view class='countAll'>合计：￥ {{count}} </view>
     <view class='placeOrder useful' bindtap='toEnsureOrder'>下单</view>
+  </view>
+  <view class="footer {{isIphoneX ?'fitBottom':''}}">
+    <view class='home' bindtap='toworkbench'>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1546397911728.png'></image>
+      <text>工作台</text>
+    </view>
+    <view class='find' bindtap='toIndex'>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512520775.png'></image>
+      <image class='choosen' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515014055.png'></image>
+      <text>发现</text>
+    </view>
+    <view class='order active'>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515621159.png'></image>
+      <image class='choosen' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515612151.png'></image>
+      <text>购物车</text>
+    </view>
+    <view class='mine' bindtap='toMine'>
+      <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544512560261.png'></image>
+      <image class='choosen' src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1544515040224.png'></image>
+      <text>我的</text>
+    </view>
   </view>
 </view>
