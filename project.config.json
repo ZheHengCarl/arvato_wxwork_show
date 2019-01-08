@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 4,
 			"list": [
 				{
 					"id": -1,
@@ -61,6 +61,12 @@
 					"id": -1,
 					"name": "工作台",
 					"pathName": "pages/workbench/workbench",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "test",
+					"pathName": "pages/swiper/swiper",
 					"query": ""
 				}
 			]

@@ -48,3 +48,122 @@ swiper-item {
 .hide{
   display: none
 }
+
+
+.ask{
+  width: 120rpx;
+  height: 138rpx;
+  border-radius: 100%;
+  position: fixed;
+  right: 20rpx;
+  bottom: 100rpx;
+}
+
+.ask image{
+  width: 120rpx;
+  height: 138rpx;
+}
+
+.cover {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 998;
+  display: none;
+}
+
+.shareCover{
+  width: 600rpx;
+  height: 1000rpx;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 60rpx;
+  background: #fff;
+  border-radius: 6rpx;
+  z-index: 999;
+  padding: 60rpx 100rpx;
+  display: none;
+}
+
+.smallImage{
+  display: block;
+  width: 400rpx;
+  height: 630rpx;
+  margin: 0 auto;
+}
+
+.sharePic{
+  text-align: center;
+  font-size: 24rpx;
+  color: #999999;
+  line-height: 80rpx;
+  border-bottom: 2rpx solid #EEEEEE;
+}
+
+.shareButton{
+  height: 200rpx;
+  display: flex;
+}
+
+.shareButton view{
+  flex: 1;
+  text-align: center;
+}
+
+.shareButton view .pyq{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx auto;
+  position: relative
+}
+
+.shareButton view .pyq button{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  opacity: 0.01
+}
+
+.shareButton view .pyq image{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 998
+}
+
+.shareButton view button{
+  background: #fff;
+  font-size: 24rpx;
+  color: #333333;
+  border: none;
+}
+
+.shareButton view button::after{
+border: none;
+}
+
+.closeShare{
+  width: 100rpx;
+  height: 100rpx;
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 1100rpx;
+  z-index: 999;
+  display: none;
+}
+
+.show{
+  display: block
+}

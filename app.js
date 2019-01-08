@@ -40,6 +40,21 @@ App({
   //   console.log(res);
   //   that.globalData.statusBarHeight  = res.statusBarHeight *2
   // },
+  onLoad:function(){
+    // 获取相册权限
+    wx.getSetting({
+      success(res) {
+        if (!res.authSetting['scope.writePhotosAlbum']) {
+          wx.authorize({
+            scope: 'scope.writePhotosAlbum',
+            success() {
+              console.log('授权成功')
+            }
+          })
+        }
+      }
+    })
+  },
 
   globalData: {
     userInfo: null

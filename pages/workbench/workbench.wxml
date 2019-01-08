@@ -40,12 +40,21 @@
     </view>
     <view class='finishMember' wx:if='{{role==0}}'>
       本店已有<text>{{dataList.finishmember}}</text>名店员完成了业绩目标
+      <view class='ask' bindtap='showConsult'>
+    <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1546865539774.png'></image>
+  </view>
     </view>
     <view class='finishMember' wx:if='{{role==1}}'>
       本区域已有<text>{{dataList.finishmember}}</text>家门店完成了业绩目标
+      <view class='ask' bindtap='showConsult'>
+    <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1546865539774.png'></image>
+  </view>
     </view>
     <view class='finishMember' wx:if='{{role==2}}'>
       全国已有<text>{{dataList.finishmember}}</text>个区域完成了业绩目标
+      <view class='ask' bindtap='showConsult'>
+    <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1546865539774.png'></image>
+  </view> 
     </view>
     <view class='chooseDate'>
       <view data-num="1" class="{{_num==1 ? 'active':''}}" bindtap='changeDate'>今日</view>
@@ -141,4 +150,28 @@
     </cover-view>
     <button class='ensurechoice' bindtap='ensureRole'>确定</button>
   </cover-view>
+  <cover-view class='shareCover {{showShare == 1?"show":""}}'>
+    <cover-view class='shareContent'>
+      <cover-image class='smallImage' src='/images/1546828529694.png'></cover-image>
+      <cover-view class='sharePic'>分享图片</cover-view>
+      <cover-view class='shareButton'>
+        <cover-view>
+          <cover-view class='pyq'>
+            <cover-image src='/images/1546830799797.png'></cover-image>
+            <button bindtap='download'>　</button>
+          </cover-view>
+          <button bindtap='download'>朋友圈</button>
+        </cover-view>
+        <cover-view>
+          <cover-view class='pyq'>
+            <cover-image src='/images/1546830790249.png'></cover-image>
+            <button open-type='share'>　</button>
+          </cover-view>
+          <button open-type='share'>微信好友</button>
+        </cover-view>
+      </cover-view>
+    </cover-view>
+  </cover-view>
+  <cover-image class='closeShare {{showShare == 1?"show":""}}' src='/images/1546830824069.png' bindtap='hideshare'></cover-image>
+  
 </view>

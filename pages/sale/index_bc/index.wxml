@@ -76,7 +76,7 @@
   <view class='transform' bindtap='showChangeRole'>
     <image class='background' src='../../../images/1545729026741.png'></image>
   </view>
-  <cover-view class="cover {{coverShow==1 ? 'show':''}}"></cover-view>
+  <view class="cover {{coverShow==1 ? 'show':''}}"></view>
   <cover-view class='choose {{chooseShow==1 ? "show":""}}'>
     <cover-view class='chooseInfo'>选择身份</cover-view>
     <cover-view class='chooseTip'>不同身份可使用不同版本的电商功能</cover-view>
@@ -93,4 +93,30 @@
     </cover-view>
     <button class='ensureChoose' bindtap='changeIndex'>确定</button>
   </cover-view>
+  <view class='shareCover {{showShare == 1?"show":""}}'>
+    <view class='shareContent'>
+      <image class='smallImage' src='/images/1546828529694.png'></image>
+      <view class='sharePic'>分享图片</view>
+       <view class='shareButton'>
+        <view>
+          <view class='pyq'>
+            <image src='/images/1546830799797.png'></image>
+            <button bindtap='download'>　</button>
+          </view>
+          <button bindtap='download'>朋友圈</button>
+        </view>
+        <view>
+          <view class='pyq'>
+            <image src='/images/1546830790249.png'></image>
+            <button open-type='share'>　</button>
+          </view>
+          <button open-type='share'>微信好友</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <image class='closeShare {{showShare == 1?"show":""}}' src='/images/1546830824069.png' bindtap='hideshare'></image>
+  <view class='ask' bindtap='showConsult'>
+    <image src='http://minipro.arvatocrm.cn/arvato/img/?fileName=1546865539774.png'></image>
+  </view>
 </view>

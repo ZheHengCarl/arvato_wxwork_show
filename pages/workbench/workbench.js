@@ -105,16 +105,7 @@ Page({
     var thisMonth = new Date().getMonth() + 1;
     this.countMonth(thisMonth);
   },
-
-  // handletouchtart: function(event) {
-  //   var startX = event.touches[0].pageX;
-  //   var startY = event.touches[0].pageY;
-  //   this.setData({
-  //     startX: startX,
-  //     startY: startY
-  //   })
-  // },
-
+  
   showHideBtn: function() {
     this.setData({
       _hide:1
@@ -283,6 +274,7 @@ Page({
   }, 
   
   onShareAppMessage(res) {
+    var that = this;
     if (res.from === 'menu') {
       // 来自页面内转发按钮
       console.log(res.target)
@@ -298,6 +290,52 @@ Page({
     this.setData({
       coverShow: 1,
       choiceShow: 1
+    })
+  },
+  
+  download: function () {
+    var that = this;
+    wx.downloadFile({
+      url: 'https://minipro.arvatocrm.cn/arvato/img/?fileName=1546828529694.png',
+      success: function (res) {
+        console.log(res);
+        //图片保存到本地
+        wx.saveImageToPhotosAlbum({
+          filePath: res.tempFilePath,
+          success: function (data) {
+            wx.showModal({
+              title: '提示',
+              content: '图片已下载本地相册，您可发朋友圈',
+              showCancel: false
+            })
+          },
+          fail: function (err) {
+            console.log(err);
+            if (err.errMsg === "saveImageToPhotosAlbum:fail auth deny") {
+              console.log("用户一开始拒绝了，我们想再次发起授权")
+              wx.showModal({
+                title: '提示',
+                content: '您没有授权访问相册权限，无法使用该功能',
+                showCancel: false
+              })
+            }
+          }
+        })
+      }
+    })
+  },
+
+  showConsult: function () {
+    this.setData({
+      showShare: 1,
+      coverShow:1
+    })
+  },
+
+  hideshare: function () {
+    this.setData({
+      showShare: 0,
+      coverShow:0
     })
   }
 })
